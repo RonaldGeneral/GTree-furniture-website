@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- Homepage content page html
+    Author : Teh chong shin
+    Date: 2/8/21 -->
+
+
+<html>
+    <head>
+        <title>Homepage - GTree</title>
+
+        <style type="text/css">
+@charset 'utf-8';
+/* reset base */
+ div {
+    display: block;
+    box-sizing: border-box;
+}
+
+/* intro section */
+ div.intro {
+     width: 100%;
+     border: 1px solid black;
+     border-left: 0px;
+     border-right: 0px;
+     text-align: center;
+     padding: 10px;
+     background-color: aqua;
+     /* background-img hereeee */
+ }
+
+ div.intro h1 {
+     margin: 2%;
+ }
+
+ div.intro p {
+     margin: 1% 25%;
+ }
+
+ div.intro button {
+     width: 10em;
+     height: 3em;
+     font-size: 1em;
+     font-variant: small-caps;
+     color: black;
+     background: red;
+     border-radius: 20px;
+ }
+
+ /* news section */
+ table.news {
+    display: table;
+    border: 3px solid;
+    border-radius: 30px;
+    width: 70%;
+    margin: 30px auto;
+ }
+
+ .news img[alt="speaker"] {
+    float: left;
+    padding: 15px;
+ }
+
+ .news h2 {
+     padding: 2px;
+     font-size: 1.7rem;
+     margin-left: 40%;
+ }
+
+ .news tr#first-row td {
+     border-bottom: 3px solid black;
+ }
+
+ .news #second-row img {
+     float: left;
+     margin-right: 30px;
+ }
+
+ .news #second-row p {
+     font-size: 1.3rem;
+     line-height: 2rem;
+     text-align: justify;
+ }
+ 
+ .news tr#second-row td {
+     padding: 30px 25px;
+ }
+
+ /* showcase section(imgmap) */
+#showcase img{
+    border-radius: 2%;
+}
+
+#showcase #left-img {
+    float: left;
+ }
+
+ #showcase #right-img {
+    float: right;
+ }
+
+ #showcase figcaption {
+     text-align: center;
+     margin-bottom: 2rem;;
+ }
+/*to make sure between the 2 img wont hav stuff whn zoomed out*/
+ #showcase::after { 
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  /* promo section */
+  #promo {
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      text-align: center;
+      clear: both;
+  }
+
+  div#promo a img[alt="promotion"] {
+    border-radius: 3rem;
+  }
+
+  /* livechat section */
+  #livechat img {  
+    border-radius: 50%;
+    border: 2px solid darkblue;
+    position: fixed;
+    bottom:3em;
+    right: 3em; 
+  }
+
+
+
+        </style>
+    </head>
+
+    <body>   
+        <!-- <header> add fixed layout here </header> -->
+        
+        <div class="intro">
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna at efficitur laoreet.
+                Orci varius natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus.
+                Vivamus euismod eros quis quam egestas iaculis. Vestibulum velit enim, placerat efficitur
+            </p>
+            <button><b>shop now</b></button>
+        </div>
+        <table class="news">
+            <tr id="first-row">
+                <td colspan="2">
+                    <img src="../assets/homepage-speaker.png" alt="speaker" />
+                    <h2>NEWS</h2>
+                </td>
+            </tr>
+            <tr id="second-row">
+                <td colspan="2">
+                    <img src="../assets/homepage-news.png" alt="news" />
+                    <p>Cras gravida congue dolor eu fermentum.
+                        Maecenas mattis nulla at scelerisque scelerisque.
+                        Cras sagittis est nisi, vel facilisis turpis posuere in.
+                        Sed id justo gravida, tempus turpis sit amet, lacinia dolor.
+                        Vivamus viverra augue quis mi sagittis faucibus vel ullamcorper nibh.
+                        Cras feugiat ullamcorper felis eget ultrices.
+                        Curabitur blandit commodo porta. Suspendisse potenti.</p>
+                </td>
+            </tr>
+            </table>
+
+        <div id="showcase">
+            <figure id="left-img">
+                <figcaption>Lorem Ipsum</figcaption>
+                <img src="../assets/homepage-furn-showcase.png" alt="furniture-showcase">
+            </figure>
+            <figure id="right-img">
+                <figcaption>Lorem Ipsum</figcaption>
+                <img src="../assets/homepage-furn-showcase.png" alt="furniture-showcase">
+            </figure>
+        </div>
+
+        <div id="promo">
+            <a><img src="../assets/homepage-promo.png" alt="promotion"></a>
+            <!-- <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a>
+            <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a>
+            <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a> -->
+        </div>
+
+        <a id="livechat" href="" ><img src="../assets/homepage-livechat.png" alt="livechat" /></a>
+        <!-- <footer> add fixed layout here </footer> -->
+    </body>
+</html>
