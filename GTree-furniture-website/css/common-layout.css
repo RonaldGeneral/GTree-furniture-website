@@ -1,0 +1,27 @@
+html{
+
+}
+
+body{
+    background-color: #B4C7E7;
+}
+
+
+h1{
+    background-color: #DAE3F3;
+}
+
+*{
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Arial-black, sans-serif;
+    color: black;
+}
+
+article{
+    background-color: rgb(137,193,255);
+}
+
+p{
+    line-height: 1.5cm;
+}
+
