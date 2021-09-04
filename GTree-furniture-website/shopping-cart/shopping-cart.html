@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shopping Cart</title>
+        <link href="shopping-cart.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1>Shopping Cart</h1>
+        <table id="product">
+            <tr>
+                <td></td>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <td></td>
+            </tr>
+
+            <tr id="row0">
+                <td><input type="checkbox" id="item0" name="chair" onclick="addItem(0, document.getElementById('quantity0').value, 9999)"></td>
+                <td><img src="shopping-cart-assets/chair.jpg" alt="furniture 0"></td>
+                <td><h2 class="name">The Chair</h2></td>
+                <td><h2 class="unitPrice">RM 9999</h2></td>
+                <td><h2 class="quantity"><input type="number" id="quantity0" name="quantity" min="0" max="99" value="1" onchange="addItem(0, document.getElementById('quantity0').value, 9999)"></h2></td>
+                <td><h2 class="totalItemPrice">RM 9999</h2></td>
+                <td><button type="button" onclick="deleteItem(0, document.getElementById('quantity0').value, 9999)">&#10060;</button></td>
+            </tr>
+
+            <tr id="row1">
+                <td><input type="checkbox" id="item1" name="chair" onclick="addItem(1, document.getElementById('quantity1').value, 9999)"></td>
+                <td><img src="shopping-cart-assets/chair.jpg" alt="furniture 1"></td>
+                <td><h2 class="name">Never The Chair</h2></td>
+                <td><h2 class="unitPrice">RM 9999</h2></td>
+                <td><h2 class="quantity"><input type="number" id="quantity1" name="quantity" min="0" max="99" value="1" onchange="addItem(1, document.getElementById('quantity1').value, 9999)"></h2></td>
+                <td><h2 class="totalItemPrice">RM 9999</h2></td>
+                <td><button type="button" onclick="deleteItem(1, document.getElementById('quantity1').value, 9999)">&#10060;</button></td>
+            </tr>
+
+            <tr id="row2">
+                <td><input type="checkbox" id="item2" name="chair" onclick="addItem(2, document.getElementById('quantity2').value, 9999)"></td>
+                <td><img src="shopping-cart-assets/chair.jpg" alt="furniture 2"></td>
+                <td><h2 class="name">Unchairably</h2></td>
+                <td><h2 class="unitPrice">RM 9999</h2></td>
+                <td><h2 class="quantity"><input type="number" id="quantity2" name="quantity" min="0" max="99" value="1" onchange="addItem(2, document.getElementById('quantity2').value, 9999)"></h2></td>
+                <td><h2 class="totalItemPrice">RM 9999</h2></td>
+                <td><button type="button" onclick="deleteItem(2, document.getElementById('quantity2').value, 9999)">&#10060;</button></td>
+            </tr>
+
+        </table>
+
+        <aside>
+            <input type="checkbox" id="selectAll" name="selectAll" onclick="selectAll();"/>
+            <h2 id="selectAll">Select All</h2>
+            <table>               
+                <tr>
+                    <th>Total Item(s) :</th>
+                    <td id="totalItem"></td>
+                </tr>
+
+                <tr>
+                    <th>Total Price &nbsp&nbsp&nbsp:</th>
+                    <td id="totalPrice"></td>
+                </tr>
+            </table>
+            <a href=""><h2 id="checkOut">Check Out</h2></a>
+        </aside>
+        <script type="text/javascript" src="shopping-cart.js"></script>
+    </body>
+    
+</html>

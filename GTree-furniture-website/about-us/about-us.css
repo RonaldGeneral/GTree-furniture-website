@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*body style*/
+body{
+    width: 100%;
+}
+
+/*header style*/
+
+
+
+/*article style*/
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+article{
+    width: 60%;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 40px 0px 0px 320px ;
+}
+
+article section#article0{
+    display: block;
+}
+
+article section#article1, article section#article2, article section#article3{
+    display: none;
+}
+
+/*paragraph style*/
+p{
+    font-size: 20px;
+}
+
+/*aside style*/
+aside{
+    float: left;
+    width: 180px;
+    text-align: center;
+    border-style: solid;
+    margin: 0px 20px 10px 80px;
+    padding: 10px 10px 10px 0px;
+    position: sticky;
+    top: 0px;
+}
+
+aside li{
+    margin-left: 0px;
+}
+
+aside ul h4:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*img style*/
+
+/*h3 style*/

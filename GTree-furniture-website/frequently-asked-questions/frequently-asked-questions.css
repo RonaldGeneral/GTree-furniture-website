@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*header style*/
+
+
+
+/*body style*/
+
+body{
+    width: 80%;
+    margin: auto;
+}
+
+/*h1*/
+h1{
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+/*category style*/
+section.category{
+    margin: 50px auto 0px;
+    padding-left: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.category h2{
+    float: left;
+    border-style: solid;
+    text-align: center;
+    width: 160px;
+    margin: 10px;
+    font-size: 28px;
+    border-radius: 20px;
+}
+
+/*QnA style*/
+section.QnA h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+section.QnA {
+    clear: both;
+}
+
+section.QnA::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+section.QnA table{
+    width: 100%;
+    margin: 30px 10px;
+    border-collapse: collapse;
+}
+
+section.QnA table th{
+    width: 100px;
+
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+section.QnA table td{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+section.QnA table tr{
+    border: 1px solid black;
+}
+
+section.QnA table tr:nth-of-type(1){
+    cursor: pointer;
+}
+
+section.QnA table tr:nth-of-type(2){
+    display: none;
+}
+
+/*get support style*/
+section.getSupport{
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*footer style*/
