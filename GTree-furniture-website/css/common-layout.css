@@ -1,27 +1,27 @@
-html{
-
-}
-
-body{
-    background-color: #B4C7E7;
-}
-
-
-h1{
-    background-color: #DAE3F3;
-}
-
+@charset "UTF-8";
 *{
     font-size: 12pt;
     font-family: Verdana, Geneva, Arial-black, sans-serif;
     color: black;
 }
+html{
+    background-color: #A7AED5;
+    background: linear-gradient(#897456, #683E00);
+}
+
+body{
+    max-width: 1600px;
+    background-color: #9F95BF;
+}
+
+header, footer{
+    background-color: #B4C7E7;
+}
+
+h1{
+    background-color: #DAE3F3;
+}
 
 article{
-    background-color: rgb(137,193,255);
+    background-color: #BFD3F5;
 }
-
-p{
-    line-height: 1.5cm;
-}
-
