@@ -1,0 +1,17 @@
+[
+    {
+        "orderID":"AAA-2345-333X",
+        "product":["lamp1","chair1"],
+        "qty":[2,1]
+    },
+    {
+        "orderID":"BBB-7890-222X",
+        "product":["sofa1","pillow1","pillowcase1"],
+        "qty":[1,2,1]
+    },
+    {
+        "orderID":"CCC-1234-111X",
+        "product":["pillow1"],
+        "qty":[5]
+    }
+]
