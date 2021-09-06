@@ -6,173 +6,409 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, kitchen, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/common-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
+
         <title>Homepage - GTree</title>
-
+        <link href="../css/common-layout.css" rel="stylesheet" />
         <style type="text/css">
-@charset 'utf-8';
-/* reset base */
-body {
-    background-color: #DAE3F3;
-    width: 90%;
-    margin: 0px auto;
-}
- div {
-    display: block;
-    box-sizing: border-box;
-}
 
-/* intro section */
- div.intro {
-     width: 100%;
-     border: 1px solid black;
-     border-left: 0px;
-     border-right: 0px;
-     text-align: center;
-     padding: 10px;
-     background-color: #B4C7E7;
-     /* background-img hereeee */
- }
+        /* reset base */
+        @charset "UTF-8";
+        body{
+            background-color: #B4C7E7;
+            width: 100%;
+            margin: 0px auto;
+        }
 
- div.intro h1 {
-     margin: 2%;
-     font-size: 50px;
- }
+        div {
+            display: block;
+            box-sizing: border-box;
+        }
 
- div.intro p {
-     margin: 1% 25%;
-     font-size: 25px;
- }
+        /* intro section */
+        div.intro {
+            width: 100%;
+            border: 1px solid black;
+            border-left: 0px;
+            border-right: 0px;
+            text-align: center;
+            padding: 10px;
+            background:  url("homepage-assets/house.png") no-repeat ;
+            background-color: rgba(255,255,255,.6);
+            background-blend-mode: overlay;
+            background-size: cover;
+        }
 
- div.intro button {
-     width: 10em;
-     height: 3em;
-     font-size: 1em;
-     font-variant: small-caps;
-     color: black;
-     background: red;
-     border-radius: 20px;
- }
+        div.intro h1 {
+            margin: 2%;
+            font-size: 50px;
+        }
 
- /* news section */
- table.news {
-    display: table;
-    border: 3px solid;
-    border-radius: 30px;
-    width: 70%;
-    margin: 30px auto;
- }
+        div.intro p {
+            margin: 1% 25%;
+            font-size: 20px;
+            line-height: 1.5em;
+        }
 
- .news img[alt="speaker"] {
-    float: left;
-    padding: 15px;
- }
+        div.intro button {
+            width: 10em;
+            height: 3em;
+            font-size: 1em;
+            font-variant: small-caps;
+            color: black;
+            background: red;
+            border-radius: 20px;
+        }
 
- .news h2 {
-     padding: 2px;
-     font-size: 1.7rem;
-     margin-left: 40%;
- }
+        /* news section */
+        table.news {
+            display: table;
+            border: 3px solid;
+            border-radius: 30px;
+            width: 70%;
+            margin: 30px auto;
+            overflow: hidden;
+            background-color: #4f82da;
+        }
 
- .news tr#first-row td {
-     border-bottom: 3px solid black;
- }
+        .news img[alt="speaker"] {
+            float: left;
+            position: relative;
+            left: 3rem;
+            top: 1rem;
+            width: 70px;
+        }
 
- .news #second-row img {
-     float: left;
-     margin-right: 30px;
- }
+        .news h2 {
+            padding: 2px;
+            font-size: 1.7rem;
+            margin-left: 40%;
+        }
 
- .news #second-row p {
-     font-size: 1.3rem;
-     line-height: 2rem;
-     text-align: justify;
- }
- 
- .news tr#second-row td {
-     padding: 30px 25px;
- }
+        .news tr#first-row td {
+            border-bottom: 3px solid black;
+        }
 
- /* showcase section(imgmap) */
-#showcase img{
-    border-radius: 2%;
-}
+        .news #second-row {
+            background-color: #dae3f3;
+        }
 
-#showcase #left-img {
-    float: left;
- }
+        .news #second-row img {
+            float: left;
+            margin-right: 30px;
+            width: 200px;
+        }
 
- #showcase #right-img {
-    float: right;
- }
+        .news #second-row p {
+            margin-top: 0;
+            line-height: 2rem;
+            text-align: justify;
+        }
+        
+        .news tr#second-row td {
+            padding: 30px 25px;
+        }
 
- #showcase figcaption {
-     text-align: center;
-     margin-bottom: 2rem;;
- }
-/*to make sure between the 2 img wont hav stuff whn zoomed out*/
- #showcase::after { 
-    display: table;
-    content: "";
-    clear: both;
-  }
+        /* showcase section(imgmap) */
+        #showcase {
+            width: 100%;
+            margin-bottom: 70px;
+            z-index: 1;
+        }
 
-  /* promo section */
-  #promo {
-      width: 100%;
-      margin-top: 2rem;
-      margin-bottom: 5rem;
-      text-align: center;
-      clear: both;
-  }
+        #showcase img{
+            border-radius: 2%;
+            margin: 0;
+            z-index: inherit;
+        }
 
-  div#promo a img[alt="promotion"] {
-    border-radius: 3rem;
-  }
+        #showcase #left-img {
+            float: left;
+            z-index: inherit;
+        }
 
-  /* livechat section */
-  #livechat img {  
-    border-radius: 50%;
-    border: 2px solid darkblue;
-    position: fixed;
-    bottom:3em;
-    right: 3em; 
-  }
+        #showcase #right-img {
+            float: right;
+        }
 
+        #showcase figcaption {
+            text-align: center;
+            margin-bottom: 2rem;;
+        }
+        /*to make sure between the 2 img wont hav stuff whn zoomed out*/
+        #showcase::after { 
+            display: table;
+            content: "";
+            clear: both;
+        }
 
+        /* overlay effect whn hover img map */
+            /* 1 */
+        .mapContainer1 {
+            width: 490px;
+            height: 302px;
+            position: relative;
+        }
+
+        .mapContainer1 #mapImg1{
+            width: 100%;
+        }
+
+        .mapContainer1 #overlay1{
+            position: absolute;
+            left: 0px;
+            visibility: hidden;
+            transition: visibility .3s ease;
+        }
+
+        .mapContainer1:hover #overlay1 {
+            visibility: visible;
+        }
+
+            /* 2 */
+        .mapContainer2 {
+            width: 490px;
+            height: 302px;
+            position: relative;
+        }
+
+        .mapContainer2 #mapImg2{
+            width: 100%;
+        }
+
+        .mapContainer2 #overlay2{
+            position: absolute;
+            left: 0px;
+            visibility: hidden;
+            transition: visibility .2s;
+        }
+
+        .mapContainer2:hover #overlay2 {
+            visibility: visible;
+        }
+
+        /* promo section */
+        #promo {
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+            text-align: center;
+            clear: both;
+        }
+
+        div#promo a img {
+            border-radius: 2rem;
+            width: 700px;
+            height: 258px;
+        }
+
+        /* dots */
+        #dots {
+            display: block;
+            position: relative;
+            top: -40px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0px 10px;
+            background-color: rgb(170, 170, 170);
+            transition: background-color .4s ease;
+        }
+
+        .active {
+            background-color: rgb(40, 40, 40);
+        }
+
+        /* livechat section */
+        #livechat img {  
+            border-radius: 50%;
+            border: 2px solid darkblue;
+            position: fixed;
+            bottom:3em;
+            right: 3em; 
+        }
+
+        /* fade */
+        .fade {
+            animation: fade 1.5s 1;
+        }
+
+        @keyframes fade {
+            0%{opacity: .6;}
+            100%{opacity: 1;}
+        }
 
         </style>
+
+        <script>
+            var i = 0; //index start
+            var images = [];
+            var links = [];
+            var time = 5000;
+
+            //images
+            images[0] = 'homepage-assets/homepage-promo1.png';
+            images[1] = 'homepage-assets/homepage-promo2.png';
+            images[2] = 'homepage-assets/homepage-promo3.png';
+            images[3] = 'homepage-assets/homepage-promo4.png';
+            
+            //links
+            links[0] = 'www.hello1.com';
+            links[1] = 'www.hello2.com';
+            links[2] = 'www.hello3.com';
+            links[3] = 'www.hello4.com';
+
+            //change slide
+            function changeSlides(){
+                var slide = document.getElementById("slide");
+                slide.src = images[i];
+
+                //change links
+                var linkBox = document.getElementById("linkBox");
+                linkBox.href = links[i];
+                
+                //fill black dot
+                var dot = document.getElementsByClassName('dot');
+                if(i > 0){
+                    dot[i-1].classList.remove("active");
+                } else {
+                    dot[images.length - 1].classList.remove("active");
+                }
+                
+                dot[i].classList.add("active");
+
+                //reset index to 0 if exceed the length
+                if(i < images.length - 1){
+                    i++;
+                } else {
+                    i = 0;
+                }
+
+                //looping the func wif delay
+                setTimeout("changeSlides()", time);
+            }
+
+            window.onload = changeSlides;
+            
+        </script>
     </head>
 
     <body>   
+        <header>
+            <!--company logo-->
+            <section class="logo">
+                <a href="home.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons     fixed-layout-assets/   -->
+            <section class="three-icons">
+            <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a href="login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+        </header>
+            <span class="nav">
+                <!--navigation bar-->
+                <nav>
+                    <ul class="menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li>
+                            <a href="furniture_category.html">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li>Tables
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Dining Table</a></li>
+                                        <li><a href="#">Writing Table</a></li>
+                                    </ul>
+                                </li>
+                                <li>Chairs
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Office Chair</a></li>
+                                        <li><a href="#">Sofa</a></li>
+                                    </ul>
+                                </li>
+                                <li>Bedroom
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Bed</a></li>
+                                        <li><a href="#">Pillow</a></li>
+                                        <li><a href="#">Pillow Case</a></li>
+                                    </ul>
+                                </li>
+                                <li>Kitchen
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Oven</a></li>
+                                        <li><a href="#">Stove</a></li>
+                                        <li><a href="#">Fridge</a></li>
+                                    </ul>
+                                </li>
+                                <li>Lighting
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Ceiling Light</a></li>
+                                        <li><a href="#">Table Lamp</a></li>
+                                    </ul>
+                                </li>
+                                <li>Decorations
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Carpet</a></li>
+                                        <li><a href="#">Curtain</a></li>
+                                        <li><a href="#">Wallpaper</a></li>
+                                    </ul>
+                                </li>
+                
+                                <li>Shelves
+                                    <ul class="submenu-2">
+                                        <li><a href="#">Bookshelf</a></li>
+                                        <li><a href="#">Drawer</a></li>
+                                        <li><a href="#">Wardrobe</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="promotion.html">Promotion</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </span>
         <!-- <header> add fixed layout here </header> -->
         
         <div class="intro">
-            <h1>Lorem Ipsum</h1>
+            <h1>GTree Furniture</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius urna at efficitur laoreet.
-                Orci varius natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus.
-                Vivamus euismod eros quis quam egestas iaculis. Vestibulum velit enim, placerat efficitur
+                We do our best to provide customers comfort to live in.
+                We provide high quality furniture with customization of customer's request.
             </p>
-            <button><b>shop now</b></button>
+            <a href="shop"><button><b>shop now</b></button></a>
         </div>
         <table class="news">
             <tr id="first-row">
                 <td colspan="2">
-                    <img src="../assets/homepage-speaker.png" alt="speaker" />
+                    <img src="homepage-assets/homepage-speaker.png" alt="speaker" />
                     <h2>NEWS</h2>
                 </td>
             </tr>
             <tr id="second-row">
                 <td colspan="2">
-                    <img src="../assets/homepage-news.png" alt="news" />
-                    <p>Cras gravida congue dolor eu fermentum.
-                        Maecenas mattis nulla at scelerisque scelerisque.
-                        Cras sagittis est nisi, vel facilisis turpis posuere in.
-                        Sed id justo gravida, tempus turpis sit amet, lacinia dolor.
-                        Vivamus viverra augue quis mi sagittis faucibus vel ullamcorper nibh.
-                        Cras feugiat ullamcorper felis eget ultrices.
-                        Curabitur blandit commodo porta. Suspendisse potenti.</p>
+                    <img src="homepage-assets/homepage-news.png" alt="news" />
+                    <p><b>24 Feb 2021</b> - We are back!
+                        GTree stores are officially reopening again after the country lockdown.
+                        All stores will be reopening from <i>3 March 2021</i> with SOP regulation implementation.
+                        Stay tuned for more announcement!
+                    </p>
                 </td>
             </tr>
             </table>
@@ -180,22 +416,64 @@ body {
         <div id="showcase">
             <figure id="left-img">
                 <figcaption>Lorem Ipsum</figcaption>
-                <img src="../assets/homepage-furn-showcase.png" alt="furniture-showcase">
+                <div class="mapContainer1">
+                    <img src="homepage-assets/homepage-furn-showcase.png" id="mapImg1" alt="furniture-showcase">
+                    <img src="homepage-assets/homepage-furn-showcase-overlay.png" id="overlay1" >
+                </div>
             </figure>
             <figure id="right-img">
                 <figcaption>Lorem Ipsum</figcaption>
-                <img src="../assets/homepage-furn-showcase.png" alt="furniture-showcase">
+                <div class="mapContainer2">
+                    <img src="homepage-assets/homepage-furn-showcase.png" id="mapImg2" alt="furniture-showcase">
+                    <img src="homepage-assets/homepage-furn-showcase-overlay.png" id="overlay2" >
+                </div>
             </figure>
         </div>
 
         <div id="promo">
-            <a><img src="../assets/homepage-promo.png" alt="promotion"></a>
-            <!-- <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a>
-            <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a>
-            <a><img src="../assets/homepage-furn-showcase.png" alt="promotion"></a> -->
+            <a id="linkBox" target="_blank"><img id="slide" class="fade"></a>
+            <div style="text-align: center;" id="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
 
-        <a id="livechat" href="" ><img src="../assets/homepage-livechat.png" alt="livechat" /></a>
+        <a id="livechat" href="" target="_blank" ><img src="homepage-assets/homepage-livechat.png" alt="livechat" /></a>
         <!-- <footer> add fixed layout here </footer> -->
+                <!--footer part-->
+                <footer>
+                    <div id="footer-1">
+                        <a href="home.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                        <p style="text-align: center; color: rgb(240, 189, 96); font-weight: bold; background-color: rgb(93, 161, 238);">GTree Furniture</p>
+                    </div>
+                    <div id="footer-2"><span style="text-decoration: underline;">Contact Us</span>
+                        <ul>
+                            <li><b>E-mail</b> : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                            <li><b>Tel No. </b>: <a href="tel:017-555 8163">017-555 8163</a></li>
+                            <li><b>Address </b>: 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                        </ul>
+                    </div>
+                    <div id="footer-3">Follow Us
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                        </ul>
+                    </div>
+                    <div id="footer-4"><b>Bedder Than The Rest</b>
+                        <p style="text-decoration: underline;">Our Cooperation Partners</p>
+                        <ul>
+                            <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                            <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                            <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                            <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                            <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                        </ul>
+                    </div>
+                    
+                </footer>
+                <p id="copyright" style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
     </body>
 </html>
