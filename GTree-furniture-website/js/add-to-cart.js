@@ -28,7 +28,7 @@ buy.addEventListener("click", function(){
 function saveData(){
     //get product id
     var urlName = window.location.href;
-    var htmlName = urlName.split("details-").pop();
+    var htmlName = urlName.split("details").pop();
     var productID = htmlName.split(".html")[0];
 
     //get qty of product
