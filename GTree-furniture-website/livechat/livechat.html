@@ -1,25 +1,13 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="keywords" content="furniture, table, chair, bedroom, kitchen, lighting, decorations, shelf">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/common-layout.css" rel="stylesheet">
         <link href="../css/fixed-layout.css" rel="stylesheet">
         <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
-
         <title>Live Chat</title>
-        <style>
-            /*
-            div #live_char_title{
-                margin: 30px auto;
-            }*/
-            
-        </style>
     </head>
     <body>
 
@@ -53,84 +41,51 @@
                     }
                 }   
             </script>
-        <div id="company-name">GTree Furniture</div>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
         </header>
-            <!--navigation bar-->
+            <!--navigation bar--> <!--cancel submenu-2-->
             <span class="nav">
-            <nav>
-                <ul class="menu">
-                    <li><a href="../homepage/homepage.html">Home</a></li>
-                    <li>
-                        <a href="../furniture-category/furniture-category.html">Furniture Category</a>
-                        <ul class="submenu-1">
-                            <li>Tables
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/table.html">Dining Table</a></li>
-                                    <li><a href="../product catalog/table.html">Writing Table</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Chairs
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/chair.html">Office Chair</a></li>
-                                    <li><a href="../product catalog/chair.html">Sofa</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Bedroom
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/bedroom.html">Bed</a></li>
-                                    <li><a href="../product catalog/bedroom.html">Pillow</a></li>
-                                    <li><a href="../product catalog/bedroom.html">Pillow Case</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Kitchen
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/kitchen.html">Oven</a></li>
-                                    <li><a href="../product catalog/kitchen.html">Stove</a></li>
-                                    <li><a href="../product catalog/kitchen.html">Fridge</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Lighting
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/lighting.html">Ceiling Light</a></li>
-                                    <li><a href="../product catalog/lighting.html">Table Lamp</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Decorations
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/decorations.html">Carpet</a></li>
-                                    <li><a href="../product catalog/decorations.html">Curtain</a></li>
-                                    <li><a href="../product catalog/decorations.html">Wallpaper</a></li>
-                                </ul>
-                            </li>
-                            
-                            <li>Shelves
-                                <ul class="submenu-2">
-                                    <li><a href="../product catalog/shelves.html">Bookshelf</a></li>
-                                    <li><a href="../product catalog/shelves.html">Drawer</a></li>
-                                    <li><a href="../product catalog/shelves.html">Wardrobe</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="../Promotion/promotion.html">Promotion</a></li>
-                    <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
-                    <li><a href="../about-us/about-us.html">About Us</a></li>
-                </ul>
-            </nav>
-            </span>
-
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../homepage/homepage.html">Home</a></li>
+                        <li>
+                            <a href="../productcatalog/mainproductcatalog/maincatalog.html">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li><a href="../productcatalog/table/productcatalogtable.html">Tables</a></li>
+    
+                                <li><a href="../productcatalog/chair/productcatalogchair.html">Chairs</a></li>
+    
+                                <li><a href="../productcatalog/bedroom/bed/productcatalogbed.html">Bedroom</a></li>
+    
+                                <li><a href="../productcatalog/lightning/productcataloglightning.html">Lighting</a></li>
+    
+                                <li><a href="../productcatalog/decoration/productcatalogdecoration.html">Decorations</a></li>
+                                
+                                <li><a href="../productcatalog/shelves/productcatalogshelves.html">Shelves</a>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../Promotion/promotion.html">Promotion</a></li>
+                        <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
+                        <li><a href="../about-us/about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
+                </span>
             <!--Content part-->
             <style>
                 #live_chat_title{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 20px;
+                    font-size: 35px;
                     color: white;
                     vertical-align: middle;
                     background-color: #7E91AF;
@@ -140,27 +95,83 @@
                 }
 
                 div.title{
-                    background-color: yellow;
+                    background-color: #26c5b8;
                     padding: 10px 0px;
+                    padding-right: 70%;
                     width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
                     flex-wrap: wrap;
                 }
-                #customer{
-                    text-align: right;
+                div.title span{
+                    font-size: 30px;
+                }
+                @media screen and (max-width: 750px) {
+                    div.title{
+                    
+                    padding-right: 0px;
+                }
                 }
                 #chat-content{
-                    height: 200px;
+                    height: 450px;
                     overflow-x: hidden;
-                    overflow-y: scroll;
+                    overflow-y:auto;
                     vertical-align: bottom;
+                    background-color: rgba(207, 232, 204, 0.692);
                 
                 }
-                
-                
-
+                #current-time{
+                    background-color: #308C88;
+                    color: white;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                #service{
+                    width: fit-content;
+                    max-width: 45%;
+                    padding: 10px;
+                    margin: 10px;
+                    
+                    border-radius: 10px;
+                    background-color: rgb(238, 230, 235);
+                    word-wrap: break-word;
+                    font-size: 23px;
+                }
+                #customer{
+                    width: fit-content;
+                    max-width: 45%;
+                    padding: 10px;
+                    margin: 5px 10px 5px 0px;
+                    
+                    
+                    border-radius: 10px;
+                    background-color: rgb(0,132,255);
+                    color: white;
+                    font-size: 23px;
+                    word-wrap: break-word;
+                    float: right;
+                    clear: both;
+                    white-space: pre-wrap;
+                }
+                form{
+                        display: flex;
+                    }
+                    form textarea{
+                        font-size: 25px;
+                        flex: 5 5 85%;
+                        padding: 5px;
+                    }
+                    
+                    form button{
+                        font-size: 25px;
+                        flex: 1 1 15%;
+                        background-color: #26c5b8;
+                    }
+                    article{
+                        max-width:75%;
+                        margin: auto;
+                    }
             </style>
             <article>
                 <p id="live_chat_title">Anything to ask? we are here to help you&#9786;&#9786;</p>
@@ -169,47 +180,24 @@
                     <span>Steffi</span>
                     <span>Active</span>
                 </div>
-                <p id="current-time"></p>
-                <script>
-                    function checkTime(i) {
-                        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                        return i;}
-                   function printTime(){
-                       var d= new Date();
-                        var hours = d.getHours();
-                        var mins = d.getMinutes();
-                        var secs = d.getSeconds();
-                        mins = checkTime(mins);
-                        secs = checkTime(secs);
-                        return (hours+" : "+mins+" : "+secs);
-                        }
-                    var time = document.getElementById("current-time");
-                    time.innerHTML = printTime();
+                <div id="current-time"></div>
+                <script type="text/javascript">
+                    var today = new Date();
+                    var day = today.toLocaleTimeString();
+                    document.getElementById("current-time").innerHTML = today.toLocaleTimeString();
                 </script>
+               
                 <div id="chat-content">
-                <div id="service">Hi, nice to meet you. I'm John</div>
-                <div id="service">What could I help you?</div>
-                <div id="customer">I want to ask about your delivery method</div>
-                <div id="customer">I want to ask about your delivery method</div>
+                <div id="service" title="Steffi">Hi, nice to meet you. I'm Steffi</div>
+                <div id="service" title="Steffi">What could I help you?</div>
                 </div>
-                <form>
-                    <textarea id="chatbar" placeholder="Click here to type" rows="2" cols="1" onkeypress="check(event)"></textarea>
+                <form id="chatarea">
+                    <textarea autofocus id="chatbar" placeholder="Click here to type" rows="3" cols="1" onkeypress="check(event)"></textarea>
                     <button type="button" onclick="send()">Send</button>
                 </form>
-                <style>
-                    form{
-                        display: flex;
-                    }
-                    form textarea{
-                        
-                        flex: 5 5 85%;
-                    }
-                    
-                    form button{
-                        flex: 1 1 15%;
-                    }
-                </style>
+                
                 <script>
+                    
                     function check(event)
                     {
                         var x = event.which;
@@ -218,39 +206,37 @@
                             if (x==13)
                             {
                                 var temp = document.getElementById("chatbar").innerText;
-                                document.getElementById("chatbar").innerText = temp + "<br/>";
-                                alert("asdasdasd");
-                                
+                                document.getElementById("chatbar").innerText = temp;
                             }
                         }
                         else if (x==13)
                         {
-                            send();
+                            event.preventDefault();
+                            send();                            
                         }
-                        
-                        
-
                     }
                     function send()
                     {
-                        var tag = document.createElement("div");
-                        tag.setAttribute("id", "customer")
+                        var chatbar = document.getElementById("chatbar");
+                        if (chatbar.value != "")
+                        {
+                            var tag = document.createElement("div");
+                            tag.setAttribute("id", "customer");
+                            tag.setAttribute("title", "customer");
 
-                        var message = document.createTextNode(document.getElementById("chatbar").value);
-                        tag.appendChild(message);
+                            var message = document.createTextNode(document.getElementById("chatbar").value);
+                            tag.appendChild(message);
 
-                        var chatbox = document.getElementById("chat-content");
-                        chatbox.appendChild(tag);
+                            var chatbox = document.getElementById("chat-content");
+                            chatbox.appendChild(tag);
 
-                        var scroll = document.getElementById("chat-content");
-                        scroll.scrollBy(0, 1000000);
-
-                        
-                        document.getElementById("chatbar").value = "";
-                        /*document.getElementById("chatbar").fromCharCode(8);*/
-                    }
-                    
-                    
+                            var scroll = document.getElementById("chat-content");
+                            scroll.scrollBy(0, 1000000);
+                            
+                            document.getElementById("chatarea").reset();
+                            document.getElementById("chatarea").focus();                        
+                        }                     
+                    }                                        
                 </script>
                 
             </article>
