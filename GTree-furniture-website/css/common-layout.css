@@ -4,18 +4,20 @@
     font-family: Verdana, Geneva, Arial-black, sans-serif;
     color: black;
 }
+
 html{
-    background-color: #A7AED5;
-    background: linear-gradient(#897456, #683E00);
+    background-color: #B4C7E7;/*#A7AED5*/
+    /*background: linear-gradient(#4F89FF, #9BE7FF);*/
 }
 
 body{
     max-width: 1600px;
-    background-color: #9F95BF;
+    background-color: #447d7a59;/*#9F95BF*/
 }
 
 header, footer{
     background-color: #B4C7E7;
+    background: linear-gradient(#4F89FF, #9BE7FF);
 }
 
 h1{
