@@ -91,7 +91,7 @@ header{
     animation-iteration-count: infinite;
 }
 #company-name{
-    animation-name: company-name-;
+    animation-name: company-name;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
@@ -128,7 +128,7 @@ header{
     80%{color: transparent;text-shadow: 0px 0px 0px transparent;}
     100%{color: transparent;text-shadow: 0px 0px 0px transparent;}
 }
-@keyframes company-name- {
+@keyframes company-name {
     0%{color: #617FE8; text-shadow: 0px 0px 0px transparent;}
     20%{color: #40643e;text-shadow: 0px 0px 0px transparent;}
     40%{color: #7e602a;text-shadow: 0px 0px 0px transparent;}
