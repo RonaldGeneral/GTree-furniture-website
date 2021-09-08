@@ -30,6 +30,8 @@
             box-sizing: border-box;
         }
 
+        div#content {background-color: #dae3f3;}
+
         /* intro section */
         div.intro {
             width: 100%;
@@ -47,6 +49,8 @@
         div.intro h1 {
             margin: 2%;
             font-size: 50px;
+            background: none;
+            
         }
 
         div.intro p {
@@ -102,6 +106,7 @@
             float: left;
             margin-right: 30px;
             width: 200px;
+            border-radius: 5px;
         }
 
         .news #second-row p {
@@ -252,19 +257,19 @@
             var i = 0; //index start
             var images = [];
             var links = [];
-            var time = 5000;
+            var time = 4000;
 
             //images
-            images[0] = 'homepage-assets/homepage-promo1.png';
-            images[1] = 'homepage-assets/homepage-promo2.png';
-            images[2] = 'homepage-assets/homepage-promo3.png';
-            images[3] = 'homepage-assets/homepage-promo4.png';
+            images[0] = 'homepage-assets/poster-shocking-sales.png';
+            images[1] = 'homepage-assets/poster-sofa.png';
+            images[2] = 'homepage-assets/poster-festival-sales.png';
+            images[3] = 'homepage-assets/poster-about-us.png';
             
             //links
-            links[0] = 'www.hello1.com';
-            links[1] = 'www.hello2.com';
-            links[2] = 'www.hello3.com';
-            links[3] = 'www.hello4.com';
+            links[0] = '../Promotion/promotion.html#xia';
+            links[1] = '../productcatalog/chairs/detailschair3.html';
+            links[2] = '../Promotion/promotion.html#shang';
+            links[3] = '../about-us/about-us.html';
 
             //change slide
             function changeSlides(){
@@ -298,14 +303,34 @@
 
             window.onload = changeSlides;
             
+            //imagemap overlay whn hover
+            function diningOverlay(obj){
+                obj.src = "homepage-assets/dining-room-overlay.png";
+            }
+
+            function diningReset(obj){
+                obj.src = "homepage-assets/dining-room.png";
+            }
+
+            function livingOverlay(obj){
+                obj.src = "homepage-assets/living-room-overlay.png";
+            }
+
+            function livingReset(obj){
+                obj.src = "homepage-assets/living-room.png";
+            }
+            
+
         </script>
     </head>
 
     <body>   
+        <!--header part-->
         <header>
             <!--company logo-->
+            <div class="upper-part">
             <section class="logo">
-                <a href="home.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
             </section>
 
             <!--search bar-->
@@ -314,166 +339,162 @@
                 <button type="submit">SEARCH!</button>
             </form>
             
-            <!--track order, cart, login icons     fixed-layout-assets/   -->
+            <!--track order, cart, login icons-->
             <section class="three-icons">
             <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
-            <a href="cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
-            <a href="login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+            <a href="../shopping-cart/shopping-cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="../Login/login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+            </div>
+            <script>
+                if (typeof(Storage) !== "undefined") {
+                    var storage = localStorage.getItem("isLogin")
+                    if (storage == "true")
+                    {
+                        document.getElementById("login").href = "../Personal-particulars/personal-particulars.html";
+                    }
+                }   
+            </script>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
             </section>
         </header>
+            <!--navigation bar--> <!--cancel submenu-2-->
             <span class="nav">
-                <!--navigation bar-->
                 <nav>
                     <ul class="menu">
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="../homepage/homepage.html">Home</a></li>
                         <li>
-                            <a href="furniture_category.html">Furniture Category</a>
+                            <a href="../productcatalog/mainproductcatalog/maincatalog.html">Furniture Category</a>
                             <ul class="submenu-1">
-                                <li>Tables
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Dining Table</a></li>
-                                        <li><a href="#">Writing Table</a></li>
-                                    </ul>
-                                </li>
-                                <li>Chairs
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Office Chair</a></li>
-                                        <li><a href="#">Sofa</a></li>
-                                    </ul>
-                                </li>
-                                <li>Bedroom
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Bed</a></li>
-                                        <li><a href="#">Pillow</a></li>
-                                        <li><a href="#">Pillow Case</a></li>
-                                    </ul>
-                                </li>
-                                <li>Kitchen
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Oven</a></li>
-                                        <li><a href="#">Stove</a></li>
-                                        <li><a href="#">Fridge</a></li>
-                                    </ul>
-                                </li>
-                                <li>Lighting
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Ceiling Light</a></li>
-                                        <li><a href="#">Table Lamp</a></li>
-                                    </ul>
-                                </li>
-                                <li>Decorations
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Carpet</a></li>
-                                        <li><a href="#">Curtain</a></li>
-                                        <li><a href="#">Wallpaper</a></li>
-                                    </ul>
-                                </li>
-                
-                                <li>Shelves
-                                    <ul class="submenu-2">
-                                        <li><a href="#">Bookshelf</a></li>
-                                        <li><a href="#">Drawer</a></li>
-                                        <li><a href="#">Wardrobe</a></li>
-                                    </ul>
+                                <li><a href="../productcatalog/table/productcatalogtable.html">Tables</a></li>
+    
+                                <li><a href="../productcatalog/chair/productcatalogchair.html">Chairs</a></li>
+    
+                                <li><a href="../productcatalog/bedroom/bed/productcatalogbed.html">Bedroom</a></li>
+    
+                                <li><a href="../productcatalog/lightning/productcataloglightning.html">Lighting</a></li>
+    
+                                <li><a href="../productcatalog/decoration/productcatalogdecoration.html">Decorations</a></li>
+                                
+                                <li><a href="../productcatalog/shelves/productcatalogshelves.html">Shelves</a>
+                                    
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="../Promotion/promotion.html">Promotion</a></li>
+                        <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
+                        <li><a href="../about-us/about-us.html">About Us</a></li>
                     </ul>
                 </nav>
-            </span>
-        <!-- <header> add fixed layout here </header> -->
+                </span>
         
-        <div class="intro">
-            <h1>GTree Furniture</h1>
-            <p>
-                We do our best to provide customers comfort to live in.
-                We provide high quality furniture with customization of customer's request.
-            </p>
-            <a href="shop"><button><b>shop now</b></button></a>
-        </div>
-        <table class="news">
-            <tr id="first-row">
-                <td colspan="2">
-                    <img src="homepage-assets/homepage-speaker.png" alt="speaker" />
-                    <h2>NEWS</h2>
-                </td>
-            </tr>
-            <tr id="second-row">
-                <td colspan="2">
-                    <img src="homepage-assets/homepage-news.png" alt="news" />
-                    <p><b>24 Feb 2021</b> - We are back!
-                        GTree stores are officially reopening again after the country lockdown.
-                        All stores will be reopening from <i>3 March 2021</i> with SOP regulation implementation.
-                        Stay tuned for more announcement!
-                    </p>
-                </td>
-            </tr>
-            </table>
-
-        <div id="showcase">
-            <figure id="left-img">
-                <figcaption>Lorem Ipsum</figcaption>
-                <div class="mapContainer1">
-                    <img src="homepage-assets/homepage-furn-showcase.png" id="mapImg1" alt="furniture-showcase">
-                    <img src="homepage-assets/homepage-furn-showcase-overlay.png" id="overlay1" >
-                </div>
-            </figure>
-            <figure id="right-img">
-                <figcaption>Lorem Ipsum</figcaption>
-                <div class="mapContainer2">
-                    <img src="homepage-assets/homepage-furn-showcase.png" id="mapImg2" alt="furniture-showcase">
-                    <img src="homepage-assets/homepage-furn-showcase-overlay.png" id="overlay2" >
-                </div>
-            </figure>
-        </div>
-
-        <div id="promo">
-            <a id="linkBox" target="_blank"><img id="slide" class="fade"></a>
-            <div style="text-align: center;" id="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+        <div id="content">
+            <div class="intro">
+                <h1>GTree Furniture</h1>
+                <p>
+                    We do our best to provide customers comfort to live in.
+                    We provide high quality furniture with customization of customer's request.
+                </p>
+                <a href="../productcatalog/mainproductcatalog/mainproductcatalog.html"><button><b>shop now</b></button></a>
             </div>
-        </div>
+            <table class="news">
+                <tr id="first-row">
+                    <td colspan="2">
+                        <img src="homepage-assets/homepage-speaker.png" alt="speaker" />
+                        <h2>NEWS</h2>
+                    </td>
+                </tr>
+                <tr id="second-row">
+                    <td colspan="2">
+                        <img src="homepage-assets/homepage-news.png" alt="news" />
+                        <p><b>24 Feb 2021</b> - We are back!
+                            GTree stores are officially reopening again after the country lockdown.
+                            All stores will be reopening from <i>3 March 2021</i> with SOP regulation implementation.
+                            Stay tuned for more announcement!
+                        </p>
+                    </td>
+                </tr>
+                </table>
+            <div id="showcase">
+                <figure id="left-img">
+                    <figcaption style="font-size: 20px;font-weight: bold;">Dinning comfort</figcaption>
+                    <div class="mapContainer1">
+                        <img src="homepage-assets/dining-room.png" id="mapImg1" alt="furniture-showcase" onmouseover="diningOverlay(this)" onmouseout="diningReset(this)" usemap="#dinning">
+                    </div>
 
-        <a id="livechat" href="" target="_blank" ><img src="homepage-assets/homepage-livechat.png" alt="livechat" /></a>
-        <!-- <footer> add fixed layout here </footer> -->
-                <!--footer part-->
-                <footer>
-                    <div id="footer-1">
-                        <a href="home.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
-                        <p style="text-align: center; color: rgb(240, 189, 96); font-weight: bold; background-color: rgb(93, 161, 238);">GTree Furniture</p>
+                    <!-- Image Map Generated by http://www.image-map.net/ -->
+                    <map name="dinning">
+                        <area title="light" href="../productcatalog/lighting/productcataloglighting.html" coords="213,73,209,91,241,92,237,73" shape="poly">
+                        <area title="light" href="../productcatalog/lighting/productcataloglighting.html" coords="132,115,98,113,98,134,106,139,108,159,122,161,124,136,132,134" shape="poly">
+                        <area title="table" href="../productcatalog/tables/productcatalogtables.html" coords="133,201,41,277,50,325,72,325,82,307,82,271,134,278,180,280,246,269,251,278,253,311,317,311,320,279,376,281,443,281,487,267,488,245,418,201" shape="poly">
+                    </map>
+
+                </figure>
+                <figure id="right-img">
+                    <figcaption style="font-size: 20px;font-weight: bold;">Living comfort</figcaption>
+                    <div class="mapContainer2">
+                        <img src="homepage-assets/living-room.png" id="mapImg2" usemap="#living" alt="furniture-showcase" onmouseover="livingOverlay(this)" onmouseout="livingReset(this)">
                     </div>
-                    <div id="footer-2"><span style="text-decoration: underline;">Contact Us</span>
-                        <ul>
-                            <li><b>E-mail</b> : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
-                            <li><b>Tel No. </b>: <a href="tel:017-555 8163">017-555 8163</a></li>
-                            <li><b>Address </b>: 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
-                        </ul>
-                    </div>
-                    <div id="footer-3">Follow Us
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
-                            <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
-                        </ul>
-                    </div>
-                    <div id="footer-4"><b>Bedder Than The Rest</b>
-                        <p style="text-decoration: underline;">Our Cooperation Partners</p>
-                        <ul>
-                            <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
-                            <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
-                            <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
-                            <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
-                            <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
-                        </ul>
-                    </div>
-                    
-                </footer>
-                <p id="copyright" style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+
+                    <!-- Image Map Generated by http://www.image-map.net/ -->
+                    <map name="living">
+                        <area target="" alt="curtain" title="curtain" href="../productcatalog/decorations/productcatalogdecorations.html" coords="84,32,82,207,120,211,120,179,139,175,141,139,154,124,167,92,169,30" shape="poly">
+                        <area target="" alt="curtain" title="curtain" href="../productcatalog/decorations/productcatalogdecorations.html" coords="238,32,240,110,250,149,259,153,259,173,304,173,312,30" shape="poly">
+                        <area target="" alt="shelf" title="shelf" href="../productcatalog/shelves/productcatalogshelves.html" coords="452,81,468,75,488,76,488,226,468,226,460,225,458,207,450,197" shape="poly">
+                        <area target="" alt="sofa" title="sofa" href="../productcatalog/chairs/productcatalogchairs.html" coords="229,175,226,183,208,192,208,205,182,207,182,217,286,220,285,239,304,237,326,240,341,245,344,269,422,271,446,261,458,251,456,209,433,205,430,175" shape="poly">
+                    </map>
+
+                </figure>
+            </div>
+            <div id="promo">
+                <a id="linkBox" target="_blank"><img id="slide" class="fade"></a>
+                <div style="text-align: center;" id="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <a id="livechat" href="../livechat/livechat.html" target="_blank" ><img src="homepage-assets/homepage-livechat.png" alt="livechat" /></a>
+        </div>
+        <!--footer part-->
+        <footer>
+            <div id="footer-1">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <p style="text-align: center;">GTree Furniture</p>
+            </div>
+            <div id="footer-2">Contact Us
+                <ul>
+                    <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                    <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+                    <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                </ul>
+            </div>
+            <div id="footer-3">Follow Us
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div id="footer-4">Bedder Than The Rest
+                <p>Our Cooperation Partners</p>
+                <ul>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
     </body>
 </html>
