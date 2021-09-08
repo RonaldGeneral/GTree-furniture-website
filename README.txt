@@ -32,3 +32,10 @@ Make sure visual studio code is installed and the live server extension is insta
 5. Open the "homepage.html" and the html document will appear on the right side of vs code.
 6. Right click anywhere within the html document and select "Open with Live server".
 7. The website will be opened in your browser,make sure it is Google Chrome.
+
+
+Available Track Order ID
+------------------------
+AAA-2345-333X
+BBB-7890-222X
+CCC-1234-111X
