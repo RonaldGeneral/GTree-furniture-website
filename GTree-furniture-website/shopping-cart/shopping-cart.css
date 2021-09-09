@@ -64,11 +64,7 @@ table#product tr td h2.quantity input{
     width: 50px;
 }
 
-table#product tr td:last-of-type{
-    width: 20px;
-}
-
-table#product tr td:first-of-type{
+table#product tr td:first-of-type, table#product tr td:last-of-type{
     width: 20px;
 }
 
@@ -78,6 +74,10 @@ table#product tr td h2#name{
 
 table#product tr td h2#quantity{
     margin-left: 20px;
+}
+
+table#product tr h2.unitPrice::before, table#product tr h2.totalItemPrice::before{
+    content: "RM ";
 }
 /*aside style*/
 aside{
@@ -114,7 +114,7 @@ aside table th, aside table td{
     font-weight: bold;
 }
 
-aside h2#checkOut{
+aside h2#checkout{
     margin: 100px 50px 10px;
     padding: 20px 0px;
     font-size: 20px;
