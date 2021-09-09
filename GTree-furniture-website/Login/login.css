@@ -1,0 +1,68 @@
+
+#peyi{
+    border: 5px solid black;
+    padding: 20px 20px;
+    margin: 0% auto;
+    text-align: center;
+    background-color: rgba(138, 153, 163, 0.664);
+    width: 50%;
+    text-align: center;
+    display: block;
+    
+}
+
+h1{
+    font-size: 35px;
+    border: 5px inset gray;
+}
+#fuidorp{
+    border: 5px solid black;
+    border-top: 0px;
+    padding: 15px 20px;
+    margin: 0% auto;
+    text-align: center;
+    background-color: rgba(138, 153, 163, 0.685);
+    width: 50%;
+}
+
+#fuidorp a{
+    color: black;
+    font-weight: bold;
+}
+
+.ki{
+    background-repeat: no-repeat;
+    background-size: 35px;
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: black;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+#UserID{
+    background-image: url("login-assets/user.png");
+}
+#Password{
+    background-image: url("login-assets/password.png");
+}
+
+.bt{
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+article{
+    padding: 5% 0%;
+}
