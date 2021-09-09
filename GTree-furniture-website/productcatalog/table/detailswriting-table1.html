@@ -65,7 +65,7 @@
                <section class="three-icons">
                <a href="../track-order/track-order.html"><img src="/css/fixed-layout-assets/track_order.png" alt="track order"></a>
                <a href="../shopping-cart/shopping-cart.html"><img src="/css/fixed-layout-assets/cart.png" alt="cart"></a>
-                       <a id="login" onclick="checkLogin()"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+              <a id="login" onclick="checkLogin()"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
         </section>
         </div>
         <script>
@@ -74,9 +74,9 @@
                 var storage = localStorage.getItem("isLogin");
                 if (storage == "true")
                 {
-                    window.location.href = "../Personal-particulars/personal-particulars.html";
+                    window.location.href = "/Personal-particulars/personal-particulars.html";
                 } else{
-                    window.location.href = "../Login/login.html";
+                    window.location.href = "/Login/login.html";
                 }
             }   
         }
