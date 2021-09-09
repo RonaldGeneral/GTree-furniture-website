@@ -1,4 +1,4 @@
-
+window.addEventListener("DOMContentLoaded", function() {
 //allow js to add array inside localstorage and access it 
 //by parsing it to json format -setObj, -getObj
 Storage.prototype.setObj = function(key, obj) {
@@ -34,6 +34,10 @@ function saveData(){
     //get qty of product
     var qty = document.getElementById("quan").value;
     qty = parseInt(qty);
+
+    if(qtyCheck(qty) == false){
+        return false;
+    }
 
     //check if exists cart var in localstorage
     var storage = window.localStorage;
@@ -91,7 +95,21 @@ function saveData(){
 }
 
 function goToCart(){
+    //get qty of product
+    var qty = document.getElementById("quan").value;
+    qty = parseInt(qty);
+
+    if(qtyCheck(qty) == false){
+        return false;
+    }
     window.location.href = "/shopping-cart/shopping-cart.html";
 }
 
+function qtyCheck(qty){
+    if (!(qty > 0 && qty < 100)){
+        alert("Invalid quantity! Please enter quantity more than 0 and less than 100.");
+        return false;
+    }
+}
 
+});
