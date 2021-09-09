@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/common-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout-assets/logo.png" rel="shortcut icon">
+        <title>GTree Company</title>
+       <style>
+        body{
+            width: 95%;
+            border-color: cornsilk;
+            background-image:url("photo1.png");
+            background-repeat:repeat;
+            background-attachment: fixed;
+            line-height: 2em;
+        }
+        body img{
+            opacity: 1%;
+        }
+        div{
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-variant: small-caps;
+            font-size: 1em;
+            text-align: center;
+        }
+        div p{
+            float:right;
+        }
+        select{
+            block-size:20px;
+        }
+        
+        </style>
+    </head>
+    <body>
+
+        <!--header part-->
+        <header>
+            <!--company logo-->
+            <div class="upper-part">
+            <section class="logo">
+                <a href="../homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons-->
+            <section class="three-icons">
+            <a href="../track-order/track-order.html"><img src="/css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="../shopping-cart/shopping-cart.html"><img src="/css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="../Login/login.html"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+            </div>
+            <script>
+                if (typeof(Storage) !== "undefined") {
+                    var storage = localStorage.getItem("isLogin")
+                    if (storage == "true")
+                    {
+                        document.getElementById("login").href = "../Personal-particulars/personal-particulars.html";
+                    }
+                }   
+            </script>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
+        </header>
+            <!--navigation bar--> <!--cancel submenu-2-->
+            <span class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../homepage/homepage.html">Home</a></li>
+                        <li>
+                            <a href="../productcatalog/mainproductcatalog/maincatalog.html">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li><a href="../productcatalog/table/productcatalogtable.html">Tables</a></li>
+    
+                                <li><a href="../productcatalog/chair/productcatalogchair.html">Chairs</a></li>
+    
+                                <li><a href="../productcatalog/bedroom/bed/productcatalogbed.html">Bedroom</a></li>
+    
+                                <li><a href="../productcatalog/lightning/productcataloglightning.html">Lighting</a></li>
+    
+                                <li><a href="../productcatalog/decoration/productcatalogdecoration.html">Decorations</a></li>
+                                
+                                <li><a href="../productcatalog/shelves/productcatalogshelves.html">Shelves</a>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../Promotion/promotion.html">Promotion</a></li>
+                        <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
+                        <li><a href="../about-us/about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
+                </span>
+
+        <!--Content part-->
+<article>    
+    <div>
+        Thank You For Purchasing From Us.<br>
+        Before You Leaving out the Website<br>
+        We like to hear some comment from <br>
+        you.
+    </div>
+    <div>
+        How sastisfied were your shopping expience <br>
+        today?<br>
+        <br>
+        <span>
+            Bad to Great(1-5)
+        </span>
+        <form>
+            <label for="name"></label>
+            <span>1</span><input type="range" id="name"><span>5</span>
+        </form>
+        <br>
+        Whats is the main reason for your score.<br>
+        <form>
+            <label for="fname"></label><br>
+            <input type="textbox" id="fname" name="fname">
+        </form>
+        <br>
+        <input type="submit" value="submit">
+    </div>
+</article>
+
+
+        <!--footer part-->
+        <footer>
+            <div id="footer-1">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <p style="text-align: center;">GTree Furniture</p>
+            </div>
+            <div id="footer-2">Contact Us
+                <ul>
+                    <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                    <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+                    <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                </ul>
+            </div>
+            <div id="footer-3">Follow Us
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="/css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="/css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="/css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div id="footer-4">Bedder Than The Rest
+                <p>Our Cooperation Partners</p>
+                <ul>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="/css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="/css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="/css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="/css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="/css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+    </body>
+</html>
