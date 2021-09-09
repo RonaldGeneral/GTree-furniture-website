@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, kitchen, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/common-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
+        <link rel="stylesheet" href="personal-particulars.css">
+        <title>Personal Particulars</title>
+    </head>
+    <body>
+
+        <!--header part-->
+        <header>
+            <!--company logo-->
+            <div class="upper-part">
+            <section class="logo">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons-->
+            <section class="three-icons">
+            <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="../shopping-cart/shopping-cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="../Login/login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+            </div>
+            <script>
+                    var storage = localStorage.getItem("isLogin");
+                    if (storage == "true")
+                    {
+                        document.getElementById("login").href = "../Personal-particulars/personal-particulars.html";
+                    }
+            </script>
+        <div id="company-name">GTree Furniture</div>
+        </header>
+            <!--navigation bar-->
+            <span class="nav">
+            <nav>
+                <ul class="menu">
+                    <li><a href="../homepage/homepage.html">Home</a></li>
+                    <li>
+                        <a href="../furniture-category/furniture-category.html">Furniture Category</a>
+                        <ul class="submenu-1">
+                            <li>Tables
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/table.html">Dining Table</a></li>
+                                    <li><a href="../productcatalog/table.html">Writing Table</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Chairs
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/chair.html">Office Chair</a></li>
+                                    <li><a href="../productcatalog/chair.html">Sofa</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Bedroom
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/bedroom.html">Bed</a></li>
+                                    <li><a href="../productcatalog/bedroom.html">Pillow</a></li>
+                                    <li><a href="../productcatalog/bedroom.html">Pillow Case</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Kitchen
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/kitchen.html">Oven</a></li>
+                                    <li><a href="../productcatalog/kitchen.html">Stove</a></li>
+                                    <li><a href="../productcatalog/kitchen.html">Fridge</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Lighting
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/lightning.html">Ceiling Light</a></li>
+                                    <li><a href="../productcatalog/lightning.html">Table Lamp</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Decorations
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/decorations.html">Carpet</a></li>
+                                    <li><a href="../productcatalog/decorations.html">Curtain</a></li>
+                                    <li><a href="../productcatalog/decorations.html">Wallpaper</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>Shelves
+                                <ul class="submenu-2">
+                                    <li><a href="../productcatalog/shelves.html">Bookshelf</a></li>
+                                    <li><a href="../productcatalog/shelves.html">Drawer</a></li>
+                                    <li><a href="../productcatalog/shelves.html">Wardrobe</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../Promotion/promotion.html">Promotion</a></li>
+                    <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
+                    <li><a href="../about-us/about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+            </span>
+
+        <!--Content part-->
+<article>
+    <fieldset class="gridcontainer">
+        <legend>Personal Particulars</legend>
+        <div class="lf">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td colspan="3"><input type="image" src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic" onclick="mypic()"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="userID">User ID</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="userID" name="userID" placeholder="1234-56789" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dateJoined">Date joinned</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="dateJoined" name="dateJoined" placeholder="2021-11-22" disabled></td>
+                    </tr>
+                </table>
+            </form>
+            <form action="/homepage/homepage.html" id="return">
+                <button class="home" type="submit"><img src="personal-particulars-assets/return.svg" width="40px" height="40px"><p>Return to Homepage</p></button>
+            </form>
+        </div>
+        <div class="rg">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><label for="firstname">Name</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="fname" name="firstname" placeholder="XXXX XXXX XXXX" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="surname">Gender</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="gender" name="gender" placeholder="XXXXXX" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="eadres">Date of Birth</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="EAdres" name="eadres" placeholder="dd/mm/yyyy" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mnum">Mobile Number</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX-XXX XXXX" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mnum">Email</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="XXXXXX@XXXXX.com" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mnum">Address</label></td>
+                        <td>：</td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="XXXX, XXXX" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"></td>
+                        <td>：</td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX, XXXX" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>：</td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX, XXXX" disabled></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td>：</td>
+                        <td><input type="password" id="password" name="mnum" placeholder="**********" disabled></td>
+                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </fieldset>
+</article>
+
+
+        <!--footer part-->
+        <footer>
+            <div id="footer-1">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <p style="text-align: center;">GTree Furniture</p>
+            </div>
+            <div id="footer-2">Contact Us
+                <ul>
+                    <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                    <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+                    <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                </ul>
+            </div>
+            <div id="footer-3">Follow Us
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div id="footer-4">Bedder Than The Rest
+                <p>Our Cooperation Partners</p>
+                <ul>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+    </body>
+</html>
