@@ -2,152 +2,182 @@
     "dining-table1":{
         "productName":"SKOGSTA",
         "productDesc":"Acacia wood dining table",
-        "unitPrice":1699.00
+        "unitPrice":1699.00,
+        "path":"/productcatalog/table"
     },
     "dining-table2":{
         "productName":"MOERBYLANGA",
         "productDesc":"Oak Veneer brown stained dining table",
-        "unitPrice":2599.00
+        "unitPrice":2599.00,
+        "path":"/productcatalog/table"
     },
     "writing-table1":{
         "productName":"MALM DESK",
         "productDesc":"Modern white writing desk with drawers",
-        "unitPrice":599.00
+        "unitPrice":599.00,
+        "path":"/productcatalog/table"
     },
     "chair1":{
         "productName":"JAERVFJARLLET",
         "productDesc":"Ergonomic office chair with armrests",
-        "unitPrice":1199.00
+        "unitPrice":1199.00,
+        "path":"/productcatalog/chair"
     },
     "chair2":{
         "productName":"HATTEFJAELL",
         "productDesc":"Adjustable Rolling Swivel Task Chair with Armrests",
-        "unitPrice":1399.00
+        "unitPrice":1399.00,
+        "path":"/productcatalog/chair"
     },
     "chair3":{
         "productName":"MULLFJAELLET",
         "productDesc":"Conference chair with castors",
-        "unitPrice":799.00
+        "unitPrice":799.00,
+        "path":"/productcatalog/chair"
     },
     "sofa1":{
         "productName":"LANDSKRON",
         "productDesc":"Chaise Longue 5-seats Leather Sofa",
-        "unitPrice":10395.00
+        "unitPrice":10395.00,
+        "path":"/productcatalog/chair"
     },
     "bed1":{
         "productName":"TUFJORD",
         "productDesc":"Upholstered Bed with Storage Drawer",
-        "unitPrice":3499.00
+        "unitPrice":3499.00,
+        "path":"/productcatalog/bedroom/bed"
     },
     "bed2":{
         "productName":"SONGESAND",
         "productDesc":"Bed frame with Large Storage Drawer",
-        "unitPrice":999.00
+        "unitPrice":999.00,
+        "path":"/productcatalog/bedroom/bed"
     },
     "pillow1":{
         "productName":"RUMSMALVA",
         "productDesc":"Ergonomic pillow with shredded memory foam",
-        "unitPrice":69.00
+        "unitPrice":69.00,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "pillow2":{
         "productName":"ROSENSKAERM",
         "productDesc":"Ergonomic pillow with 2-layer memory foam",
-        "unitPrice":79.00
+        "unitPrice":79.00,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "pillow3":{
         "productName":"LAPPTATEL",
         "productDesc":"Thin pillow for stomach sleeper",
-        "unitPrice":17.90
+        "unitPrice":17.90,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "pillowcase1":{
         "productName":"DVALA",
         "productDesc":"Light Grey Cotton Pillowcase",
-        "unitPrice":14.95
+        "unitPrice":14.95,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "pillowcase2":{
         "productName":"ASKLOENN",
         "productDesc":"Cherry Blossom Cotton Pillowcase",
-        "unitPrice":14.90
+        "unitPrice":14.90,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "pillowcase3":{
         "productName":"JAETTEVALLMO",
         "productDesc":"Pillowcase with Paisley pattern",
-        "unitPrice":29.90
+        "unitPrice":29.90,
+        "path":"/productcatalog/bedroom/pillowandpillowcase"
     },
     "light1":{
         "productName":"FLUGBO",
         "productDesc":"5-armed Brass Chandelier",
-        "unitPrice":369.00
+        "unitPrice":369.00,
+        "path":"/productcatalog/lightning"
     },
     "light2":{
         "productName":"DEJSA",
         "productDesc":"3-lamp Ceiling Lamp with Chrome Plating",
-        "unitPrice":229.00
+        "unitPrice":229.00,
+        "path":"/productcatalog/lightning"
     },
     "lamp1":{
         "productName":"ARSTID",
         "productDesc":"Brass Table Lamp",
-        "unitPrice":79.00
+        "unitPrice":79.00,
+        "path":"/productcatalog/lightning"
     },
     "lamp2":{
         "productName":"SVALLET",
         "productDesc":"White Work Lamp",
-        "unitPrice":19.90
+        "unitPrice":19.90,
+        "path":"/productcatalog/lightning"
     },
     "lamp3":{
         "productName":"TERTIAL",
         "productDesc":"Steel Work Lamp",
-        "unitPrice":49.90
+        "unitPrice":49.90,
+        "path":"/productcatalog/lightning"
     },
     "shelf1":{
         "productName":"KALLAX",
         "productDesc":"Shelving unit White",
-        "unitPrice":299.00
+        "unitPrice":299.00,
+        "path":"/productcatalog/shelves"
     },
     "shelf2":{
         "productName":"BILLY / OXBERG",
         "productDesc":"Bookcase with glass panel door",
-        "unitPrice":778.00
+        "unitPrice":778.00,
+        "path":"/productcatalog/shelves"
     },
     "shelf3":{
         "productName":"BILLY",
         "productDesc":"Bookcase White",
-        "unitPrice":229.00
+        "unitPrice":229.00,
+        "path":"/productcatalog/shelves"
     },
     "drawer1":{
         "productName":"MALM CHEST",
         "productDesc":"White Drawer",
-        "unitPrice":399.00
+        "unitPrice":399.00,
+        "path":"/productcatalog/shelves"
     },
     "wardrobe1":{
         "productName":"RAKKESTAD",
         "productDesc":"Wardrobe with Sliding doors",
-        "unitPrice":699.00
+        "unitPrice":699.00,
+        "path":"/productcatalog/shelves"
     },
     "carpet1":{
         "productName":"VINDUM 200x270cm",
         "productDesc":"Rug White 200x270cm",
-        "unitPrice":899.00
+        "unitPrice":899.00,
+        "path":"/productcatalog/decoration"
     },
     "carpet2":{
         "productName":"GOERLOESE 133x195 cm",
         "productDesc":"Rug Black/White 133x195 cm",
-        "unitPrice":99.00
+        "unitPrice":99.00,
+        "path":"/productcatalog/decoration"
     },
     "curtain1":{
         "productName":"LENDA 140x250 cm",
         "productDesc":"Curtains with tie-backs 140x250 cm",
-        "unitPrice":69.00
+        "unitPrice":69.00,
+        "path":"/productcatalog/decoration"
     },
     "curtain2":{
         "productName":"HANNALENA 145x250 cm",
         "productDesc":"Room darkening curtains 145x250 cm",
-        "unitPrice":99.00
+        "unitPrice":99.00,
+        "path":"/productcatalog/decoration"
     },
     "curtain3":{
         "productName":"SILVERLOENN 145x250 cm",
         "productDesc":"Sheer curtains 145x250 cm",
-        "unitPrice":59.00
+        "unitPrice":59.00,
+        "path":"/productcatalog/decoration"
     }
 
 }
