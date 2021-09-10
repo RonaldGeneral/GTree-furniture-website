@@ -8,6 +8,9 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+//initialize quantity
+document.getElementById("quan").value = 1;
+
 //get 2 button elem
 var bContainer = document.getElementsByClassName("add");
 var span = bContainer[0];
@@ -113,3 +116,4 @@ function qtyCheck(qty){
 }
 
 });
+
