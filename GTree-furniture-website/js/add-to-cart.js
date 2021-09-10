@@ -49,6 +49,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     var mistakeText = tdGrp[qtyIndex].childNodes[2];
     mistakeText.nodeValue = "";
 
+    //add product code on page
+    var codeIndex;
+
+    for(var i = 0;i < tdGrp.length;i++){
+        var tdContent = tdGrp[i].innerHTML;
+        if(tdContent.search("Product Code") != -1){
+            codeIndex = i;
+        }
+    }
+
+    var productCodeText = tdGrp[codeIndex];
+    console.log(productCodeText);
+    productCodeText.innerHTML = "Product Code : " + productID;
+
+
     //get the td containing total amount
     var findIndex;
 
