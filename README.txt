@@ -1,27 +1,7 @@
 # GTree-furniture-website
-gtree website for group assignment
 
 In order to use it, just prepend this fragment to the URL of any HTML file: https://htmlpreview.github.io/?
-
-LOOK HERE,FIXED LAYOUT PART
-        <a id="login" onclick="checkLogin()"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
-        </section>
-        </div>
-        <script>
-        function checkLogin(){
-                if (typeof(Storage) !== "undefined") {
-                var storage = localStorage.getItem("isLogin");
-                if (storage == "true")
-                {
-                    window.location.href = "/Personal-particulars/personal-particulars.html";
-                } else{
-                    window.location.href = "/Login/login.html";
-                }
-            }   
-        }
-        </script>
-        
-        
+      
 
 Main page to open: "GTree-furniture-website\homepage\homepage.html"
 
