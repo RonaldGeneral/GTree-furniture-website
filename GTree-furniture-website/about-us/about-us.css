@@ -4,22 +4,24 @@ body{
     width: 100%;
 }
 
-/*header style*/
-
-
-
 /*article style*/
 h1{
     font-size: 50px;
     text-align: center;
     font-weight: bold;
+    display: block;
+}
+
+h2{
+    font-size: 30px;
 }
 
 article{
-    width: 60%;
+    width: 70%;
     border: 1px solid black;
     padding: 30px;
     margin: 40px 0px 0px 320px ;
+    background-color: #BFD3F5;
 }
 
 article section#article0{
@@ -40,11 +42,12 @@ aside{
     float: left;
     width: 180px;
     text-align: center;
-    border-style: solid;
-    margin: 0px 20px 10px 80px;
+    border:1px solid;
+    margin: 7px 20px 10px 80px;
     padding: 10px 10px 10px 0px;
     position: sticky;
-    top: 0px;
+    top: 60px;
+    background-color: #BFD3F5;
 }
 
 aside li{

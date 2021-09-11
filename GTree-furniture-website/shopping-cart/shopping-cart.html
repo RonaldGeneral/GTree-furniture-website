@@ -1,53 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/common-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout.css" rel="stylesheet">
+        <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
         <title>Shopping Cart</title>
         <link href="shopping-cart.css" rel="stylesheet">
     </head>
-
     <body>
-        <h1>Shopping Cart</h1>
-        <table id="product">
-            <tr>
-                <td></td>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Unit Price</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
-                <td></td>
-            </tr>
-        </table>
 
-        <aside>
-            <input type="checkbox" id="selectAll" name="selectAll"/>
-            <h2 id="selectAll">Select All</h2>
-            <table>               
+        <!--header part-->
+        <header>
+            <!--company logo-->
+            <div class="upper-part">
+            <section class="logo">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons-->
+            <section class="three-icons">
+            <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="../shopping-cart/shopping-cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
+                    <a id="login" onclick="checkLogin()"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+        </section>
+        </div>
+        <script>
+        function checkLogin(){
+                if (typeof(Storage) !== "undefined") {
+                var storage = localStorage.getItem("isLogin");
+                if (storage == "true")
+                {
+                    window.location.href = "/Personal-particulars/personal-particulars.html";
+                } else{
+                    window.location.href = "/Login/login.html";
+                }
+            }   
+        }
+        </script>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
+        </header>
+            <!--navigation bar--> <!--cancel submenu-2-->
+            <span class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="../homepage/homepage.html">Home</a></li>
+                        <li>
+                            <a href="../productcatalog/mainproductcatalog/maincatalog.html">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li><a href="../productcatalog/table/productcatalogtable.html">Tables</a></li>
+    
+                                <li><a href="../productcatalog/chair/productcatalogchair.html">Chairs</a></li>
+    
+                                <li><a href="../productcatalog/bedroom/bed/bed.html">Bedroom</a></li>
+    
+                                <li><a href="../productcatalog/lightning/productcataloglightning.html">Lighting</a></li>
+    
+                                <li><a href="../productcatalog/decoration/productcatalogdecoration.html">Decorations</a></li>
+                                
+                                <li><a href="../productcatalog/shelves/productcatalogshelves.html">Shelves</a>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../Promotion/promotion.html">Promotion</a></li>
+                        <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
+                        <li><a href="../about-us/about-us.html">About Us</a></li>
+                    </ul>
+                </nav>
+                </span>
+
+        <!--Content part-->
+        <div>    
+            <h1>Shopping Cart</h1>
+            <table id="product">
                 <tr>
-                    <th>Total Item(s) :</th>
-                    <td id="totalItem">0</td>
-                </tr>
-
-                <!--
-                <tr id="row1">
-                    <td><input type="checkbox" id="item1" name="chair" onclick="addItem(1, document.getElementById('quantity1').value, document.getElementById('totalItemPrice1'))"></td>
-                    <td><img src="shopping-cart-assets/chair.jpg" alt="furniture 1"></td>
-                    <td><h2 class="name" id="name1">Never The Chair</h2></td>
-                    <td><h2 class="unitPrice" id="unitPrice1">9999</h2></td>
-                    <td><h2 class="quantity"><input type="number" id="quantity1" name="quantity" min="1" max="99" value="1" onchange="addItem(1, document.getElementById('quantity1').value, document.getElementById('totalItemPrice1'))"></h2></td>
-                    <td><h2 class="totalItemPrice" id="totalItemPrice1">9999</h2></td>
-                    <td><button type="button" onclick="deleteItem(1, document.getElementById('quantity1').value, document.getElementById('totalItemPrice1'))">&#10060;</button></td>
-                </tr>-->
-
-                <tr>
-                    <th>Total Price &nbsp&nbsp&nbsp:</th>
-                    <td id="totalPrice">0</td>
+                    <td></td>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <td></td>
                 </tr>
             </table>
-            <a href="../checkout/checkout.html"><h2 id="checkout">Check Out</h2></a>
-        </aside>
-        <script type="text/javascript" src="shopping-cart.js"></script>
-    </body>
     
+            <aside>
+                <input type="checkbox" id="selectAll" name="selectAll"/>
+                <h2 id="selectAll">Select All</h2>
+                <table>               
+                    <tr>
+                        <th>Total Item(s) :</th>
+                        <td id="totalItem">0</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Total Price &nbsp&nbsp&nbsp:</th>
+                        <td id="totalPrice">0</td>
+                    </tr>
+                </table>
+                <a href="../checkout/checkout.html"><h2 id="checkout">Check Out</h2></a>
+            </aside>
+            <script type="text/javascript" src="shopping-cart.js"></script>
+            
+        </div>
+
+
+        <!--footer part-->
+        <footer style="clear: both;">
+            <div id="footer-1">
+                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <p style="text-align: center;">GTree Furniture</p>
+            </div>
+            <div id="footer-2">Contact Us
+                <ul>
+                    <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                    <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+                    <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                </ul>
+            </div>
+            <div id="footer-3">Follow Us
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div id="footer-4">Bedder Than The Rest
+                <p>Our Cooperation Partners</p>
+                <ul>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+    </body>
 </html>

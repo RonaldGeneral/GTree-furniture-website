@@ -1,4 +1,4 @@
-fetch("product.json")
+fetch("../mock-database/product.json")
     .then(response => response.json())
     .then(data => {
         var orderData = {};
@@ -11,8 +11,8 @@ fetch("product.json")
               return JSON.parse(this.getItem(key))
         }
 
-        localStorage.setObj("cartProduct", ["chair1", "chair2"]);
-        localStorage.setObj("cartQty", ["3", "5"]);
+        //localStorage.setObj("cartProduct", ["chair1", "chair2"]);
+        //localStorage.setObj("cartQty", ["3", "5"]);
         var product = localStorage.getObj("cartProduct");
         var qty = localStorage.getObj("cartQty");
         
@@ -20,9 +20,10 @@ fetch("product.json")
         
         //Display cart product according to items added to cart
         for(var i = 0; i < product.length; i++){
-            var str = '<tr id="row$"><td><input type="checkbox" id="item$" name="chair"></td><td><img src="shopping-cart-assets/chair.jpg" alt="furniture $"></td><td><h2 class="name" id="name$">The Chair</h2></td><td><h2 class="unitPrice" id="unitPrice$">9999</h2></td><td><h2 class="quantity"><input type="number" id="quantity$" name="quantity" min="1" max="99" value="1" ></h2></td><td><h2 class="totalItemPrice" id="totalItemPrice$">9999</h2></td><td><button type="button" id=\"delete$\">&#10060;</button></td></tr>';
-            for (var j = 0; j < 17; j++)
-                str = str.replace("$", i);
+            var str = '<tr id="row$"><td><input type="checkbox" id="item$" name="chair"></td><td><a href="..@/details%.html"><img src="../mock-database/product-assets/%.png" alt="furniture $"></a></td><td><h2 class="name" id="name$">The Chair</h2></td><td><h2 class="unitPrice" id="unitPrice$">9999</h2></td><td><h2 class="quantity"><input type="number" id="quantity$" class="quantity" name="quantity" min="1" max="99" value="1" ></h2></td><td><h2 class="totalItemPrice" id="totalItemPrice$">9999</h2></td><td><button type="button" id=\"delete$\">&#10060;</button></td></tr>';
+            str = str.replace(/\$/g, i);
+            str = str.replace(/%/g, product[i]);
+            str = str.replace("@", orderData[product[i]]["path"]);
             document.getElementById("product").innerHTML += str;
             document.getElementById("row"+i).style.display = "table-row";
             document.getElementById("quantity"+i).value = qty[i];document.getElementById("quantity0").value = qty[0];
@@ -57,15 +58,12 @@ fetch("product.json")
         for(var x = 0; x < product.length; x++){
             document.getElementById("item"+x).addEventListener("click", function() {
                 var index = getItemIndex(this);
-                console.log(index);
                 addItem(index, document.getElementById("quantity"+index).value);});
             document.getElementById("quantity"+x).addEventListener("change", function() {
                 var index = getQtyIndex(this);
-                console.log(index);
                 addItem(index, document.getElementById("quantity"+index).value);});
             document.getElementById("delete"+x).addEventListener("click", function() {
                 var index = getDltIndex(this);
-                console.log(index);
                 deleteItem(index)});
         }
         document.getElementById("selectAll").addEventListener("click", function() {selectAll();});
@@ -87,7 +85,7 @@ fetch("product.json")
                         addItem(i, document.getElementById('quantity'+i).value);
                     }
                 }
-                //document.getElementById("selectAll").checked = false;
+                document.getElementById("selectAll").checked = false;
             }
         }
         
@@ -124,8 +122,8 @@ fetch("product.json")
             }
         }
 
+        var totalPrice = 0, totalQuantity = 0;
         function addTotalItem(){
-            var totalPrice = 0, totalQuantity = 0;
             for (var i = 0; i < product.length; i++){
                 itemQuantity[i] = parseInt(itemQuantity[i]);
                 itemPrice[i] = parseInt(itemPrice[i]);
@@ -137,13 +135,18 @@ fetch("product.json")
         }
         
         function checkout(){
-            const selectedProduct = [], selectedQty = [];
+            const selectedProduct = [], selectedQty = [], selectedPrice = [], selectedUnitPrice = [];
             for (var i = 0; i < product.length; i++){
                 if (item[i] == "selected"){
-                    selectedProduct.push(product[i]);
+                    selectedProduct.push(orderData[product[i]]["productName"]);
                     localStorage.setObj("selectedProduct", selectedProduct);
+                    selectedUnitPrice.push(orderData[product[i]]["unitPrice"]);
+                    localStorage.setObj("selectedUnitPrice", selectedUnitPrice);
                     selectedQty.push(qty[i]);
                     localStorage.setObj("selectedQty", selectedQty);
+                    selectedPrice.push(itemPrice[i]);
+                    localStorage.setObj("selectedPrice", selectedPrice);
+                    localStorage.setObj("totalPrice", totalPrice);
                 }
             }
         }

@@ -7,9 +7,13 @@ h1{
 }
 
 body{
-    width: 80%;
     margin: auto;
 }
+
+input{
+    background-color: rgb(230,230,230); 
+}
+
 
 /*table style*/
 table#product{
@@ -17,6 +21,8 @@ table#product{
     width: 75%;
     border-collapse: collapse;
     float: left;
+    margin-bottom: 30px;
+    background-color: #B4C7E7;
 }
 
 table#product tr th{
@@ -29,7 +35,6 @@ table#product td img{
     border: 1px solid black;
     max-height: 150px;
     max-width: 150px;
-
 }
 
 table#product tr td:nth-of-type(2){
@@ -61,20 +66,25 @@ table#product h2, table#product th{
 }
 
 table#product tr td h2.quantity input{
-    width: 50px;
+    width: 45px;
 }
 
 table#product tr td:first-of-type, table#product tr td:last-of-type{
     width: 20px;
 }
 
-table#product tr td h2#name{
-    width: 120px;
+table#product tr td:nth-of-type(3){
+    width: 200px;
+}
+
+table#product tr h2.name{
+    width: 200px;
 }
 
 table#product tr td h2#quantity{
     margin-left: 20px;
 }
+
 
 table#product tr h2.unitPrice::before, table#product tr h2.totalItemPrice::before{
     content: "RM ";
@@ -83,8 +93,9 @@ table#product tr h2.unitPrice::before, table#product tr h2.totalItemPrice::befor
 aside{
     float: left;
     border: 1px solid black;
-    width:200px;
+    width:15%;
     margin-left: 30px;
+    background-color: #B4C7E7;
 }
 
 aside h2#selectAll {
@@ -105,7 +116,7 @@ aside input{
 aside table{
     clear: both;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 10%;
     font-size: 24px;
 }
 
@@ -115,12 +126,12 @@ aside table th, aside table td{
 }
 
 aside h2#checkout{
-    margin: 100px 50px 10px;
+    margin: 100px auto 10px;
     padding: 20px 0px;
     font-size: 20px;
     text-align: center;
     border: 1px solid black;
-    width: 100px;
+    width: 150px;
 }
 
 a{
