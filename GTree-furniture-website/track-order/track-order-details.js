@@ -1,4 +1,5 @@
-var product = {};
+window.onlaod = function(){
+    var product = {};
 
 fetch("../mock-database/product.json")
     .then(response => response.json())
@@ -80,5 +81,5 @@ fetch("../mock-database/track-order.json")
         tPrice.innerHTML = `RM ${twoDec(priceSum)}`;
     });
 
-
+}
 
