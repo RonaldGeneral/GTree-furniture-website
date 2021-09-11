@@ -33,7 +33,6 @@ fetch("../mock-database/product.json")
             item[i] = "unselected";
             itemQuantity[i] = 0;
             itemPrice[i] = 0;
-            
         }
         
         function getItemIndex(obj){
@@ -99,12 +98,19 @@ fetch("../mock-database/product.json")
                 addTotalItem();
             }
             item[i] = "deleted";
+            product.splice(i, 1);
+            localStorage.setObj("cartProduct", product);
+            qty.splice(i, 1);
+            localStorage.setObj("cartQty", qty);
         }
         
         function addItem(i,quantity){          
             quantity = parseInt(quantity);
             itemQuantity[i] = quantity;
+            console.log(i);
+            console.log(product[i]);
             itemPrice[i] = parseFloat(orderData[product[i]]["unitPrice"]) * quantity;
+            
             document.getElementById("totalItemPrice"+i).innerHTML = itemPrice[i];
             
             if (document.getElementById("item"+i).checked){
@@ -122,8 +128,9 @@ fetch("../mock-database/product.json")
             }
         }
 
-        var totalPrice = 0, totalQuantity = 0;
+        
         function addTotalItem(){
+            var totalPrice = 0, totalQuantity = 0;
             for (var i = 0; i < product.length; i++){
                 itemQuantity[i] = parseInt(itemQuantity[i]);
                 itemPrice[i] = parseInt(itemPrice[i]);
@@ -146,7 +153,6 @@ fetch("../mock-database/product.json")
                     localStorage.setObj("selectedQty", selectedQty);
                     selectedPrice.push(itemPrice[i]);
                     localStorage.setObj("selectedPrice", selectedPrice);
-                    localStorage.setObj("totalPrice", totalPrice);
                 }
             }
         }
