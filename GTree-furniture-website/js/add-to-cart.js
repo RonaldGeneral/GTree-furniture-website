@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log(e);
     }
 
+    // add on head : <link href="/css/product-details.css" rel="stylesheet" />
+    var link = document.createElement("link");
+    link.href = "/css/product-details.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
     
     //get product id
     var urlName = window.location.href;
@@ -49,19 +54,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     var mistakeText = tdGrp[qtyIndex].childNodes[2];
     mistakeText.nodeValue = "";
 
-    //add product code on page
-    var codeIndex;
+    //add product dimensions on page
+    var dimensionIndex;
+    var dimension = productData["dimension"];
 
     for(var i = 0;i < tdGrp.length;i++){
         var tdContent = tdGrp[i].innerHTML;
         if(tdContent.search("Product Code") != -1){
-            codeIndex = i;
+            dimensionIndex = i;
         }
     }
 
-    var productCodeText = tdGrp[codeIndex];
-    console.log(productCodeText);
-    productCodeText.innerHTML = "Product Code : " + productID;
+    var dimensionText = tdGrp[dimensionIndex];
+    dimensionText.innerHTML = "Dimensions : " + dimension;
+
+    //add product description by replacing shipping fee
+    var descIndex;
+
+    for(var i = 0;i < tdGrp.length;i++){
+        var tdContent = tdGrp[i].innerHTML;
+        if(tdContent.search("Shipping Fee") != -1){
+            descIndex = i;
+        }
+    }
+
+    var description = productData["productDesc"];
+    var productDescText = tdGrp[descIndex];
+    productDescText.style.lineHeight = "2em";
+    productDescText.innerHTML = 
+    `Product Description : <br/> ${description}`;
+    
+
 
 
     //get the td containing total amount
