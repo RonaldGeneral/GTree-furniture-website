@@ -150,15 +150,19 @@
         </td>
     </tr>
     <tr>
-        <td colspan="100" >material :
-         <div id="show">
-            <div id="content">
-                <div><img src="/productcatalog/chair/materialchair3.jpg"></div>
-                <div><img src="/productcatalog/chair/materialchair3.1.jpg"></div>          
-                <div><img src="/productcatalog/chair/materialchair3.2.jpg"></div>
-                <div><img src="/productcatalog/chair/materialchair3.3.jpg"></div>
+        <td colspan="100">Material : 
+            <div id="show">
+                <img id="goLeft" class="arrow" src="/css/fixed-layout-assets/arrowleft.png" />
+                <div id="content">
+                    <div><img class="thumbnail active" src="officechair3.jpg"></div>
+                    <div><img class="thumbnail " src="materialchair3.jpg"></div>
+                    <div><img class="thumbnail" src="materialchair3.1.jpg"></div>
+                    <div><img class="thumbnail" src="materialchair3.2.jpg"></div>
+                    <div><img class="thumbnail" src="materialchair3.3.jpg"></div>
+                    <div><img class="thumbnail" src="/productcatalog/chair/officechair3.5.jpg"></div>
+                </div>
+                <img id="goRight" class="arrow" src="/css/fixed-layout-assets/arrowright.png" />
             </div>
-        </div>
         </td>
     </tr>
     </table>
@@ -205,21 +209,5 @@
 </footer>
 <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
 </body>
-<script>
-var speed = 30;//每次移动10像素
-function movePic(){
-    var content = document.getElementById("content");
-    var left = content.style.marginLeft;
-    left = left == "" ? 0 : parseInt(left);
-    content.style.marginLeft = (left - speed) + "px";
-    if(left-speed == -1600){
-        content.style.marginLeft = "0px";
-    }
-}
-var interId = setInterval(function (){
- movePic();}, 1000)
 
-
-
-</script>
 </html>
