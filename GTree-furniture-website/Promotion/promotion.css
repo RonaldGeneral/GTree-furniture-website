@@ -1,15 +1,22 @@
+tr, td{
+   border: 3px solid black;
+}
 
-
+table{
+   padding: 10px;
+   border-spacing: 15px;
+   border: 5px solid black;
+}
 
 .shang, .xia{
    border: 5px black solid;
-   padding: 50px;
+   padding: 50px 50px 50px 100px;
 }
 
 .shang{
    display: grid;
-   grid-gap: 5%;
-   grid-template-columns: 20% 60%;
+   
+   grid-template-columns: 40% 60%;
    background-color: rgba(60, 111, 170, 0.5);
    margin: 5% 5% 0% 5%;
 }
@@ -31,16 +38,10 @@ p{
    text-decoration: underline;
 }
 
-div#promo a img {
-   border-radius: 2rem;
-   width: 700px;
-   height: 258px;
-}
-
 #dots{
    display: block;
    position: relative;
-   bottom: 100px;
+   bottom: 50px;
 }
 
 .dot{
@@ -57,6 +58,156 @@ div#promo a img {
    background-color: black;
 }
 
-#zuo img{
-   width: 400px;
+.zuo img{
+   border: 4px solid black;
 }
+
+td img{
+   width: 125px;
+}
+
+div#flow {
+   background-color: #333;
+   overflow: auto;
+   white-space: nowrap;
+}
+ 
+div#flow img {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 14px;
+   text-decoration: none;
+   width: 250px;
+}
+
+div#flow div.container{
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 14px;
+   text-decoration: none;
+   width: 250px;
+}
+
+.container:hover .more {
+   opacity: 1;
+}
+ 
+.container:hover .middle {
+   opacity: 1;
+}
+
+.container:hover .top {
+   opacity: 0;
+}
+
+.more{
+   opacity: 1;
+   display: block;
+   width: 100%;
+   height: auto;
+   transition: .5s ease;
+   backface-visibility: hidden;
+}
+
+.container {
+   position: relative;
+}
+
+.container:hover img{
+   border: 5px solid black;
+}
+
+.middle {
+   transition: .5s ease;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.top{
+   transition: .5s ease;
+   opacity: 1;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.midPercent{
+   color: white;
+   font-size: 20px;
+   margin: 0px 0px 90px 50px;
+   width: 80px;
+   height: 30px;
+   background-color: rgba(221, 80, 14, 0.61);
+   font-weight: bold;
+   border: 3px rgba(109, 54, 10, 0.863) solid ;
+   border-radius: 10px;
+}
+
+.topPercent{
+   color: white;
+   font-size: 50px;
+   margin: 0px 0px 250px 150px;
+   width: 150px;
+   height: 70px;
+   background-color: rgba(211, 43, 43, 0.822);
+   font-weight: bold;
+   border: 5px rgba(97, 13, 13, 0.863) solid ;
+   border-radius: 15px;
+}
+
+.lowPercent{
+   color: white;
+   font-size: 20px;
+   margin: 0px 0px 160px 150px;
+   width: 70px;
+   height: 30px;
+   background-color: rgba(5, 14, 139, 0.733);
+   font-weight: bold;
+   border: 3px rgba(13, 19, 97, 0.863) solid ;
+   border-radius: 10px;
+}
+
+.text {
+   color: black;
+   font-weight: bold;
+   font-size: 12px;
+   margin-top: 85px;
+   width: 120px;
+   background-color: rgba(87, 84, 84, 0.747);
+   font-weight: bold;
+   border: 1px black solid ;
+}
+
+.lowText{
+   color: black;
+   font-weight: bold;
+   font-size: 12px;
+   margin: 195px 0px 0px 27px;
+   width: 200px;
+   background-color: rgba(87, 84, 84, 0.747);
+   font-weight: bold;
+   border: 1px black solid ;
+}
+
+.topText{
+   color: black;
+   font-weight: bold;
+   font-size: 20px;
+   margin: 200px 0px 0px -10px;
+   width: 300px;
+   height: 30px;
+   background-color: rgba(87, 84, 84, 0.747);
+   font-weight: bold;
+   border: 1px black solid ;
+}
+
