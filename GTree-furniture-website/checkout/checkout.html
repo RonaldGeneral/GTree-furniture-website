@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../css/common-layout.css" rel="stylesheet">
-        <link href="../css/fixed-layout.css" rel="stylesheet">
-        <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
-
-        <title>Check Out</title>
-
-        <!--Checkout css-->
+        <script src="/fixed-layout/fixed-layout.js" type="text/javascript"></script>
+        <script>head("Checkout");</script>
         <style>
-          /* body{
-               width: auto;
-               width: 95%;
-    
-                max-width: 960px;
-                min-width: 640px;
-    
-                margin-left: auto;
-                margin-right: auto;
- 
-            }*/
+            article{
+                padding: 5px;
+            }
             
             h1,h3{
                 text-align: center;
             }
-            /*table, th, td {
-                border: 1px solid black;
-                border-collapse: collapse;
+            h1{
+                font-size: 30px;
             }
-
-            th, td {
-            padding: 5px;
-            text-align: left;
-            }*/
+            h2, h3{
+                font-size: 20px;
+            }
 
             table, th, td {
                 border: 1px solid black;
@@ -43,9 +24,14 @@
                 padding:10px;
                 text-align: center;
                 table-layout: auto;
-                table-layout:auto;
                 margin-left: auto;
                 margin-right: auto;
+                min-width: 80%;
+                
+            }
+            td{
+                word-wrap:break-word;
+                word-break: break-all;
             }
 
             ul.personal-details>li:nth-of-type(1){
@@ -60,162 +46,200 @@
             ul.personal-details>li:nth-of-type(4){
                 list-style-image: url(checkout-assets/send-email.png);
             }
-            .personal-details li{
-                word-wrap: break-word;
+
+            /*personal details layout*/
+            .personal-details label{
+                width: 200px;
+                float: left;
+            }
+            .personal-details input, .personal-details textarea{
+                width: 80%;
+                padding: 5px;
+            }
+            .info{
+                margin: 10px;
+            }
+
+            /*payment and place order button design*/
+            #payment-method{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content:space-evenly;
+            }
+            
+            #payment-method button{
+                max-width: 350px;
+                height: auto;
+                margin: 10px;
+                flex: 1 1 200px;
+            }
+            
+            #place-order{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content:end;
+                align-items: center;
+            }
+            #place-order button{
+                margin: 10px;
+                padding: 50px;
+                font-size: 25px;
+            }
+            #place-order p{
+                font-size: 30px; 
+                margin: 0px; 
+                padding:10px; 
             }
         </style>
     </head>
     <body>
-        <!--header part-->
-        <header>
-            <!--company logo-->
-            <div class="upper-part">
-            <section class="logo">
-                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
-            </section>
-
-            <!--search bar-->
-            <form class="searchbar">
-                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
-                <button type="submit">SEARCH!</button>
-            </form>
-            
-            <!--track order, cart, login icons-->
-            <section class="three-icons">
-            <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
-            <a href="../shopping-cart/shopping-cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
-            <a id="login" href="../Login/login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
-            </section>
-            </div>
-            <script>
-                if (typeof(Storage) !== "undefined") {
-                    var storage = localStorage.getItem("isLogin")
-                    if (storage == "true")
-                    {
-                        document.getElementById("login").href = "../Personal-particulars/personal-particulars.html";
-                    }
-                }   
-            </script>
-            <section id="namebar">
-                <div id="first">Modern</div>
-                <div id="second">Comfortable</div>
-                <div id="third">Reliable</div>
-                <div id="fourth">Because we are</div>
-                
-                <div id="company-name">GTree Furniture</div>
-            </section>
-        </header>
-            <!--navigation bar--> <!--cancel submenu-2-->
-            <span class="nav">
-                <nav>
-                    <ul class="menu">
-                        <li><a href="../homepage/homepage.html">Home</a></li>
-                        <li>
-                            <a href="../productcatalog/mainproductcatalog/maincatalog.html">Furniture Category</a>
-                            <ul class="submenu-1">
-                                <li><a href="../productcatalog/table/productcatalogtable.html">Tables</a></li>
-    
-                                <li><a href="../productcatalog/chair/productcatalogchair.html">Chairs</a></li>
-    
-                                <li><a href="../productcatalog/bedroom/bed/productcatalogbed.html">Bedroom</a></li>
-    
-                                <li><a href="../productcatalog/lightning/productcataloglightning.html">Lighting</a></li>
-    
-                                <li><a href="../productcatalog/decoration/productcatalogdecoration.html">Decorations</a></li>
-                                
-                                <li><a href="../productcatalog/shelves/productcatalogshelves.html">Shelves</a>
-                                    
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="../Promotion/promotion.html">Promotion</a></li>
-                        <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
-                        <li><a href="../about-us/about-us.html">About Us</a></li>
-                    </ul>
-                </nav>
-                </span>
+        <script>body();</script>
         <!--Content part-->
         <article>
+            
         <h1 style="text-align: center;font-weight: bold;">Check Out</h1>
-        <ul class="personal-details">
-            <li>Name: </li>
-            <li>Address: </li>
-            <li>Phone Number: </li>
-            <li>Email: </li>
-        </ul>
+        <h2>Delivery Details</h2>
+        <form class="personal-details">
+            <div class="info">
+            <label for="name"><img src="checkout-assets/people.png"> Name: </label>
+            <input type="text" id="name" name="name"  required/>
+            </div>
+            <div class="info">
+            <label for="address"><img src="checkout-assets/home.png"> Address: </label>
+            <textarea id="address" name="address" rows="3" cols="1" required></textarea>
+            </div>
+            <div class="info">
+            <label for="phone"><img src="checkout-assets/phone-call.png"> Phone Number: </label>
+            <input type="tel" id="phone" name="phone" required/>
+            </div>
+            <div class="info">
+            <label for="email"><img src="checkout-assets/send-email.png"> Email: </label>
+            <input type="email" id="email" name="email" required/>
+            </div>
+        </form>
+        
         <h3 style="text-decoration-line: underline;">Summary of Order</h3>
-        <table>
+        <table id="summary-table">
             <tr>
                 <th>Products</th>
                 <th>Unit Price (RM)</th>
                 <th>Quantity</th>
                 <th>Price (RM)</th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="3" style="text-align: right;">Total Price(RM):</td>
-            </tr>
+            <script>
+                
+                /*Storage.prototype.setObj = function(key, obj) {
+                                return this.setItem(key, JSON.stringify(obj))
+                            }
+                localStorage.setObj("selectedProduct", ["chair", "table"]);
+                localStorage.setObj("selectedUnitPrice", [200.12, 500.23]);
+                localStorage.setObj("selectedQty", [3,5]);
+                localStorage.setObj("selectedPrice", [600.23, 4]);*/
+
+
+                //retrieve data from local storage
+                Storage.prototype.getObj = function(key) {
+                    return JSON.parse(this.getItem(key))
+                }
+                var product = localStorage.getObj("selectedProduct");
+                var unitPrice = localStorage.getObj("selectedUnitPrice");
+                var qty = localStorage.getObj("selectedQty");
+                var price = localStorage.getObj("selectedPrice");
+                var sum = 0;
+
+                //print the data to the webpage
+                for (var i = 0; i < product.length; i++)
+                {
+                    document.write(
+                    "<tr>" +
+                    "<td>" + product[i] + "</td>" +
+                    "<td>" + unitPrice[i] + "</td>" +
+                    "<td>" + qty[i] + "</td>" +
+                    "<td>" + price[i] + "</td>" +
+                    "</tr>");
+                    sum += price[i];
+                }
+                //add shipping fee to the price if the total is less than RM1000.00
+                if (sum < 1000.00)
+                {
+                    sum += 5;
+                    document.write(
+                    "<tr>" +
+                    '<td colspan="3" style="text-align: right;">Shipping Fee (RM):</td>' +
+                    "<td>" + '5.00' + "</td>" +
+                    "</tr>");
+                }
+                //output the total price        
+                document.write(
+                    "<tr>" +
+                    '<td colspan="3" style="text-align: right;">Total Price (RM):</td>' +
+                    "<td>" + sum + "</td>" +
+                "</tr>"
+                );
+
+
+
+
+                //payment button programming
+                var payment = "";
+                //change the background color according to user's choice
+                function select(type){
+                    var choice = document.body.getElementsByClassName("choice");
+                    choice[0].style.backgroundColor = "rgb(239,239,239)";
+                    choice[1].style.backgroundColor = "rgb(239,239,239)";
+                    choice[2].style.backgroundColor = "rgb(239,239,239)";
+                    choice[3].style.backgroundColor = "rgb(239,239,239)";
+                    choice[type].style.backgroundColor = "rgb(91, 151, 255)";
+                    payment = choice[type].innerText;
+                }
+
+
+                //place order button programming
+                //store the personal information to local storage
+                function invoice(){
+                    var name = document.getElementById("name").value;
+                    var address = document.getElementById("address").value;
+                    var phone = document.getElementById("phone").value;
+                    var email = document.getElementById("email").value;
+                    
+                //check validity of personal information
+                if (name != "" && address != "" && phone != "" && email != "")
+                {
+                    if(payment != "")
+                    {
+                        localStorage.setItem("name", name);
+                        localStorage.setItem("address", address);
+                        localStorage.setItem("phone", phone);
+                        localStorage.setItem("email", email);
+                        localStorage.setItem("payment-method", payment);
+
+                        window.location.assign("invoice.html");
+                    }
+                    else
+                    alert("Please choose the payment method");
+                }
+                else
+                    alert("Please complete your personal inforamtion");
+                    
+                }
+            </script>
         </table>
-        <p>*All product are delivered in standard delivary</p>
+        
+        <p>*All products are delivered in standard delivery</p>
         <h3 style="text-decoration: underline;">Payment Method</h3>
-        <p style="text-align:right;">Total: RM</p>
-    </article>
-    
-      <!--footer part-->
-      <footer>
-        <div id="footer-1">
-            <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
-            <p style="text-align: center;">GTree Furniture</p>
+        <div id="payment-method">
+            <button class="choice" onclick="select(0)"><img style="width: 70px; height: auto;" src="checkout-assets/touch-n-go.png"><p>Touch 'n Go eWallet</p></button>
+            <button class="choice" onclick="select(1)"><img style="width: 300px; height: auto;" src="checkout-assets/online-banking.png"><p>Online Banking</p></button>
+            <button class="choice" onclick="select(2)"><img style="width: 150px; height: auto;" src="checkout-assets/credit-card.png"><p>Credit / Debit Card</p></button>
+            <button class="choice" onclick="select(3)"><img style="width: 100px; height: auto;" src="checkout-assets/installment.png"><p>Installment</p></button>
         </div>
-        <div id="footer-2">Contact Us
-            <ul>
-                <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
-                <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
-                <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
-            </ul>
-        </div>
-        <div id="footer-3">Follow Us
-            <ul>
-                <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
-            </ul>
-        </div>
-        <div id="footer-4">Bedder Than The Rest
-            <p>Our Cooperation Partners</p>
-            <ul>
-                <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
-                <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
-                <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
-                <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
-                <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
-            </ul>
+        <div id="place-order">
+        <p>Total: RM</p>
+        <button onclick="invoice()">Place Order</button>
         </div>
         
-    </footer>
-    <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+    </article>
+    
+      <script>footer();</script>
 </body>
 </html>
