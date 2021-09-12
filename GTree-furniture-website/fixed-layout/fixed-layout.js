@@ -1,5 +1,4 @@
 var path = "/";
-var path = "/";
 
 function head(title){
     document.write(
