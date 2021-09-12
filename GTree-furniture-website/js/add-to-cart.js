@@ -1,3 +1,14 @@
+    // add on head : <link href="/css/product-details.css" rel="stylesheet" />
+    var link = document.createElement("link");
+    link.href = "/css/product-details.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
+    //add another link to showcaseImg.js
+    var script = document.createElement('script');
+    script.src = "/js/showcaseImg.js";
+    document.head.appendChild(script);
+
 async function fetchObj() {
     return(await(fetch("/mock-database/product.json"))).json();
 }
@@ -12,12 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log("Error!");
         console.log(e);
     }
-
-    // add on head : <link href="/css/product-details.css" rel="stylesheet" />
-    var link = document.createElement("link");
-    link.href = "/css/product-details.css";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
     
     //get product id
     var urlName = window.location.href;
