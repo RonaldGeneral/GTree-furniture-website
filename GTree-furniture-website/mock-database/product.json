@@ -3,181 +3,211 @@
         "productName":"SKOGSTA",
         "productDesc":"Acacia wood dining table",
         "unitPrice":1699.00,
-        "path":"/productcatalog/table"
+        "path":"/productcatalog/table",
+        "dimension":"180x101x74 cm"
     },
     "dining-table2":{
         "productName":"MOERBYLANGA",
         "productDesc":"Oak Veneer brown stained dining table",
         "unitPrice":2599.00,
-        "path":"/productcatalog/table"
+        "path":"/productcatalog/table",
+        "dimension":"220x100 cm"
     },
     "writing-table1":{
         "productName":"MALM DESK",
         "productDesc":"Modern white writing desk with drawers",
         "unitPrice":599.00,
-        "path":"/productcatalog/table"
+        "path":"/productcatalog/table",
+        "dimension":"140x65 cm"
     },
     "chair1":{
         "productName":"JAERVFJARLLET",
         "productDesc":"Ergonomic office chair with armrests",
         "unitPrice":1199.00,
-        "path":"/productcatalog/chair"
+        "path":"/productcatalog/chair",
+        "dimension":"68x68x140 cm"
     },
     "chair2":{
         "productName":"HATTEFJAELL",
         "productDesc":"Adjustable Rolling Swivel Task Chair with Armrests",
         "unitPrice":1399.00,
-        "path":"/productcatalog/chair"
+        "path":"/productcatalog/chair",
+        "dimension":"68x68x110 cm"
     },
     "chair3":{
         "productName":"MULLFJAELLET",
         "productDesc":"Conference chair with castors",
         "unitPrice":799.00,
-        "path":"/productcatalog/chair"
+        "path":"/productcatalog/chair",
+        "dimension":"72x72x112 cm"
     },
     "sofa1":{
         "productName":"LANDSKRON",
         "productDesc":"Chaise Longue 5-seats Leather Sofa",
         "unitPrice":10395.00,
-        "path":"/productcatalog/chair"
+        "path":"/productcatalog/chair",
+        "dimension":"360x89x78 cm"
     },
     "bed1":{
         "productName":"TUFJORD",
         "productDesc":"Upholstered Bed with Storage Drawer",
         "unitPrice":3499.00,
-        "path":"/productcatalog/bedroom/bed"
+        "path":"/productcatalog/bedroom/bed",
+        "dimension":"180x200 cm"
     },
     "bed2":{
         "productName":"SONGESAND",
         "productDesc":"Bed frame with Large Storage Drawer",
         "unitPrice":999.00,
-        "path":"/productcatalog/bedroom/bed"
+        "path":"/productcatalog/bedroom/bed",
+        "dimension":"150x200 cm"
     },
     "pillow1":{
         "productName":"RUMSMALVA",
         "productDesc":"Ergonomic pillow with shredded memory foam",
         "unitPrice":69.00,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"50x80 cm"
     },
     "pillow2":{
         "productName":"ROSENSKAERM",
         "productDesc":"Ergonomic pillow with 2-layer memory foam",
         "unitPrice":79.00,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"33x50 cm"
     },
     "pillow3":{
         "productName":"LAPPTATEL",
         "productDesc":"Thin pillow for stomach sleeper",
         "unitPrice":17.90,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"50x80 cm"
     },
     "pillowcase1":{
         "productName":"DVALA",
         "productDesc":"Light Grey Cotton Pillowcase",
         "unitPrice":14.95,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"50x80 cm"
     },
     "pillowcase2":{
         "productName":"ASKLOENN",
         "productDesc":"Cherry Blossom Cotton Pillowcase",
         "unitPrice":14.90,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"50x80 cm"
     },
     "pillowcase3":{
         "productName":"JAETTEVALLMO",
         "productDesc":"Pillowcase with Paisley pattern",
         "unitPrice":29.90,
-        "path":"/productcatalog/bedroom/pillowandpillowcase"
+        "path":"/productcatalog/bedroom/pillowandpillowcase",
+        "dimension":"50x80 cm"
     },
     "light1":{
         "productName":"FLUGBO",
         "productDesc":"5-armed Brass Chandelier",
         "unitPrice":369.00,
-        "path":"/productcatalog/lightning"
+        "path":"/productcatalog/lightning",
+        "dimension":"77 cm (diameter)"
     },
     "light2":{
         "productName":"DEJSA",
         "productDesc":"3-lamp Ceiling Lamp with Chrome Plating",
         "unitPrice":229.00,
-        "path":"/productcatalog/lightning"
+        "path":"/productcatalog/lightning",
+        "dimension":"44 cm (diameter)"
     },
     "lamp1":{
         "productName":"ARSTID",
         "productDesc":"Brass Table Lamp",
         "unitPrice":79.00,
-        "path":"/productcatalog/lightning"
+        "path":"/productcatalog/lightning",
+        "dimension":"15 cm (diameter)"
     },
     "lamp2":{
         "productName":"SVALLET",
         "productDesc":"White Work Lamp",
         "unitPrice":19.90,
-        "path":"/productcatalog/lightning"
+        "path":"/productcatalog/lightning",
+        "dimension":"16 cm (diameter)"
     },
     "lamp3":{
         "productName":"TERTIAL",
         "productDesc":"Steel Work Lamp",
         "unitPrice":49.90,
-        "path":"/productcatalog/lightning"
+        "path":"/productcatalog/lightning",
+        "dimension":"17 cm (diameter)"
     },
     "shelf1":{
         "productName":"KALLAX",
         "productDesc":"Shelving unit White",
         "unitPrice":299.00,
-        "path":"/productcatalog/shelves"
+        "path":"/productcatalog/shelves",
+        "dimension":"77x39x147 cm"
     },
     "shelf2":{
         "productName":"BILLY / OXBERG",
         "productDesc":"Bookcase with glass panel door",
         "unitPrice":778.00,
-        "path":"/productcatalog/shelves"
+        "path":"/productcatalog/shelves",
+        "dimension":"160x30x202 cm"
     },
     "shelf3":{
         "productName":"BILLY",
         "productDesc":"Bookcase White",
         "unitPrice":229.00,
-        "path":"/productcatalog/shelves"
+        "path":"/productcatalog/shelves",
+        "dimension":"80x28x202 cm"
     },
     "drawer1":{
         "productName":"MALM CHEST",
         "productDesc":"White Drawer",
         "unitPrice":399.00,
-        "path":"/productcatalog/shelves"
+        "path":"/productcatalog/shelves",
+        "dimension":"80x48x100 cm"
     },
     "wardrobe1":{
         "productName":"RAKKESTAD",
         "productDesc":"Wardrobe with Sliding doors",
         "unitPrice":699.00,
-        "path":"/productcatalog/shelves"
+        "path":"/productcatalog/shelves",
+        "dimension":"117x55x176 cm"
     },
     "carpet1":{
         "productName":"VINDUM 200x270cm",
         "productDesc":"Rug White 200x270cm",
         "unitPrice":899.00,
-        "path":"/productcatalog/decoration"
+        "path":"/productcatalog/decoration",
+        "dimension":"200x270 cm"
     },
     "carpet2":{
         "productName":"GOERLOESE 133x195 cm",
         "productDesc":"Rug Black/White 133x195 cm",
         "unitPrice":99.00,
-        "path":"/productcatalog/decoration"
+        "path":"/productcatalog/decoration",
+        "dimension":"133x195 cm"
     },
     "curtain1":{
         "productName":"LENDA 140x250 cm",
         "productDesc":"Curtains with tie-backs 140x250 cm",
         "unitPrice":69.00,
-        "path":"/productcatalog/decoration"
+        "path":"/productcatalog/decoration",
+        "dimension":"140x250 cm"
     },
     "curtain2":{
         "productName":"HANNALENA 145x250 cm",
         "productDesc":"Room darkening curtains 145x250 cm",
         "unitPrice":99.00,
-        "path":"/productcatalog/decoration"
+        "path":"/productcatalog/decoration",
+        "dimension":"145x250 cm"
     },
     "curtain3":{
         "productName":"SILVERLOENN 145x250 cm",
         "productDesc":"Sheer curtains 145x250 cm",
         "unitPrice":59.00,
-        "path":"/productcatalog/decoration"
+        "path":"/productcatalog/decoration",
+        "dimension":"145x250 cm"
     }
 
 }
