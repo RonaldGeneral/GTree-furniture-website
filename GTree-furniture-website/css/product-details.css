@@ -1,4 +1,69 @@
+td{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+th[rowspan="5"]{
+    width: 600px !important; 
+    height: 600px;
+    padding: 0;
+}
+
 th[rowspan="5"] img{
     border-radius: 20px !important; 
-    width: 400px !important;
+    height: 500px !important;
+}
+
+img.thumbnail{
+    width:200px !important;
+    height: 230px !important;
+    cursor: pointer;
+    opacity: .5;
+    border: 2px solid gray;
+}
+
+img.thumbnail:hover{
+    opacity: 1;
+}
+
+img.active{
+    opacity: 1;
+}
+
+
+#show{
+    display: flex;
+    max-width: 85%;
+    min-height: 100px;
+    align-items: center;
+    padding: 3px 15px;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+#content{
+    display: flex;
+    width: 80%;
+    overflow-x: hidden;
+    flex-flow: row nowrap;
+}
+
+.arrow{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .4s ease;
+    padding: 10px;
+    position: relative
+}
+
+.arrow:hover{
+    width: 70px;
+    height: 70px;
+    opacity: .5;
+}
+
+td[colspan="100"]{
+    padding: 5px;
 }
