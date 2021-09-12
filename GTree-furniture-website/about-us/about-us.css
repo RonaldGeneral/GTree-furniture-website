@@ -16,6 +16,14 @@ h2{
     font-size: 30px;
 }
 
+h3{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 14px;
+}
+
 article{
     width: 70%;
     border: 1px solid black;
@@ -40,10 +48,10 @@ p{
 /*aside style*/
 aside{
     float: left;
-    width: 180px;
+    width: 13%;
     text-align: center;
     border:1px solid;
-    margin: 7px 20px 10px 80px;
+    margin: 7px 20px 10px 75px;
     padding: 10px 10px 10px 0px;
     position: sticky;
     top: 60px;

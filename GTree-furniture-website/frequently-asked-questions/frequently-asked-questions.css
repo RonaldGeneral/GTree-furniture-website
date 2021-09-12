@@ -95,6 +95,28 @@ section.getSupport{
     font-size: 20px;
 }
 
+section.getSupport li{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 43%;
+}
+
+section.getSupport ul > li::before{
+    content: "•";
+    padding-right: 8px;
+}
+
+section.getSupport ul ul > li{
+    font-weight:normal;
+    line-height: 20px;
+}
+
+section.getSupport ul ul > li::before{
+    content: "-";
+    padding-right: 8px;
+}
+
 a{
     text-decoration: none;
+    
 }
