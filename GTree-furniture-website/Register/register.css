@@ -1,36 +1,16 @@
 
-input[type=text], input[type=email], input[type=tel], select {
-  width: 100%;
-  padding: 8px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+
 legend{
   text-align: center;
   font-weight: bold;
   font-size: 60px;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 2px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
 
 fieldset.all {
   border-radius: 5px;
-  background-color: rgba(74, 134, 190, 0.329);
+  background-color: rgba(5, 45, 131, 0.582);
   padding: 25px;
   width: 80%;
   margin: 10px auto;
@@ -73,9 +53,11 @@ fieldset.all {
   height: 30px;
 }
 
-#Male, #Female{
-  width: 10px;
-  height: 10px;
+#male, #female{
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  float: right;
 }
 
 .ksCantik{
@@ -83,20 +65,16 @@ fieldset.all {
   border: 1px solid black;
   border-radius: 10px;
   margin-right: 10px;
-  text-align: center;
+  text-align: left;
   background-color: white;
   padding: 5px 2px 2px 0px;
   width: 100px;
   height: 30px;
 }
 
-div.grid-item2 > label, div > form {
+div.grid-item2 > label, div > form{
   font-size: 18px;
   font-weight: bold;
-}
-
-form label {
-  float: left;
 }
 
 #Password, #comPassword, textarea{
@@ -140,9 +118,37 @@ textarea{
   font-weight: bold;
 }
 
-/* Validation Styles */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnSubmit{
+  text-align: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input, select, textarea{
+  padding: 8px 10px;
+  margin: 8px 0;
+  border: 1px double #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+input:hover, .gende:hover, textarea:hover{
+  border: 1px solid black;
+}
 input:focus, select:focus, textarea:focus{
-  background-color: rgb(245,245,140);
+  background-color: rgba(152, 217, 219, 0.973);
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 input#fname:focus:valid,
@@ -154,11 +160,11 @@ input#idBox:focus:valid{
   background: rgb(220,255,220) url(register-assets/rb_valid.png) right/contain no-repeat;
 }
 
-input#fnBox:focus:invalid,
-input#InBox:focus:invalid,
-input#addBox:focus:invalid,
-input#mailBox:focus:invalid,
+input#fname:focus:invalid,
+input#sname:focus:invalid,
+input#email:focus:invalid,
+input#mnum:focus:invalid,
 input#phoneBox:focus:invalid,
 input#idBox:focus:invalid{
-  background: rgb(220,255,220) url(register-assets/rb_invalid.png) right/contain no-repeat;
+  background: rgba(252, 133, 133, 0.781) url(register-assets/rb_invalid.png) right/contain no-repeat;
 }

@@ -113,50 +113,47 @@
 
         <!--Content part-->
 <article>    
-    <header>
-    </header>
     <fieldset class="all">
         <legend>Create a new account</legend>
-        <div class="grid-container">
-            <div class="grid-item1">
-                <form action="/action_page.php" method="POST">
+        <form onsubmit="myfun()">
+            <div class="grid-container">
+                <div class="grid-item1">
                     <div>
                         <input type="text" id="fname" name="firstname" placeholder="First name" required autofocus style="text-align: center;">
                         <input type="text" id="sname" name="surname" placeholder="Surname" required style="text-align: center;"><br><br> 
                     </div>       
                     <input type="email" id="email" name="email" placeholder="Email address" required style="text-align: center;"><br><br>
-                    <input type="tel" id="mnum" name="mnum" pattern="[0]{1}[0-9]{9}" placeholder="Mobile number" required style="text-align: center;"><br><br>
-                </form>
-            </div>
-            <div class="grid-item2">
-                <label for="gender">Gender:</label><br>
-                <div class="ksCantik">
-                    <label for="male">Male</label> 
-                    <input type="radio" id="Male" name="gender" onclick="myFunction()">
+                    <input type="tel" id="mnum" name="mnum" pattern="^[0][1]\d[0-9]?[\s-]?\d{3}?[\s ]?\d{4}$" placeholder="Mobile number (01X-XXX XXXX)" required style="text-align: center;"/><br><br>
                 </div>
-                <div class="ksCantik">
-                    <label for="female">Female</label>
-                    <input type="radio" id="Female" name="gender" onclick="myFunction()">
+                <div class="grid-item2">
+                    <label for="gender">Gender:</label><br><br>
+                    <div class="ksCantik">
+                        <label for="male">Male</label> 
+                        <input type="radio" id="male" name="gender" onclick="myFunction()">
+                    </div>
+                    <div class="ksCantik">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" onclick="myFunction()">
+                    </div>
+                    <div>
+                        <br><br><br><label for="date"><b>Date of birth:</b></label><br>
+                        <input type="date" id="birthday" name="birthday" style="text-align: center;"><br><br>
+                    </div>
                 </div>
-                <!--<p id="text" style="display:none">Checkbox is CHECKED!</p>--><br><br><br>
-                <form action="/action_page.php">
-                    <label for="date">Date of birth:</label><br>
-                    <input type="date" id="birthday" name="birthday" style="text-align: center;"><br><br>
-                </form>
+                <div class="grid-item3">
+                    <label for="address">Address :</label>
+                    <textarea type="text" id="address" name="address" required></textarea><br>
+                    
+                    <label for="password">New Password:</label>
+                    <input type="password" id="password" name="password" value="" required><br>
+                    <span id="messages" style="color:red";> </span></br><br>
+                    <label for="compassword">Confirm password : </label>
+                    <input type="password" id="passwordss" name="passwordss" value="" required>
+                </div>
             </div>
-            <div class="grid-item3">
-                <label for="address">Address :</label>
-                <textarea type="text" id="address" name="address" required></textarea><br>
-                
-                <label for="password">Password :</label>
-                <input type="password" id="Password" name="password" required><br>
-
-                <label for="compassword">Comfirm password :</label>
-                <input type="password" id="comPassword" name="compassword" required>
-            </div>
-        </div>
+            <p class="btnSubmit"><input type="submit" value="Submit"></p>
+        </form>
         <div class="last">
-            <input type="submit" id="Sub" onclick="submit()"><br>
             <a href="../Login/login.html">Already have an account</a><br/>
             <a href="../terms-and-conditions/terms-and-conditions.html">Term & Conditions</a>
         </div>
