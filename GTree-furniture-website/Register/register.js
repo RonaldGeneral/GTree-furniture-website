@@ -12,25 +12,32 @@ function myfun(){
   var a = document.getElementById("password").value;
   var b = document.getElementById("passwordss").value;
 
-  if(a==""){
-    document.getElementById("messages").innnerHTML="**Please Fill Your Password";
+  if(a == ""){
+    document.getElementById("messages").innerHTML="**Please Fill Your Password";
     return false;
   }
-  if(a.length < 5){
-    document.getElementById("messages").innerHTML="**Password length must be greater than 5 characters";
-    return false;
-  }
+  
   if(a.length > 25){
     document.getElementById("messages").innerHTML="**Password length must be smaller than 25 characters";
     return false;
   }
-  if(a!=b){ 
-    document.getElementById("messages").innerHTML="*Your password are not same*";
+  
+  if(a.length < 5){
+    document.getElementById("messages").innerHTML="**Password length must be greater than 5 characters";
     return false;
   }
-  else if(a==b){
+
+  if(a != b){
+    alert("Your Password is not same");
+    setTimeout(function(){ location.href = "../Register/register.html"; }, 0.000001);
+    return false;
+  }
+
+  else{
     alert("Register Successfully");
-    window.location.href("https://www.w3schools.com");
+    setTimeout(function(){ location.href = "../Login/login.html"; }, 0.000001);
     return true;
   }
 }
+
+

@@ -115,7 +115,7 @@
 <article>    
     <fieldset class="all">
         <legend>Create a new account</legend>
-        <form onsubmit="myfun()">
+        <form>
             <div class="grid-container">
                 <div class="grid-item1">
                     <div>
@@ -142,7 +142,8 @@
                 </div>
                 <div class="grid-item3">
                     <label for="address">Address :</label>
-                    <textarea type="text" id="address" name="address" required></textarea><br><br>
+                    <textarea type="text" id="address" name="address" required></textarea><br>
+                    
                     <label for="password">New Password:</label>
                     <input type="password" id="password" name="password" value="" required><br>
                     <span id="messages" style="color:red";> </span></br><br>
@@ -150,7 +151,7 @@
                     <input type="password" id="passwordss" name="passwordss" value="" required>
                 </div>
             </div>
-            <p class="btnSubmit"><input type="submit" value="Submit"></p>
+            <p class="btnSubmit"><input type="submit" value="Submit" onclick="myfun()"></p>
         </form>
         <div class="last">
             <a href="../Login/login.html">Already have an account</a><br/>
