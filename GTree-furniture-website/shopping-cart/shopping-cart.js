@@ -188,6 +188,7 @@ fetch("../mock-database/product.json")
                         localStorage.setObj("cartQty", qty);
                     }
                 }
+                setTimeout(function(){ location.href = "../checkout/checkout.html"; }, 0.000001);
             } 
         }
     });
