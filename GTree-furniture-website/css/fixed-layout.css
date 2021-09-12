@@ -9,11 +9,6 @@ body{
 }
 
 /*header*/
-header{
-    width: 100%;
-    
-    
-}
 div.upper-part{
     display: flex;
     flex-flow: row wrap;
@@ -25,6 +20,10 @@ div.upper-part{
 
 section.logo{
     flex: 1 1 0;
+}
+
+section.logo img, section.logo a{
+    cursor: pointer;
 }
 
 form.searchbar{
@@ -39,15 +38,21 @@ section.three-icons{
     justify-content: center;
 }
 
+section.three-icons img, section.three-icons a{
+    cursor: pointer;
+}
+
 header{
+    width: 100%;
     min-height: 300px;
     position: relative;
 }
 
+
 #namebar{
     position: relative;
     min-height: 100px;
-    background-image: linear-gradient(#9be8ff00, #4F89FF);
+    background-image: linear-gradient(#00000000, #4F89FF);
 }
 
 #first, #second, #third, #fourth, #company-name{
@@ -137,11 +142,25 @@ header{
     100%{color: #88367a;text-shadow: 0px 0px 500px white; font-size: 50px;}
     
 }
+/*here got problem*/
+@media screen and (max-width: 750px) {
+    
+    @keyframes company-name {
+        0%{color: #617FE8; text-shadow: 0px 0px 0px transparent;}
+        20%{color: #40643e;text-shadow: 0px 0px 0px transparent;}
+        40%{color: #7e602a;text-shadow: 0px 0px 0px transparent;}
+        60%{color: #e86a61;text-shadow: 0px 0px 1px white; font-size: 50px;}
+        80%{color: #e86a61;text-shadow: 0px 0px 50px white; font-size: 55px;}
+        100%{color: #88367a;text-shadow: 0px 0px 500px white; font-size: 50px;}
+        
+    }
+}
 
 @media screen and (max-width: 1056px) {
     
 section.logo{
     order: 1;
+    margin-right: 100px;
 }
 
 form.searchbar{
@@ -155,6 +174,9 @@ section.three-icons{
 
 }
 @media screen and (max-width: 644px) {
+    section.logo{
+        margin-right: 0px;
+    }
     section.three-icons{
         
         justify-content:center;
@@ -311,7 +333,7 @@ ul.menu{
     position: absolute;
     top: 50px;
     
-    background-color: #0b7dda;
+    background-color: #0050BC;/*#0b7dda*/
     grid-template-areas: "1 3 5"
                         "2 4 6";    
 }
@@ -335,15 +357,15 @@ ul.menu{
         display: unset;
     }
     .menu li .submenu-1 > li:nth-child(1),
-    .menu li .submenu-1 > li:nth-child(4), 
+    .menu li .submenu-1 > li:nth-child(3), 
     .menu li .submenu-1 > li:nth-child(5){
-        background-color: #B4C7E7;
+        background-color: #C2A875;
     }
 
     .menu li .submenu-1 > li:nth-child(2), 
-    .menu li .submenu-1 > li:nth-child(3), 
+    .menu li .submenu-1 > li:nth-child(4), 
     .menu li .submenu-1 > li:nth-child(6){
-        background-color: #A2ACBD;
+        background-color: #FFEECA;
     }
     .menu li:hover .submenu-1{
         grid-template-areas: "1 2" "3 4" "5 6";
