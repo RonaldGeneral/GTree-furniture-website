@@ -161,29 +161,34 @@ fetch("../mock-database/product.json")
         
         function checkout(){
             const selectedProduct = [], selectedQty = [], selectedPrice = [], selectedUnitPrice = [];
-            for (var i = 0; i < product.length; i++){
-                if (item[i] == "selected" && product[i] != "null"){
-                    selectedProduct.push(orderData[product[i]]["productName"]);
-                    localStorage.setObj("selectedProduct", selectedProduct);
-                    selectedUnitPrice.push(orderData[product[i]]["unitPrice"]);
-                    localStorage.setObj("selectedUnitPrice", selectedUnitPrice);
-                    selectedQty.push(qty[i]);
-                    localStorage.setObj("selectedQty", selectedQty);
-                    selectedPrice.push(itemPrice[i]);
-                    localStorage.setObj("selectedPrice", selectedPrice);
-                    item[i] = "deleted";
-                    product[i] = "null";
-                    qty[i] = "null";
-                }
+            if (product.length == 0){
+                alert("Your Shopping Cart is empty!");
             }
-            for (var i = product.length; i >= 0; i--){
-                if (product[i] == "null"){
-                    product.splice(i, 1);
-                    qty.splice(i, 1);
-                    localStorage.setObj("cartProduct", product);
-                    localStorage.setObj("cartQty", qty);
+            else{
+                for (var i = 0; i < product.length; i++){
+                    if (item[i] == "selected" && product[i] != "null"){
+                        selectedProduct.push(orderData[product[i]]["productName"]);
+                        localStorage.setObj("selectedProduct", selectedProduct);
+                        selectedUnitPrice.push(orderData[product[i]]["unitPrice"]);
+                        localStorage.setObj("selectedUnitPrice", selectedUnitPrice);
+                        selectedQty.push(qty[i]);
+                        localStorage.setObj("selectedQty", selectedQty);
+                        selectedPrice.push(itemPrice[i]);
+                        localStorage.setObj("selectedPrice", selectedPrice);
+                        item[i] = "deleted";
+                        product[i] = "null";
+                        qty[i] = "null";
+                    }
                 }
-            }
+                for (var i = product.length; i >= 0; i--){
+                    if (product[i] == "null"){
+                        product.splice(i, 1);
+                        qty.splice(i, 1);
+                        localStorage.setObj("cartProduct", product);
+                        localStorage.setObj("cartQty", qty);
+                    }
+                }
+            } 
         }
     });
 

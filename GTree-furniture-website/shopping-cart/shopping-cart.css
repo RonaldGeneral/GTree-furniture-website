@@ -132,8 +132,5 @@ aside h2#checkout{
     text-align: center;
     border: 1px solid black;
     width: 150px;
-}
-
-a{
-    text-decoration: none;
+    cursor: pointer;
 }
