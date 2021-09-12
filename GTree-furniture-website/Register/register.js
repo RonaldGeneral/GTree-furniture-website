@@ -30,8 +30,7 @@ function myfun(){
   }
   else if(a==b){
     alert("Register Successfully");
-    window.location.replace("https://www.w3schools.com");
+    window.location.href("https://www.w3schools.com");
+    return true;
   }
 }
-
-
