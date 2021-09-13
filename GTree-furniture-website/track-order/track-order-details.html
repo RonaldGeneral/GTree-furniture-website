@@ -81,7 +81,7 @@
         }
 
         td{
-            border-right: 2px dashed grey;
+            border-right: 2px solid grey;
             text-align: center;
         }
 
@@ -97,15 +97,18 @@
 
         tr{border-bottom: 1px solid black;}
 
-        td img {width: 225px;}
+        td img {
+            width: 220px;
+            padding: 0 5px;
+        }
 
         colgroup col{
             background-color: #dae3f3;
         }
 
-        col#product{width:250px; background-color: white;}
+        col#product{width:250px; background-color: #fafcff;}
         col#unit{width: 150px;}
-        col#qty{width: 150px;}
+        col#qty{width: 150px; background-color: #fafcff;}
         col#total{width: 150px;}
 
         div#estimate {
@@ -113,6 +116,7 @@
             text-align-last: center;
             margin: 0px 30%;
             font-size: 20px;
+            line-height: 1.2em;
         }
 
         #estimate h2 {
@@ -341,7 +345,8 @@
         
     </body>
     <script type="text/javascript" >
-        var product = {};
+    document.addEventListener("DOMContentLoaded",function(){
+    var product = {};
     
     fetch("../mock-database/product.json")
         .then(response => response.json())
@@ -422,5 +427,6 @@
             tQty.innerHTML = qtySum;
             tPrice.innerHTML = `RM ${twoDec(priceSum)}`;
         });
+    });
         </script>
 </html>
