@@ -42,3 +42,10 @@ Available user account
 ----------------------
 UserID: John123
 Password: abc123aabb
+
+
+
+
+
+livechat command
+/dark    -   toggle dark mode
