@@ -240,6 +240,13 @@
                     max-width:75%;
                     margin: auto;
                 }
+                /* DARKMODE */
+                div.title.dark {background-color: #17776F;}
+                #current-time.dark {background-color: #153D3B;}
+                #chat-content.dark {background-color: #3b423f;}
+                .receptionist.dark {background-color: #918C8F; color: white;}
+                #chatbar.dark {background-color: #918C8F; color: white;}
+
             </style>
             <article>
                 <p id="general-sentence">Anything to ask? We are here to help you&#128522;&#128522;</p>
@@ -265,7 +272,7 @@
                 
                 <script type="text/javascript">
                     function setTime(){
-                        //set the time for the chat
+                        //set the time for the chat and update it frequently
                         var date = new Date();
                         date = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
                         document.getElementById("current-time").innerHTML = date;
@@ -292,12 +299,37 @@
                         }
                     }
 
+                    //*EASTER EGG(darkmode color theme)
+                    function toggleDarkMode(){
+                        //get element to add class name
+                        var topBar = document.getElementsByClassName("title")[0];
+                        var timeBar = document.getElementById("current-time");
+                        var contentArea = document.getElementById("chat-content");
+                        var msgGrp = document.querySelectorAll("[title|='Steffi']");
+                        var chatBar = document.getElementById("chatbar");
+
+                        //add dark to class name or remove if hav
+                        topBar.classList.toggle("dark");
+                        timeBar.classList.toggle("dark");
+                        contentArea.classList.toggle("dark");
+                        chatBar.classList.toggle("dark");
+
+                        for(var i = 0;i < msgGrp.length;i++){
+                            msgGrp[i].classList.toggle("dark");
+                        }
+                    }
+
                     //print the message to the chat
                     function send()
                     {
                         var chatbar = document.getElementById("chatbar");
                         if (chatbar.value != "")
                         {
+                            if(chatbar.value == "/dark"){
+                                toggleDarkMode();
+                                chatbar.value = "";
+                                return 0;
+                            }
                             var tag = document.createElement("div");
                             tag.setAttribute("class", "customer");
                             tag.setAttribute("title", "customer");
