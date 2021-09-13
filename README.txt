@@ -15,6 +15,7 @@ Functionable website features
 Unavailable features
 --------------------
 -register
+-feedback
 
 
 Opening the website
