@@ -9,35 +9,6 @@
         <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
         <link rel="stylesheet" href="personal-particulars.css">
         <title>Personal Particulars</title>
-        <script>
-
-            // Get the modal
-            var modal = document.getElementById("myModal");
-
-            // Get the button that opens the modal
-            var mybtn = document.getElementById("myBtn");
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-            modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-            modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-        </script>
     </head>
     <body>
 
@@ -148,7 +119,7 @@
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <td colspan="3"><input type="file" src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic" accept="image/*" onclick="mypic()"></td>
+                        <td colspan="3"><span id="insertImg"><input type="image" src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic" accept="image/*" onclick="mypic()"></span></td>
                     </tr>
                     <tr>
                         <td><label for="userID">User ID</label></td>
@@ -156,7 +127,7 @@
                         <td><input type="text" id="userID" name="userID" placeholder="1234-56789" disabled></td>
                     </tr>
                     <tr>
-                        <td><label for="dateJoined">Date joinned</label></td>
+                        <td><label for="dateJoined">Date joined</label></td>
                         <td>：</td>
                         <td><input type="text" id="dateJoined" name="dateJoined" placeholder="2021-11-22" disabled></td>
                     </tr>
@@ -167,74 +138,51 @@
             </form>
         </div>
         <div class="rg">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td><label for="firstname">Name</label></td>
                         <td>：</td>
-                        <td><input type="text" id="fname" name="firstname" placeholder="XXXX XXXX XXXX" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="name" name="name" placeholder="John" disabled pattern="^[A-Za-z]+$"></td>
+                        <td><button class="btn" onclick="disabledName()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="surname">Gender</label></td>
                         <td>：</td>
-                        <td><input type="text" id="gender" name="gender" placeholder="XXXXXX" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="gender" name="gender" placeholder="Male" disabled></td>
+                        <td><button class="btn" onclick="disabledGender()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="eadres">Date of Birth</label></td>
                         <td>：</td>
-                        <td><input type="text" id="EAdres" name="eadres" placeholder="dd/mm/yyyy" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="EAdres" name="eadres" placeholder="21/05/1995" disabled></td>
+                        <td><button class="btn" onclick="disabledEadres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="mnum">Mobile Number</label></td>
                         <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX-XXX XXXX" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="MNum" name="mnum" placeholder="011-888 8899" disabled></td>
+                        <td><button class="btn" onclick="disabledMnum()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
-                        <td><label for="mnum">Email</label></td>
+                        <td><label for="email">Email</label></td>
                         <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="XXXXXX@XXXXX.com" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="email" id="email" name="email" placeholder="john@gmail.com" disabled></td>
+                        <td><button class="btn" onclick="disabledEmail()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
-                        <td><label for="mnum">Address</label></td>
+                        <td><label for="adres">Address</label></td>
                         <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="XXXX, XXXX" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2"></td>
-                        <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX, XXXX" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="XXX, XXXX" disabled></td>
+                        <td><input type="textarea" id="adres" name="adres" placeholder="666, Taman Durian, 33000 Bukit Merah, Perak." disabled></td>
+                        <td><button class="btn" onclick="disabledAdres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="password">Password</label></td>
                         <td>：</td>
-                        <td><input type="password" id="password" name="mnum" placeholder="**********" disabled></td>
-                        <td><button class="btn"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="password" id="password" name="password" placeholder="**********" disabled></td>
+                        <td><button class="btn" onclick="disabledPassword()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                 </table>
-
-                <button id="myBtn">Open Modal</button>
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Some text in the Modal..</p>
-                    </div>
-
-                </div>
-            </form>
+            
         </div>
     </fieldset>
 </article>
@@ -275,4 +223,4 @@
         <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
     </body>
 </html>
-<script src="personal-particulars.js"></script> 
+<script src="personal-particulars.js" type="text/javascript"></script> 

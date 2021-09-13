@@ -1,25 +1,57 @@
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var mybtn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+function disabledName() {
+	var x = document.getElementById("name");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+function disabledGender() {
+	var x = document.getElementById("gender");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
+}
+function disabledEadres() {
+	var x = document.getElementById("eadres");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
+}
+function disabledMnum() {
+	var x = document.getElementById("mnum");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
+}
+function disabledEmail() {
+	var x = document.getElementById("email");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
+}
+function disabledAdres() {
+	var x = document.getElementById("adres");
+	if(x.hasAttribute("disabled")){
+		x.removeAttribute("disabled");
+    } else {
+    	x.setAttribute("disabled",""); 
+    }
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function mypic() {
+	var x = document.getElementById("upLoadPic");
+	if(x.hasAttribute("type")){
+		x.removeAttribute("type");
+    	x.setAttribute("type","file"); 
   }
 }
