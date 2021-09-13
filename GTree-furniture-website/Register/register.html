@@ -119,11 +119,11 @@
             <div class="grid-container">
                 <div class="grid-item1">
                     <div>
-                        <input type="text" id="fname" name="firstname" placeholder="First name" required autofocus style="text-align: center;">
-                        <input type="text" id="sname" name="surname" placeholder="Surname" required style="text-align: center;"><br><br> 
+                        <input type="text" id="fname" name="firstname" placeholder="First name" pattern="^[A-Za-z]+$" required autofocus style="text-align: center;">
+                        <input type="text" id="sname" name="surname" placeholder="Surname" pattern="^[A-Za-z]+$" required style="text-align: center;"><br><br> 
                     </div>       
                     <input type="email" id="email" name="email" placeholder="Email address" required style="text-align: center;"><br><br>
-                    <input type="tel" id="mnum" name="mnum" pattern="^[0][1]\d[0-9]?[\s-]?\d{3}?[\s ]?\d{4}$" placeholder="Mobile number (01X-XXX XXXX)" required style="text-align: center;"/><br><br>
+                    <input type="tel" id="mnum" name="mnum" pattern="^[0]{1}\d[0-9]?[\s-]?\d{3}?[\s ]?\d{4}$|^[0]{1}?[\s-]?\d{3}?[\s ]?\d{4}$" placeholder="Mobile number (01X-XXX XXXX)" required style="text-align: center;"/><br><br>
                 </div>
                 <div class="grid-item2">
                     <label for="gender">Gender:</label><br><br>
@@ -142,8 +142,7 @@
                 </div>
                 <div class="grid-item3">
                     <label for="address">Address :</label>
-                    <textarea type="text" id="address" name="address" required></textarea><br>
-                    
+                    <textarea type="text" id="address" name="address" required></textarea><br/><br/>
                     <label for="password">New Password:</label>
                     <input type="password" id="password" name="password" value="" required><br>
                     <span id="messages" style="color:red";> </span></br><br>
@@ -151,10 +150,10 @@
                     <input type="password" id="passwordss" name="passwordss" value="" required>
                 </div>
             </div>
-            <p class="btnSubmit"><input type="submit" value="Submit" onclick="myfun()"></p>
+            <p class="btnSubmit"><input type="submit" value="Sign Up" onclick="myfun()"></p>
         </form>
         <div class="last">
-            <a href="../Login/login.html">Already have an account</a><br/>
+            <a href="../Login/login.html">Already have an account</a><br/><br/>
             <a href="../terms-and-conditions/terms-and-conditions.html">Term & Conditions</a>
         </div>
     </fieldset>
