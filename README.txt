@@ -44,8 +44,9 @@ UserID: John123
 Password: abc123aabb
 
 
-
-
+**
+**When opening the tracking order details page, if the table has not loaded in,you can refresh it.**
+**
 
 livechat command
 /dark    -   toggle dark mode
