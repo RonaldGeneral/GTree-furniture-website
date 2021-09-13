@@ -274,9 +274,9 @@
                     document.write(
                     "<tr>" +
                     "<td>" + product[i] + "</td>" +
-                    "<td>" + unitPrice[i] + "</td>" +
+                    "<td>" + unitPrice[i].toFixed(2) + "</td>" +
                     "<td>" + qty[i] + "</td>" +
-                    "<td>" + price[i] + "</td>" +
+                    "<td>" + price[i].toFixed(2) + "</td>" +
                     "</tr>");
                     sum += price[i];
                 }
@@ -294,7 +294,7 @@
                 document.write(
                     "<tr>" +
                     '<td colspan="3" style="text-align: right;">Total Price (RM):</td>' +
-                    "<td>" + sum + "</td>" +
+                    "<td>" + sum.toFixed(2) + "</td>" +
                 "</tr>"
                 );
              
@@ -354,7 +354,7 @@
         <div id="place-order">
         <p id="price-to-pay">Total: RM</p>
         <script>
-            document.getElementById("price-to-pay").innerHTML = "Total: RM" + sum;
+            document.getElementById("price-to-pay").innerHTML = "Total: RM" + sum.toFixed(2);
         </script>
         <button onclick="invoice()">Place Order</button>
         </div>
