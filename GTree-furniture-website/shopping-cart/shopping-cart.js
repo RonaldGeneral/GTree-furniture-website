@@ -28,7 +28,7 @@ fetch("../mock-database/product.json")
                 document.getElementById("row"+i).style.display = "table-row";
                 document.getElementById("name"+i).innerHTML = orderData[product[i]]["productName"];
                 document.getElementById("unitPrice"+i).innerHTML = orderData[product[i]]["unitPrice"];
-                document.getElementById("totalItemPrice"+i).innerHTML = orderData[product[i]]["unitPrice"] * qty[i];   
+                document.getElementById("totalItemPrice"+i).innerHTML = (orderData[product[i]]["unitPrice"] * qty[i]).toFixed(2);   
                 item[i] = "unselected";
                 itemQuantity[i] = 0;
                 itemPrice[i] = 0;
