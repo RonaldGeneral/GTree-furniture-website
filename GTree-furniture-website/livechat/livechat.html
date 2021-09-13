@@ -264,10 +264,14 @@
                 </form>
                 
                 <script type="text/javascript">
-                    //set the time for the chat
-                    var today = new Date();
-                    var day = today.toLocaleTimeString();
-                    document.getElementById("current-time").innerHTML = today.toLocaleTimeString();
+                    function setTime(){
+                        //set the time for the chat
+                        var date = new Date();
+                        date = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                        document.getElementById("current-time").innerHTML = date;
+                    }
+                    setTime();
+                    window.onload = function() {setInterval(setTime,60);}
 
                     //check the user input validity and send message if press enter
                     function check(event)
