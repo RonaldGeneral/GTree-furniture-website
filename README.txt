@@ -9,11 +9,11 @@ Functionable website features
 -Add to cart in product catalog
 -Shopping cart
 -Checkout
--Personal Particular
 
 
 Unavailable features
 --------------------
+-Personal Particular
 -register
 -feedback
 
