@@ -155,12 +155,12 @@ header{
         
     }
 }
-/*1056*/
-@media screen and (max-width: 1100px) {
+/*1056*//*1100*/
+@media screen and (max-width: 1200px) {
     
 section.logo{
     order: 1;
-    margin-right: 100px;
+    margin-right: 50%;/*100px*/
 }
 
 form.searchbar{
@@ -173,6 +173,13 @@ section.three-icons{
 }
 
 }
+
+@media screen and (max-width: 900px) {
+    section.logo{
+        margin-right: 100px;
+    }
+}
+
 @media screen and (max-width: 644px) {
     section.logo{
         margin-right: 0px;
