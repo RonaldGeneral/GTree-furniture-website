@@ -17,20 +17,29 @@
             background-attachment: fixed;
             line-height: 2em;
         }
-        div{
+        article div{
             box-sizing: border-box;
             margin-top: 10px;
-            margin-bottom: 5px;
-            font-variant: small-caps;
+            margin-bottom: 50px;
             font-size: 1em;
             text-align: center;
         }
-        div p{
+
+        article div p{
             float:right;
         }
-        select{
-            block-size:20px;
+
+        article {
+            padding: 30px; 
+            font-size: 20px;
         }
+
+        #rate {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
         
         </style>
     </head>
@@ -107,31 +116,33 @@
 
         <!--Content part-->
 <article>    
-    <div>
+    <div style="line-height: 2em;">
         Thank You For Purchasing From Us.<br>
         Before You Leaving out the Website<br>
-        We like to hear some comment from <br>
-        you.
+        We like to hear some comment from 
+        you.<br>
     </div>
     <div>
-        How sastisfied were your shopping expience <br>
-        today?<br>
+        <span style="font-variant: small-caps; font-size: 20px;">
+            How sastisfied were your shopping experience
+            today?
+        </span><br>
         <br>
-        <span>
+        <span id="rate">
             Bad to Great(1-5)
         </span>
         <form>
             <label for="name"></label>
-            <span>1</span><input type="range" id="name"><span>5</span>
+            <span style="font-size: 20px;">1</span><input style="width: 200px;" type="range" id="name"><span style="font-size: 20px;">5</span>
         </form>
         <br>
         Whats is the main reason for your score.<br>
         <form>
             <label for="fname"></label><br>
-            <input type="textbox" id="fname" name="fname">
+            <input type="textbox" id="fname" name="fname" style="width: 450px; background-color: rgba(180, 173, 173,.7);">
         </form>
         <br>
-        <input type="submit" value="submit">
+        <input type="submit" value="Submit" style="font-size: 20px; font-weight: bold; background-color: grey;">
     </div>
 </article>
 
