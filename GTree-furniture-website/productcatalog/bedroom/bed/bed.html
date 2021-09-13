@@ -64,6 +64,21 @@
             tfoot tr{
             font-weight: bold;
             height: 40px;
+            border: hidden;
+            background-color: rgba(202, 192, 192, 0);
+            }
+
+            tfoot tr#pages{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                min-width: 190%;
+                max-width: 1vw;
+            }
+
+            #pages td{
+                flex: 1 1 200px;
+                margin: 0 5px;
             }
          
              </style>
@@ -203,7 +218,7 @@
         </tr>
          </tbody>
          <tfoot>
-            <tr>
+        <tr id="pages">
             <td colspan="10"><a href="/productcatalog/table/productcatalogtable.html">First Page</td>
             <td colspan="10"><a href="/productcatalog/chair/productcatalogchair.html">Previous</td>
             <td colspan="10"><a href="/productcatalog/mainproductcatalog/maincatalog.html">Home</td>
