@@ -28,7 +28,7 @@ article{
     width: 70%;
     border: 1px solid black;
     padding: 30px;
-    margin: 40px 0px 0px 320px ;
+    margin: 40px 0px 0px 23% ;
     background-color: #BFD3F5;
 }
 
@@ -41,15 +41,17 @@ article section#article1, article section#article2, article section#article3{
 }
 
 /*paragraph style*/
-p{
+article p{
+    text-indent: 50px;
+    line-height: 1.5em;
     font-size: 20px;
 }
 
 /*aside style*/
 aside{
     float: left;
-    width: 13%;
-    text-align: center;
+    width: 14%;
+    text-align: left;
     border:1px solid;
     margin: 7px 20px 10px 75px;
     padding: 10px 10px 10px 0px;
@@ -60,6 +62,10 @@ aside{
 
 aside li{
     margin-left: 0px;
+}
+
+aside h3{
+    text-align: center;
 }
 
 aside ul h4:hover{

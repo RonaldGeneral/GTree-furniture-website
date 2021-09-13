@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /*body style*/
-
 body{
     width: 80%;
     margin: auto;
@@ -27,7 +26,7 @@ section.category{
 section.category h2{
     text-align: center;
     margin: 10px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 section.category a{
@@ -43,8 +42,9 @@ section.category a{
 /*QnA style*/
 section.QnA h2{
     font-size: 30px;
-    font-weight: bold;
+    font-weight:bold;
 }
+
 section.QnA {
     clear: both;
 }
@@ -68,6 +68,7 @@ section.QnA table th{
     padding: 10px;
     background-color: #51b1ff;
     border-radius: 10px;
+    font-weight: 600;
     
 }
 
@@ -76,7 +77,7 @@ section.QnA table td{
     padding-left: 10px;
     background-color: #51b1ff;
     border-radius: 0px 0px 10px 10px;
-    width: 1%;
+    display: block;
 }
 
 section.QnA table tr:nth-of-type(1){
@@ -118,5 +119,4 @@ section.getSupport ul ul > li::before{
 
 a{
     text-decoration: none;
-    
 }

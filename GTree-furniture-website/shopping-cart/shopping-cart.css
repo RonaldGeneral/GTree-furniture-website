@@ -93,8 +93,9 @@ table#product tr h2.unitPrice::before, table#product tr h2.totalItemPrice::befor
 aside{
     float: left;
     border: 1px solid black;
-    width:15%;
+    width:18%;
     margin-left: 30px;
+    margin-bottom: 30px;
     background-color: #B4C7E7;
 }
 
@@ -116,13 +117,17 @@ aside input{
 aside table{
     clear: both;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 5%;
     font-size: 24px;
 }
 
 aside table th, aside table td{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+}
+
+aside table td::before{
+    content: ": ";
 }
 
 aside h2#checkout{
@@ -131,6 +136,10 @@ aside h2#checkout{
     font-size: 20px;
     text-align: center;
     border: 1px solid black;
-    width: 150px;
+    width: 75%;
     cursor: pointer;
+}
+
+footer{
+    clear: both;
 }
