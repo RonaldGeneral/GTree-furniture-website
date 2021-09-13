@@ -364,7 +364,7 @@
             if (product !== null && qty !== null)
             {
             /*append the new values into the array*/
-            trackOrder.push({"orderID": orderId, "productID": productId, "qty": qty});
+            trackOrder.push({"orderID": orderId, "product": productId, "qty": qty});
             localStorage.setObj("trackOrder", trackOrder);
             }
 
