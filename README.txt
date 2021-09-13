@@ -1,8 +1,5 @@
 # GTree-furniture-website
 
-In order to use it, just prepend this fragment to the URL of any HTML file: https://htmlpreview.github.io/?
-      
-
 Main page to open: "GTree-furniture-website\homepage\homepage.html"
 
 Functionable website features
