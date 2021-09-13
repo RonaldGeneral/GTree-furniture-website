@@ -83,13 +83,22 @@
             }
         </style>
 <script type="text/javascript" >
-let orderData = [];
+let orderList = [];
 
+//retrieve data from local storage
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+var orderLStorage = window.localStorage.getObj("trackOrder");
 //get file
 fetch("../mock-database/track-order.json")
     .then(response => response.json())
     .then(data => {
-        orderData = data;
+        orderList = data;
     });
 
 
@@ -98,8 +107,15 @@ function checkInput(){
     var valid = false;
     var input = document.getElementById("orderID").value;
     //check for orderid if same as database
-    for(let i = 0;i < orderData.length;i++){
-        if(orderData[i].orderID == input){
+    for(let i = 0;i < orderList.length;i++){
+        if(orderList[i].orderID == input){
+            valid = true;
+        }
+    }
+    //check for orderid in local storage
+    
+    for(let i = 0;i < orderLStorage.length;i++){
+        if(orderLStorage[i].orderID == input){
             valid = true;
         }
     }

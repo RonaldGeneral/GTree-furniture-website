@@ -347,6 +347,15 @@
     <script type="text/javascript" >
     document.addEventListener("DOMContentLoaded",function(){
     var product = {};
+    var storage;
+
+    //retrieve data from local storage
+    Storage.prototype.setObj = function(key, obj) {
+        return this.setItem(key, JSON.stringify(obj))
+    }
+    Storage.prototype.getObj = function(key) {
+        return JSON.parse(this.getItem(key))
+    }
     
     fetch("../mock-database/product.json")
         .then(response => response.json())
@@ -357,6 +366,9 @@
      function twoDec(x) {
           return Number.parseFloat(x).toFixed(2);
       }
+
+    //get orderData from local storage
+    var orderLocal = window.localStorage.getObj("trackOrder");
     
     //get file
     fetch("../mock-database/track-order.json")
@@ -376,16 +388,31 @@
             var orderID = getURLData();
             var orderIndex;
             
-            //get index of order
+            //get index of order from database
             for(var i = 0;i < orderData.length;i++){
                 if(orderData[i].orderID == orderID){
                     orderIndex = i;
+                    storage = "database";
+                    }
+            }
+            //get index of order from localstorage
+            for(var i = 0;i < orderLocal.length;i++){
+                if(orderLocal[i].orderID == orderID){
+                    orderIndex = i;
+                    storage = "local";
                     }
             }
             
             //put data on table
             var table = document.getElementById('details');
-            var orderDetails = orderData[orderIndex];
+
+            //store data in variable either from database or localstorage
+            if(storage == "database"){
+                var orderDetails = orderData[orderIndex];
+            } else if(storage == "local"){
+                var orderDetails = orderLocal[orderIndex];
+            }
+               
     
             //sum counter
             var qtySum = 0;

@@ -29,12 +29,14 @@ fetch("../mock-database/track-order.json")
         var orderID = getURLData();
         var orderIndex;
         
-        //get index of order
+        //get index of order from database if hav
         for(var i = 0;i < orderData.length;i++){
             if(orderData[i].orderID == orderID){
                 orderIndex = i;
                 }
         }
+        //get index of order from local storage if hav
+        
         
         //put data on table
         var table = document.getElementById('details');
