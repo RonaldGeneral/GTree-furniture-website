@@ -305,13 +305,13 @@
             var phone = document.getElementById("phone");
             var email = document.getElementById("email");
 
-            custname.innerHTML += localStorage.getItem("name");
-            address.innerHTML += localStorage.getItem("address");
-            phone.innerHTML += localStorage.getItem("phone");
-            email.innerHTML += localStorage.getItem("email");
+            custname.innerHTML += sessionStorage.getItem("name");
+            address.innerHTML += sessionStorage.getItem("address");
+            phone.innerHTML += sessionStorage.getItem("phone");
+            email.innerHTML += sessionStorage.getItem("email");
             
             var payment = document.getElementById("payment-method");
-            payment.innerHTML += localStorage.getItem("payment-method");
+            payment.innerHTML += sessionStorage.getItem("payment-method");
 
             /*generate order ID*/
             var orderId = "";
@@ -356,12 +356,15 @@
             {   
                 trackOrder.push(previous[i]);
             }
+
+            /*retrieve the product ID from the local storage*/
+            var productId = localStorage.getObj("selectedProductId");
             
             /*check if the product and qty are really exist*/
             if (product !== null && qty !== null)
             {
             /*append the new values into the array*/
-            trackOrder.push({"orderID": orderId, "product": product, "qty": qty});
+            trackOrder.push({"orderID": orderId, "productID": productId, "qty": qty});
             localStorage.setObj("trackOrder", trackOrder);
             }
 
