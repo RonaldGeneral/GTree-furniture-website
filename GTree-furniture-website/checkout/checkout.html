@@ -251,6 +251,7 @@
                                 return this.setItem(key, JSON.stringify(obj))
                             }
                 localStorage.setObj("selectedProduct", ["chair", "table"]);
+                localStorage.setObj("selectedProductId", ["chair1", "table1"]);
                 localStorage.setObj("selectedUnitPrice", [200.12, 500.23]);
                 localStorage.setObj("selectedQty", [3,5]);
                 localStorage.setObj("selectedPrice", [600.23, 4]);*/
@@ -296,13 +297,7 @@
                     "<td>" + sum + "</td>" +
                 "</tr>"
                 );
-
-
-                //total price
-                
-
-
-
+             
                 //payment button programming
                 var payment = "";
                 //change the background color according to user's choice
@@ -330,11 +325,11 @@
                 {
                     if(payment != "")
                     {
-                        localStorage.setItem("name", name);
-                        localStorage.setItem("address", address);
-                        localStorage.setItem("phone", phone);
-                        localStorage.setItem("email", email);
-                        localStorage.setItem("payment-method", payment);
+                        sessionStorage.setItem("name", name);
+                        sessionStorage.setItem("address", address);
+                        sessionStorage.setItem("phone", phone);
+                        sessionStorage.setItem("email", email);
+                        sessionStorage.setItem("payment-method", payment);
 
                         window.location.assign("invoice.html");
                     }
