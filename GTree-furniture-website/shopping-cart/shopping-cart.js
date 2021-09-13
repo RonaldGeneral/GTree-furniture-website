@@ -129,7 +129,7 @@ fetch("../mock-database/product.json")
                 localStorage.setObj("cartQty", qty);
                 itemQuantity[i] = quantity; //Add the item's quantity into array of total quantity of every item 
                 itemPrice[i] = parseFloat(orderData[product[i]]["unitPrice"]) * quantity; //Add the item's price into array of total price of every item 
-                document.getElementById("totalItemPrice"+i).innerHTML = itemPrice[i];
+                document.getElementById("totalItemPrice"+i).innerHTML = itemPrice[i].toFixed(2);
                 if (document.getElementById("item"+i).checked){ //Take the item into calculation of total price if it is selected
                     item[i] = "selected";
                     addTotalItem();
