@@ -119,7 +119,7 @@
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <td colspan="3"><span id="insertImg"><input type="image" src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic" accept="image/*" onclick="mypic()"></span></td>
+                        <td colspan="3"><span id="insertImg"><img src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic"/></span></td>
                     </tr>
                     <tr>
                         <td><label for="userID">User ID</label></td>
@@ -154,13 +154,13 @@
                     <tr>
                         <td><label for="eadres">Date of Birth</label></td>
                         <td>：</td>
-                        <td><input type="text" id="EAdres" name="eadres" placeholder="21/05/1995" disabled></td>
+                        <td><input type="text" id="eadres" name="eadres" placeholder="21/05/1995" disabled></td>
                         <td><button class="btn" onclick="disabledEadres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="mnum">Mobile Number</label></td>
                         <td>：</td>
-                        <td><input type="text" id="MNum" name="mnum" placeholder="011-888 8899" disabled></td>
+                        <td><input type="text" id="mnum" name="mnum" placeholder="011-888 8899" disabled></td>
                         <td><button class="btn" onclick="disabledMnum()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
@@ -172,7 +172,7 @@
                     <tr>
                         <td><label for="adres">Address</label></td>
                         <td>：</td>
-                        <td><input type="textarea" id="adres" name="adres" placeholder="666, Taman Durian, 33000 Bukit Merah, Perak." disabled></td>
+                        <td><textarea id="adres" name="adres" placeholder="666, Taman Durian, 33000 Bukit Merah, Perak." disabled></textarea></td>
                         <td><button class="btn" onclick="disabledAdres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
