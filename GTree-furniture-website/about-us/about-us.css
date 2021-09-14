@@ -32,6 +32,12 @@ article{
     background-color: #BFD3F5;
 }
 
+article::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
 article section#article0{
     display: block;
 }
@@ -73,5 +79,8 @@ aside ul h4:hover{
     text-decoration: underline;
 }
 /*img style*/
+img{
+    float: left;
+    margin-right: 20px;
+}
 
-/*h3 style*/
