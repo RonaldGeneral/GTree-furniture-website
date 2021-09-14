@@ -8,9 +8,9 @@ Storage.prototype.getObj = function(key) {
 
 document.getElementById("name").value = localStorage.getObj("userName");
 document.getElementById("gender").value = localStorage.getObj("userGender");
-document.getElementById("eadres").value = localStorage.getObj("userBirthday");
+document.getElementById("dateBirth").value = localStorage.getObj("userBirthday");
 document.getElementById("mnum").value = localStorage.getObj("userPhoneNo");
-document.getElementById("adres").value = localStorage.getObj("userAddress");
+document.getElementById("address").value = localStorage.getObj("userAddress");
 document.getElementById("email").value = localStorage.getObj("userEmail");
 document.getElementById("password").value = localStorage.getObj("userPassword");
 
@@ -68,8 +68,8 @@ function disabledEmail() {
     }
 }
 
-function disabledAdres() {
-	var x = document.getElementById("adres");
+function disabledAddress() {
+	var x = document.getElementById("address");
 	if(x.hasAttribute("disabled")){
 		x.removeAttribute("disabled");
     } else {

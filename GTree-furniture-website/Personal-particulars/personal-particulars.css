@@ -25,6 +25,8 @@ article{
 
 p{
     float: right;
+    position: relative;
+    top: -10px;
 }
 
 .btn, .home {
