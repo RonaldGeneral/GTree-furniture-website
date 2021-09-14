@@ -159,7 +159,7 @@ fetch("../mock-database/product.json")
                 }
             }
             document.getElementById("totalItem").innerHTML = totalQuantity;
-            document.getElementById("totalPrice").innerHTML = totalPrice;
+            document.getElementById("totalPrice").innerHTML = totalPrice.toFixed(2);
         }
         
         function checkout(){
