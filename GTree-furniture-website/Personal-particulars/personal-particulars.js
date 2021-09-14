@@ -41,7 +41,6 @@ function disabledDateBirth() {
 
 	if(x.hasAttribute("disabled")){
 		x.removeAttribute("disabled");
-		x.setAttribute("type","date").value="21\5\1995";
     }
 	else {
     	x.setAttribute("disabled","");
