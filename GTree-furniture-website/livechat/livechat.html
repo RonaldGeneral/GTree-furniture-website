@@ -39,10 +39,6 @@
                     {
                         document.getElementById("login").href = "/Personal-particulars/personal-particulars.html";
                     }
-                    else
-                    {
-                        
-                    }
                 }   
             </script>
             <section id="namebar">
@@ -139,7 +135,6 @@
                     min-height: 50px;
                     margin: 0px;
                     text-align: center;
-                    
                 }
 
                 /*chat bar which contains profile pic, name and status*/
@@ -152,7 +147,9 @@
                     align-items: center;
                     justify-content: left;
                     flex-wrap: wrap;
+                    position: relative;
                 }
+
                 div.title span{
                     font-size: 30px;
                     margin: 0px 20px;
@@ -188,8 +185,15 @@
                     overflow-y:auto;
                     vertical-align: bottom;
                     background-color: rgba(207, 232, 204, 0.692);
-                
                 }
+
+                #audio-icon{
+                    position: absolute;
+                    left: 48%;
+                    bottom: 0px;
+                    visibility: hidden;
+                }
+
                 #current-time{
                     background-color: #308C88;
                     color: white;
@@ -201,6 +205,9 @@
                     max-width: 45%;
                     padding: 10px;
                     margin: 10px;
+                    clear: both;
+                    float: left;
+                    white-space: pre-wrap;
                     
                     border-radius: 10px;
                     background-color: rgb(238, 230, 235);
@@ -243,6 +250,7 @@
                     max-width:75%;
                     margin: auto;
                 }
+
                 /* DARKMODE */
                 div.title.dark {background-color: #17776F;}
                 #current-time.dark {background-color: #153D3B;}
@@ -262,12 +270,13 @@
                     </div>
                     <span>Steffi</span>
                     <span style="font-size: 22px; color: rgb(49, 162, 76); font-weight: bold;">Active</span>
+                    <img id="audio-icon" src="livechat-assets/mute.png" width="50px" height="auto">
                 </div>
 
                 <div id="current-time"></div>
 
                 <!--chat content part-->
-                <div id="chat-content">
+                <div id="chat-content">                   
                 <div class="receptionist" title="Steffi">Hi, nice to meet you. I'm Steffi</div>
                 <div class="receptionist" title="Steffi">What could I help you with?</div>
                 </div>
@@ -308,6 +317,7 @@
                     }
 
                     //*EASTER EGG(darkmode color theme)
+                    var dark = false;
                     function toggleDarkMode(){
                         //get element to add class name
                         var topBar = document.getElementsByClassName("title")[0];
@@ -325,9 +335,11 @@
                         for(var i = 0;i < msgGrp.length;i++){
                             msgGrp[i].classList.toggle("dark");
                         }
+                        dark = !dark;
                     }
 
                     //print the message to the chat
+                    var text = "";
                     function send()
                     {
                         var chatbar = document.getElementById("chatbar");
@@ -338,10 +350,16 @@
                                 chatbar.value = "";
                                 return 0;
                             }
+                            if(chatbar.value == "/mute"){
+                                mute();
+                                chatbar.value = "";
+                                return 0;
+                            }
                             var tag = document.createElement("div");
                             tag.setAttribute("class", "customer");
                             tag.setAttribute("title", "customer");
 
+                            text = document.getElementById("chatbar").value;
                             var message = document.createTextNode(document.getElementById("chatbar").value);
                             tag.appendChild(message);
 
@@ -353,8 +371,180 @@
                             
                             document.getElementById("chatarea").reset();
                             document.getElementById("chatarea").focus();                        
+                            reply();
                         }                     
-                    }                                        
+                    }                      
+                    
+                     /*reply customers automatically*/
+                     function reply(){
+                        /*split the sentence into words*/
+                        text = text.toLocaleLowerCase();
+                        text = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+                        var specimen = text.split(" ");
+                        
+                        /*words to recognise*/
+                        /*robot reply sentences, customer words (must single words), keyword of customer question (must put inside square bracket)*/
+                        /*put the answers/questions from most important to less important, from specific to general*/
+                        var info = [
+                        ["Sorry I didn't get your point. Could you clarify it again?"], [], [],
+
+                        ["Our products are locally and internationally sourced from various locations.\nThis is to ensure that our customer receives the best quality in our products."], ["Where", "are","is","do", "most", "of", "your", "manufacture", "produce", "from"], ["product"],
+
+                        ["Reviews are currently not available on the online store.\nHowever, customers can visit our stores in Penang to have a better look at the products they want."], ["Where", "can", "I", "look", "for", "products"], ["review"],
+                        
+                        ["Yes you can, GTree Company products are all hand-picked by us. \nMaterials for each product are also stated clearly. \nIf you are still unsure of the product’s quality, you are advised to visit our store in Penang to have a better look at the products."], ["Can", "I", "trust", "of", "gtree", "company","furniture", "product"], ["quality", ],
+
+                        ["No, only selected items such as sofas, sofa beds, bed frames and mattresses have a warranty."], ["is", "are", "there", "all", "product", "gtree", "company?"], ["warranty", ],
+                        
+                        ["No, we do not do customization at the moment."], ["can", "gtree", "company", "furniture"], ["customize", "customise"],
+
+                        ["No, currently we do not offer any tokens or points during online shopping in GTree Company."], ["Can", "earn", "purchasing", "purchase", "buy", "gtree", "company", "online", "shopping"], ["tokens", "points", ],
+                        
+                        ["No, currently we do not offer any referral program during online shopping in GTree Company."], ["Is", "are", "program", "available", "gtree", "company", "online", "shopping?"], ["referral",],
+                        
+                        ["No, our warehouse is not open to the public."], ["can", "directly", "buy", "purchase", "product", "through", "from", ], ["warehouse",],
+                        
+                        ["Delivery fees depend on the weight of each item."], ["How", "do", "check", "delivery", "fees", "for", "different", "items"], [],
+                        
+                        ["The online payment methods available are Credit Card, Boost, GrabPay, TouchnGo eWallet and ShopeePay."], ["What", "are", "online", "methods", "available", "gtree", "company"], ["payment", ],
+                        
+                        ["Of course. All the customers information are absolutely secure and encrypted on our server."], ["Is", "secure", "submit", "information", "gtree", "company"], ["credit", "card", ],
+                        
+                        ["No, we only accept full payment."], ["Is", "needed", "purchase", "buy", "product", "gtree", "ccompany"], ["deposit",],
+                        
+                        ["Yes you may purchase directly on our online store.\nDelivery team will contact you to confirm on a suitable delivery date."], ["if", "direct", "purchase", "buy", "gtree", "company", "can", "choose",], ["delivery", "date"],
+                        
+                        ["Yes, we can store purchased items for customers up to 2 months."], ["can", "purchase", "buy", "now", "deliver", "months", "later", "weeks", "choose",], [],
+                        
+                        ["Yes, you can call to change them but an advance notice of 3 working days will be needed.\nPlease email customer service@GTree Company-home.com to do so."], ["can", "change", "delivery", "date", "time", "product", "bought", "buy", "purchase"], [],
+                        
+                        ["We have our self delivery inclusive with installation service for furniture delivery in West Malaysia purchases. \nFor East Malaysia we deliver through a courier or sea shipment for RM300 per trip and self installation is required."], ["how", "do", "gtree", "company", "deliver", "goods", "product"], [],
+                        
+                        ["Of course. We want to ensure that our customers receive the best of our products."], ["gtree", "company", "do", "before", "sending", "send", "out", "furniture", "product"], ["quality", "checking", "check", ],
+                        
+                        ["The goods will normally take around 10 – 14 working days to deliver depending on stock availability. \nOur delivery team will contact you 1 – 3 working days prior to the actual delivery date to schedule a delivery appointment. \nMade to order items would usually take around 5 – 6 weeks. \nCustomers can also email us at customerservice@GTree Company-home.com if you are still unsure of the delivery time."], ["how", "do", "track", "estimation", "delivery", "time", "product", "bought", "buy", "purchase"], [],
+                        
+                        ["Yes, our professional furniture delivery team will help you assembly your product with no extra charges."], ["have", "include", "after", "purchasing", "purchase", "gtree", "company"], ["assembly", "service", ],
+                        
+                        ["No. Currently we only provide shipping within Malaysia due to Covid-19 pandemic. "], ["can", "ship", "to", "foreign", "countries?"], [],
+                        
+                        ["Yes, you can only for West Malaysia customers. \nWe have a 14-Day satisfaction guarantee."], ["can", "return", "exchange", "item?"], [],
+                        
+                        ["GTree Company offers a 14-day satisfaction guarantee policy in terms of exchanging or cancelling your order."], ["how", "do", "14", "day", "guarantee", "work"], [],
+                        
+                        ["No, this policy is for selected products only."], ["do", "14", "day", "satisfaction", "guarantee", "apply", "all", "product", "gtree", "company"], [],
+                        
+                        ["Customers are guaranteed with a returns & refunds policy."], ["what", "can", "do", "if", "have", "problem", "new", "item"], [],
+                        
+                        ["If you believe the product you’ve ordered is damaged, the incorrect items have been delivered, or your order hasn’t arrived within the specified time frame, please email us at customerservice@GTree Company-home.com."], ["what", "do", "if", "receive", "damaged", "parcel", "product", "furniture", "wrong", "item", "receive", "order", "all"], [],
+                        
+                        ["No worries, you can contact us by sending us an email at customerservice@GTree Company-home.com we would be happy to help."], ["wait", "can", "cannot", "not", "find", "anything", "related", "not", "too", "sure"], [],
+                        
+                        ["You can click furniture category in the navigation tab"],["what", "type", "category", "categories", "of", "product"],[],
+                        ["You can click promotion in the navigation tab to get the latest information"], [ "want", "have",],[ "discount", "promotion", "coupon", "voucher", ],
+                        ["Our company email is GTreeFurniture@gmail.com"], [],["email"],
+                        ["Our company telephone number is 017-555 8163"], [],["phone", "telephone"],
+                        ["Our company address is 40, Jalan Utama, 12300 Butterworth, Pulau Pinang"], [],["address"],
+                        ["What's your questions?", "What's your problems?"], [],["question", "problem",],
+                        ["Penang"], ["where", "do", "you", "live", "are", "from"],[],
+                        ["GTree Furniture"], ["what", "is", "are", ],["name", "company"],
+                        ["Steffi"], ["what", "is", "are", ],["name"],
+                        ["25", "I'm 25", "I am 25 years old"], ["what","is","your","age","how","old","are","you"],[],
+                        ["Hello", "hey"], ["hi","hai", "hey", "hello", "hei"], [],
+                        [""],["okay", "ok", "k", "oky"],[],
+                        ["Good morning"], ["good", "morning"],[],
+                        ["Your're welcome"], ["thank", "you"],[],
+                        ];
+
+                        var storage = [];
+                        var tempStorage = "";
+                        var matched = 0;
+                        var matchedNum = [];
+                        var index = [];
+
+                        for (var i2 = 1; i2<info.length; i2+=3)
+                        {
+                            matched = 0;
+                            for (var i3 = 0; i3<info[i2].length; i3++)
+                            {
+                                for (var i1 = 0; i1<specimen.length; i1++)
+                                {
+                                    if (specimen[i1].includes(info[i2][i3]))
+                                    {
+                                        matched++;                            
+                                    }
+                                }
+                            }
+                            for (var i3 = 0; i3<info[i2+1].length; i3++)
+                            {
+                                for (var i1 = 0; i1<specimen.length; i1++)
+                                {
+                                    if (specimen[i1].includes(info[i2+1][i3]))
+                                    {
+                                        matched+=2;                            
+                                    }
+                                }
+                            }
+                            matchedNum.push(matched);
+                            index.push(i2-1);
+                        }
+                            
+                        tempStorage = info[index[matchedNum.indexOf(Math.max.apply(null, matchedNum))]];
+                        storage.push(tempStorage[random(0, tempStorage.length-1)]);
+                    
+                        function random(min, max){
+                            return Math.floor(Math.random()*(max-min+1)) + min;
+                        }
+                                
+                        /*auto create text message to reply*/
+                        for (var i4 = 0; i4<storage.length; i4++)/*i4+=2*/
+                        {
+                            if (storage[i4] != "")
+                            {
+                                var tag = document.createElement("div");
+                                tag.setAttribute("class", "receptionist");
+                                tag.setAttribute("title", "Steffi");
+                            
+                                text = storage[i4]; //put the message in here
+                                var message = document.createTextNode(text);
+                                
+                                if (dark == true){ //if it is in dark mode, change the message to dark mode
+                                    tag.classList.toggle("dark");
+                                }
+
+                                tag.appendChild(message);
+
+                                var chatbox = document.getElementById("chat-content");
+                                chatbox.appendChild(tag);
+                                
+                                var scroll = document.getElementById("chat-content");
+                                scroll.scrollBy(0, 1000000);
+                                                                
+                                audio.play();                                 
+                            }
+                        }                        
+                    }
+                </script>
+                <audio id="audio">
+                    <source src="livechat-assets/pop-up.mp3" type="audio/mpeg">
+                </audio>
+                <script>
+                    /*mute/ummute audio and display audio icon for few seconds*/
+                    var audio = document.getElementById("audio");
+                    var audioIcon = document.getElementById("audio-icon");
+
+                    function mute(){
+                        if (audio.muted == true){
+                            audio.muted = false;
+                            audioIcon.src = "livechat-assets/ummute.png"
+                        }
+                        else{
+                            audio.muted = true;  
+                            audioIcon.src = "livechat-assets/mute.png" 
+                        }
+                        audioIcon.style.visibility = "visible";
+                        setTimeout(() => {audioIcon.style.visibility = "hidden";}, 3000);
+                    }
                 </script>
             </article>
             
