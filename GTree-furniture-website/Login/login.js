@@ -1,10 +1,12 @@
+//declare userid and password
 const userId = "John123";
 const password = "abc123aabb";
 
+//check validation for used id and password
 var loginButton = document.getElementById("loginBtn");
 loginButton.addEventListener("click", function(){
-    var inputId = document.getElementById("UserID").value;
-    var inputPass = document.getElementById("Password").value;
+    var inputId = document.getElementById("userID").value;
+    var inputPass = document.getElementById("password").value;
 
     if (inputId == userId && inputPass == password){
         if(window.localStorage.getItem("isLogin") == undefined){
@@ -21,6 +23,7 @@ loginButton.addEventListener("click", function(){
     }
 });
 
+//link to register page
 function registerBtn(){
     window.location.href="/Register/register.html";
 }
