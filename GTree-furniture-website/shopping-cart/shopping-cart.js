@@ -27,8 +27,8 @@ fetch("../mock-database/product.json")
                 document.getElementById("product").innerHTML += str;
                 document.getElementById("row"+i).style.display = "table-row";
                 document.getElementById("name"+i).innerHTML = orderData[product[i]]["productName"];
-                document.getElementById("unitPrice"+i).innerHTML = orderData[product[i]]["unitPrice"];
-                document.getElementById("totalItemPrice"+i).innerHTML = orderData[product[i]]["unitPrice"] * qty[i];   
+                document.getElementById("unitPrice"+i).innerHTML = orderData[product[i]]["unitPrice"].toFixed(2);
+                document.getElementById("totalItemPrice"+i).innerHTML = (orderData[product[i]]["unitPrice"] * qty[i]).toFixed(2);   
                 item[i] = "unselected";
                 itemQuantity[i] = 0;
                 itemPrice[i] = 0;
@@ -129,7 +129,7 @@ fetch("../mock-database/product.json")
                 localStorage.setObj("cartQty", qty);
                 itemQuantity[i] = quantity; //Add the item's quantity into array of total quantity of every item 
                 itemPrice[i] = parseFloat(orderData[product[i]]["unitPrice"]) * quantity; //Add the item's price into array of total price of every item 
-                document.getElementById("totalItemPrice"+i).innerHTML = itemPrice[i];
+                document.getElementById("totalItemPrice"+i).innerHTML = itemPrice[i].toFixed(2);
                 if (document.getElementById("item"+i).checked){ //Take the item into calculation of total price if it is selected
                     item[i] = "selected";
                     addTotalItem();
@@ -159,7 +159,7 @@ fetch("../mock-database/product.json")
                 }
             }
             document.getElementById("totalItem").innerHTML = totalQuantity;
-            document.getElementById("totalPrice").innerHTML = totalPrice;
+            document.getElementById("totalPrice").innerHTML = totalPrice.toFixed(2);
         }
         
         function checkout(){
