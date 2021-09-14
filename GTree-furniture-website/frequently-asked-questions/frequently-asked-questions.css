@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/*body style*/
+body{
+    width: 80%;
+    margin: auto;
+}
+
+/*h1*/
+h1{
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+/*category style*/
+section.category{
+    margin: 50px auto 0px;
+    padding-left: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.category h2{
+    text-align: center;
+    margin: 10px;
+    font-size: 24px;
+}
+
+section.category a{
+    float: left;
+    width: 90%;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #2196F3;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+/*QnA style*/
+section.QnA h2{
+    font-size: 30px;
+    font-weight:bold;
+}
+
+section.QnA {
+    clear: both;
+}
+
+section.QnA::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+section.QnA table{
+    width: 100%;
+    margin: 30px 10px;
+    border-collapse: collapse;
+}
+
+section.QnA table th{
+    width: 100px;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    background-color: #51b1ff;
+    border-radius: 10px;
+    font-weight: 600;
+    
+}
+
+section.QnA table td{
+    font-size: 20px;
+    padding: 10px 0;
+    padding-left: 10px;
+    background-color: #8fccff;
+    border-top: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+    display: block;
+}
+
+section.QnA table tr:nth-of-type(1){
+    cursor: pointer;
+}
+
+section.QnA table tr:nth-of-type(2){
+    display: none;
+}
+
+/*get support style*/
+section.getSupport{
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+section.getSupport li{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 43%;
+}
+
+section.getSupport li a:hover{
+    color: grey;
+}
+
+section.getSupport ul > li::before{
+    content: "•";
+    padding-right: 8px;
+}
+
+section.getSupport ul ul > li{
+    font-weight:normal;
+    line-height: 20px;
+}
+
+section.getSupport ul ul > li::before{
+    content: "-";
+    padding-right: 8px;
+}
+
+a{
+    text-decoration: none;
+}
