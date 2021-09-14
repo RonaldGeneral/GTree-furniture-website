@@ -19,7 +19,6 @@ Unavailable features
 --------------------
 -Personal Particular
 -register
--feedback
 
 
 Opening the website
