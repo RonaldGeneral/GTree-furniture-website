@@ -1,3 +1,4 @@
+//Deal with data in local storage
 Storage.prototype.setObj = function(key, obj) {
 	return this.setItem(key, JSON.stringify(obj))
 }
@@ -13,6 +14,7 @@ document.getElementById("adres").value = localStorage.getObj("userAddress");
 document.getElementById("email").value = localStorage.getObj("userEmail");
 document.getElementById("password").value = localStorage.getObj("userPassword");
 
+//set or remove attribute disabled
 function disabledName() {
 	var x = document.getElementById("name");
 	if(x.hasAttribute("disabled")){
@@ -34,18 +36,20 @@ function disabledGender() {
 		localStorage.setObj("userGender", x.value);
     }
 }
-function disabledEadres() {
-	var x = document.getElementById("eadres");
+function disabledDateBirth() {
+	var x = document.getElementById("dateBirth");
+
 	if(x.hasAttribute("disabled")){
 		x.removeAttribute("disabled");
+		x.setAttribute("type","date").value="21\5\1995";
     }
 	else {
     	x.setAttribute("disabled","");
 		localStorage.setObj("userBirthday", x.value);
     }
 }
-function disabledMnum() {
-	var x = document.getElementById("mnum");
+function disabledMobileNum() {
+	var x = document.getElementById("mobileNum");
 	if(x.hasAttribute("disabled")){
 		x.removeAttribute("disabled");
     } else {
@@ -84,10 +88,3 @@ function disabledPassword() {
     }
 }
 
-function mypic() {
-	var x = document.getElementById("upLoadPic");
-	if(x.hasAttribute("type")){
-		x.removeAttribute("type");
-    	x.setAttribute("type","file"); 
-  }
-}

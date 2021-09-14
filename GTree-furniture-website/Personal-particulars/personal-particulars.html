@@ -2,22 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="keywords" content="furniture, table, chair, bedroom, kitchen, lighting, decorations, shelf">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../css/common-layout.css" rel="stylesheet">
-        <link href="../css/fixed-layout.css" rel="stylesheet">
-        <link href="../css/fixed-layout-assets/logo.png" rel="shortcut icon">
+        <link href="/css/common-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout-assets/logo.png" rel="shortcut icon">
         <link rel="stylesheet" href="personal-particulars.css">
         <title>Personal Particulars</title>
     </head>
     <body>
-
         <!--header part-->
         <header>
             <!--company logo-->
             <div class="upper-part">
             <section class="logo">
-                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
             </section>
 
             <!--search bar-->
@@ -28,100 +27,119 @@
             
             <!--track order, cart, login icons-->
             <section class="three-icons">
-            <a href="../track-order/track-order.html"><img src="../css/fixed-layout-assets/track_order.png" alt="track order"></a>
-            <a href="../shopping-cart/shopping-cart.html"><img src="../css/fixed-layout-assets/cart.png" alt="cart"></a>
-            <a id="login" href="../Login/login.html"><img src="../css/fixed-layout-assets/login.png" alt="login"></a>
+            <a href="/track-order/track-order.html"><img src="/css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="/shopping-cart/shopping-cart.html"><img src="/css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="/Login/login.html"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
             </section>
             </div>
             <script>
-                    var storage = localStorage.getItem("isLogin");
+                /*check if the user is login*/
+                if (typeof(Storage) !== "undefined") {
+                    var storage = localStorage.getItem("isLogin")
                     if (storage == "true")
                     {
-                        document.getElementById("login").href = "../Personal-particulars/personal-particulars.html";
+                        document.getElementById("login").href = "/Personal-particulars/personal-particulars.html";
                     }
+                    else
+                    {
+                        
+                    }
+                }   
             </script>
-        <div id="company-name">GTree Furniture</div>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
         </header>
             <!--navigation bar-->
             <span class="nav">
-            <nav>
-                <ul class="menu">
-                    <li><a href="../homepage/homepage.html">Home</a></li>
-                    <li>
-                        <a href="../furniture-category/furniture-category.html">Furniture Category</a>
-                        <ul class="submenu-1">
-                            <li>Tables
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/table.html">Dining Table</a></li>
-                                    <li><a href="../productcatalog/table.html">Writing Table</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Chairs
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/chair.html">Office Chair</a></li>
-                                    <li><a href="../productcatalog/chair.html">Sofa</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Bedroom
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/bedroom.html">Bed</a></li>
-                                    <li><a href="../productcatalog/bedroom.html">Pillow</a></li>
-                                    <li><a href="../productcatalog/bedroom.html">Pillow Case</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Kitchen
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/kitchen.html">Oven</a></li>
-                                    <li><a href="../productcatalog/kitchen.html">Stove</a></li>
-                                    <li><a href="../productcatalog/kitchen.html">Fridge</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Lighting
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/lightning.html">Ceiling Light</a></li>
-                                    <li><a href="../productcatalog/lightning.html">Table Lamp</a></li>
-                                </ul>
-                            </li>
-
-                            <li>Decorations
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/decorations.html">Carpet</a></li>
-                                    <li><a href="../productcatalog/decorations.html">Curtain</a></li>
-                                    <li><a href="../productcatalog/decorations.html">Wallpaper</a></li>
-                                </ul>
-                            </li>
-                            
-                            <li>Shelves
-                                <ul class="submenu-2">
-                                    <li><a href="../productcatalog/shelves.html">Bookshelf</a></li>
-                                    <li><a href="../productcatalog/shelves.html">Drawer</a></li>
-                                    <li><a href="../productcatalog/shelves.html">Wardrobe</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="../Promotion/promotion.html">Promotion</a></li>
-                    <li><a href="../frequently-asked-questions/frequently-asked-questions.html">FAQ</a></li>
-                    <li><a href="../about-us/about-us.html">About Us</a></li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul class="menu">
+                        <li onclick="link(0)"><a id="home" href="#">Home</a></li>
+                        <li onclick="link(1)">
+                            <a id="furniture-category" href="#">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li onmousedown="link(5)">
+                                    <a id="table" href="#">Tables</a></li>
+    
+                                <li onmousedown="link(6)">
+                                    <a id="chair" href="#">Chairs</a></li>
+    
+                                <li onmousedown="link(7)">
+                                    <a id="bedroom" href="#">Bedroom</a></li>
+    
+                                <li onmousedown="link(8)">
+                                    <a id="lighting" href="#">Lighting</a></li>
+    
+                                <li onmousedown="link(9)">
+                                    <a id="decorations" href="#">Decorations</a></li>
+                                
+                                <li onmousedown="link(10)">
+                                    <a id="shelves" href="#">Shelves</a></li>
+                            </ul>
+                        </li>
+                        <li onclick="link(2)"><a id="promotion" href="#">Promotion</a></li>
+                        <li onclick="link(3)"><a id="faq" href="#">FAQ</a></li>
+                        <li onclick="link(4)"><a id="about-us" href="#">About Us</a></li>
+                    </ul>
+                </nav>
             </span>
+<script>
+    //defining the 11 hyperlinks into an array
+    var hyperlink = [
+    /*home*/ "/homepage/homepage.html",
+    /*furnitureCategory*/ "/productcatalog/mainproductcatalog/maincatalog.html",
+    /*promotion*/ "/Promotion/promotion.html",
+    /*faq*/ "/frequently-asked-questions/frequently-asked-questions.html",
+    /*aboutUs*/ "/about-us/about-us.html",
+    /*table*/ "/productcatalog/table/productcatalogtable.html",
+    /*chair*/ "/productcatalog/chair/productcatalogchair.html",
+    /*bedroom*/ "/productcatalog/bedroom/bed/bed.html",
+    /*lighting*/ "/productcatalog/lightning/productcataloglightning.html",
+    /*decorations*/ "/productcatalog/decoration/productcatalogdecoration.html",
+    /*shelves*/ "/productcatalog/shelves/productcatalogshelves.html"
+        ];
+    
+    //defining the id name into an array
+    var tag = [
+        "home",
+        "furniture-category",
+        "promotion",
+        "faq",
+        "about-us",
+        "table",
+        "chair",
+        "bedroom",
+        "lighting",
+        "decorations",
+        "shelves"
+    ]
+    for (var i = 0; i < 11; i++)
+        document.getElementById(tag[i]).href = hyperlink[i];
+
+    function link(number){
+        window.location.assign(hyperlink[number]);
+    }
+    
+</script>
 
         <!--Content part-->
 <article>
-    <fieldset class="gridcontainer">
+    <!--A container to include all the user information-->
+    <fieldset class="gridContainer">
         <legend>Personal Particulars</legend>
-        <div class="lf">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div>
+            <form action="upload.php" method="post">
                 <table>
                     <tr>
                         <td colspan="3"><span id="insertImg"><img src="personal-particulars-assets/head.png" name="uploadpic" id="upLoadPic"/></span></td>
                     </tr>
                     <tr>
+                        <!--Display a table to show user information are unable to edit. -->
                         <td><label for="userID">User ID</label></td>
                         <td>：</td>
                         <td><input type="text" id="userID" name="userID" placeholder="1234-56789" disabled></td>
@@ -129,39 +147,41 @@
                     <tr>
                         <td><label for="dateJoined">Date joined</label></td>
                         <td>：</td>
-                        <td><input type="text" id="dateJoined" name="dateJoined" placeholder="2021-11-22" disabled></td>
+                        <td><input type="text" id="dateJoined" name="dateJoined" placeholder="2021/7/22" disabled></td>
                     </tr>
                 </table>
             </form>
+            <!--A button for return to homepage-->
             <form action="/homepage/homepage.html" id="return">
                 <button class="home" type="submit"><img src="personal-particulars-assets/return.svg" width="40px" height="40px"><p>Return to Homepage</p></button>
             </form>
         </div>
-        <div class="rg">
+        <!--Display a table to show user information are able to edit. -->
+        <div class="rightSide">
                 <table>
                     <tr>
-                        <td><label for="firstname">Name</label></td>
+                        <td><label for="name">Name</label></td>
                         <td>：</td>
                         <td><input type="text" id="name" name="name" placeholder="John" disabled pattern="^[A-Za-z]+$"></td>
                         <td><button class="btn" onclick="disabledName()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
-                        <td><label for="surname">Gender</label></td>
+                        <td><label for="gender">Gender</label></td>
                         <td>：</td>
                         <td><input type="text" id="gender" name="gender" placeholder="Male" disabled></td>
                         <td><button class="btn" onclick="disabledGender()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
-                        <td><label for="eadres">Date of Birth</label></td>
+                        <td><label for="dateBirth">Date of Birth</label></td>
                         <td>：</td>
-                        <td><input type="text" id="eadres" name="eadres" placeholder="21/05/1995" disabled></td>
-                        <td><button class="btn" onclick="disabledEadres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="dateBirth" name="dateBirth" value="21/05/1995" disabled></td>
+                        <td><button class="btn" onclick="disabledDateBirth()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
-                        <td><label for="mnum">Mobile Number</label></td>
+                        <td><label for="mobileNum">Mobile Number</label></td>
                         <td>：</td>
-                        <td><input type="text" id="mnum" name="mnum" placeholder="011-888 8899" disabled></td>
-                        <td><button class="btn" onclick="disabledMnum()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><input type="text" id="mobileNum" name="mobileNum" placeholder="011-888 8899" disabled></td>
+                        <td><button class="btn" onclick="disabledMobileNum()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="email">Email</label></td>
@@ -172,8 +192,8 @@
                     <tr>
                         <td><label for="adres">Address</label></td>
                         <td>：</td>
-                        <td><textarea id="adres" name="adres" placeholder="666, Taman Durian, 33000 Bukit Merah, Perak." disabled></textarea></td>
-                        <td><button class="btn" onclick="disabledAdres()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
+                        <td><textarea id="address" name="address" placeholder="666, Taman Durian, 33000 Bukit Merah, Perak." disabled></textarea></td>
+                        <td><button class="btn" onclick="disabledAddress()"><img src="personal-particulars-assets/edit.png" width="15px" height="15px"></button></td>
                     </tr>
                     <tr>
                         <td><label for="password">Password</label></td>
@@ -186,14 +206,15 @@
         </div>
     </fieldset>
 </article>
-
-
         <!--footer part-->
         <footer>
+            <!--Company logo and name-->
             <div id="footer-1">
-                <a href="../homepage/homepage.html"><img src="../css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
                 <p style="text-align: center;">GTree Furniture</p>
             </div>
+
+            <!--Company information-->
             <div id="footer-2">Contact Us
                 <ul>
                     <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
@@ -201,21 +222,25 @@
                     <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
                 </ul>
             </div>
+
+            <!--Social media platform-->
             <div id="footer-3">Follow Us
                 <ul>
-                    <li><a href="https://www.facebook.com/" target="_blank"><img src="../css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank"><img src="../css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="/css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="/css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="/css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
                 </ul>
             </div>
+
+            <!--Slogan and cooperation partners logo-->
             <div id="footer-4">Bedder Than The Rest
                 <p>Our Cooperation Partners</p>
                 <ul>
-                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="../css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
-                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="../css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
-                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="../css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
-                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="../css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
-                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="../css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="/css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="/css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="/css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="/css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="/css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
                 </ul>
             </div>
             
