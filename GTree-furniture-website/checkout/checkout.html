@@ -246,17 +246,6 @@
                 <th>Price (RM)</th>
             </tr>
             <script>
-                /*code for testing*/
-                /*Storage.prototype.setObj = function(key, obj) {
-                                return this.setItem(key, JSON.stringify(obj))
-                            }
-                localStorage.setObj("selectedProduct", ["chair", "table"]);
-                localStorage.setObj("selectedProductId", ["chair1", "table1"]);
-                localStorage.setObj("selectedUnitPrice", [200.12, 500.23]);
-                localStorage.setObj("selectedQty", [3,5]);
-                localStorage.setObj("selectedPrice", [600.23, 4]);*/
-
-
                 //retrieve data from local storage
                 Storage.prototype.getObj = function(key) {
                     return JSON.parse(this.getItem(key))
