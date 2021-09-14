@@ -347,7 +347,8 @@
     <script type="text/javascript" >
     document.addEventListener("DOMContentLoaded",function(){
     var product = {};
-    var storage;
+    var storage = "none";
+    var check = 0;
 
     //retrieve data from local storage
     Storage.prototype.setObj = function(key, obj) {
@@ -361,10 +362,15 @@
         .then(response => response.json())
         .then(data => {
             product = data;
-        });
+            check = 1;
+        })
     
      function twoDec(x) {
           return Number.parseFloat(x).toFixed(2);
+      }
+
+      function errorPrompt(){
+          alert("Something went wrong! Please refresh your page.");
       }
 
     //get orderData from local storage
@@ -403,6 +409,10 @@
                     }
             }
             
+            if(check == 0){
+                errorPrompt();
+            }
+
             //put data on table
             var table = document.getElementById('details');
 
@@ -413,10 +423,11 @@
                 var orderDetails = orderLocal[orderIndex];
             }
                
-    
             //sum counter
             var qtySum = 0;
             var priceSum = 0;
+
+            //backup in case promise havent return 
     
             //loop in available product and put each details in a row
             for(var x = 0;x < orderDetails.product.length;x++){
