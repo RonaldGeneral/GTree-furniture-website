@@ -2,6 +2,9 @@
 
 Main page to open: "GTree-furniture-website\homepage\homepage.html"
 
+Recommended browser: Google Chrome
+Recommended Resolution: 1200 px x 800 px
+
 Functionable website features
 -----------------------------
 -Track orders
