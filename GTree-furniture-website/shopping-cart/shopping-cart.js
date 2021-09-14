@@ -153,7 +153,7 @@ fetch("../mock-database/product.json")
                 //Add the total price and total quantity of each item if it is not deleted
                 if (product[i] != "null"){
                     itemQuantity[i] = parseInt(itemQuantity[i]);
-                    itemPrice[i] = parseInt(itemPrice[i]);
+                    itemPrice[i] = parseFloat(itemPrice[i]);
                     totalQuantity += itemQuantity[i];
                     totalPrice += itemPrice[i];
                 }
