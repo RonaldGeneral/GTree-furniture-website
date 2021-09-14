@@ -1,4 +1,5 @@
 # GTree-furniture-website
+-we tried to make the website as real as possible by adding features and implementing database in our website.
 
 Main page to open: "GTree-furniture-website\homepage\homepage.html"
 
