@@ -142,6 +142,7 @@
                     
                 }
 
+                /*chat bar which contains profile pic, name and status*/
                 div.title{
                     background-color: #26c5b8;
                     padding: 10px 0px;
@@ -218,10 +219,12 @@
                     color: white;
                     font-size: 23px;
                     word-wrap: break-word;
-                    float: right;
                     clear: both;
+                    float: right;
                     white-space: pre-wrap;
                 }
+
+                /*chatbox for user to type*/
                 form{
                     display: flex;
                 }
@@ -250,6 +253,8 @@
             </style>
             <article>
                 <p id="general-sentence">Anything to ask? We are here to help you&#128522;&#128522;</p>
+
+                <!--chatbar-->
                 <div class="title">
                     <div id="profile-picture">
                         <img src="livechat-assets/profile-pic.jpg" alt="profile picture" width="80px" height="80px" style="border-radius: 200px;">
@@ -261,10 +266,13 @@
 
                 <div id="current-time"></div>
 
+                <!--chat content part-->
                 <div id="chat-content">
                 <div class="receptionist" title="Steffi">Hi, nice to meet you. I'm Steffi</div>
                 <div class="receptionist" title="Steffi">What could I help you with?</div>
                 </div>
+
+                <!--chatbox for user to type-->
                 <form id="chatarea">
                     <textarea autofocus id="chatbar" placeholder="Click here to type" rows="3" cols="1" onkeypress="check(event)"></textarea>
                     <button type="button" onclick="send()">Send</button>
