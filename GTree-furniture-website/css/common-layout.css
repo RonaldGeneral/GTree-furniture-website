@@ -6,13 +6,12 @@
 }
 
 html{
-    background-color: #B4C7E7;/*#A7AED5*/
-    /*background: linear-gradient(#4F89FF, #9BE7FF);*/
+    background-color: #B4C7E7;
 }
 
 body{
     max-width: 1600px;
-    background-color: #447d7a59;/*#9F95BF*/
+    background-color: #447d7a59;
 }
 
 header, footer{
