@@ -12,6 +12,7 @@ th[rowspan="5"]{
 th[rowspan="5"] img{
     border-radius: 20px !important; 
     height: 500px !important;
+    max-width: 700px;
 }
 
 img.thumbnail{
@@ -69,13 +70,22 @@ td[colspan="100"]{
 }
 
 span.add button {
-    background-color: rgba(122, 127, 196, 0.616);
+    background-color: rgba(66, 102, 201, 0.801);
+    color: rgb(255, 249, 249);
     font-weight: bold;
     cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    height: 50px;
+    box-shadow: 2px 2px 1px rgba(2, 11, 34, 0.801);
+    position: relative;
+    top: -13px;
 }
 
+span.add
+
 input#quan {
-    min-width: 40px;
+    min-width: 30px;
     background-color: rgba(215, 215, 236, 0.795);
     text-align: center;
 }
