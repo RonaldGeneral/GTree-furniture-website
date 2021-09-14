@@ -74,10 +74,8 @@ section.QnA table th{
 
 section.QnA table td{
     font-size: 20px;
-    padding: 10px 0;
     padding-left: 10px;
-    background-color: #8fccff;
-    border-top: 1px solid black;
+    background-color: #51b1ff;
     border-radius: 0px 0px 10px 10px;
     display: block;
 }
@@ -102,10 +100,6 @@ section.getSupport li{
     list-style-type: none;
     text-align: left;
     margin-left: 43%;
-}
-
-section.getSupport li a:hover{
-    color: grey;
 }
 
 section.getSupport ul > li::before{

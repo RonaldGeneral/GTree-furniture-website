@@ -7,7 +7,94 @@
         <link href="/css/common-layout.css" rel="stylesheet">
         <link href="/css/fixed-layout.css" rel="stylesheet">
         <link href="/css/fixed-layout-assets/logo.png" rel="shortcut icon">
-        <link href="about-us.css" rel="stylesheet">
+        <style>
+            @charset "utf-8";
+            /*body style*/
+            body{
+                width: 100%;
+            }
+
+            /*article style*/
+            h1{
+                font-size: 50px;
+                text-align: center;
+                font-weight: bold;
+                display: block;
+            }
+
+            h2{
+                font-size: 30px;
+            }
+
+            h3{
+                font-size: 20px;
+            }
+
+            h4{
+                font-size: 14px;
+            }
+
+            article{
+                width: 70%;
+                border: 1px solid black;
+                padding: 30px;
+                margin: 40px 0px 0px 23% ;
+                background-color: #BFD3F5;
+            }
+
+            article::after{
+                clear: both;
+                content: "";
+                display: table;
+            }
+
+            article section#article0{
+                display: block;
+            }
+
+            article section#article1, article section#article2, article section#article3{
+                display: none;
+            }
+
+            /*paragraph style*/
+            article p{
+                text-indent: 50px;
+                line-height: 1.5em;
+                font-size: 20px;
+            }
+
+            /*aside style*/
+            aside{
+                float: left;
+                width: 14%;
+                text-align: left;
+                border:1px solid;
+                margin: 7px 20px 10px 75px;
+                padding: 10px 10px 10px 0px;
+                position: sticky;
+                top: 60px;
+                background-color: #BFD3F5;
+            }
+
+            aside li{
+                margin-left: 0px;
+            }
+
+            aside h3{
+                text-align: center;
+            }
+
+            aside ul h4:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            /*img style*/
+            img{
+                float: left;
+                margin-right: 20px;
+            }
+        </style>
         <title>About Us</title>
         
     </head>
@@ -170,8 +257,8 @@
                     <p>While our vision tells us why we exist, our business idea tells us what we want to achieve. And for everyone that has visited Gtree, our business idea is pretty obvious – “to offer a wide range of well-designed, functional home furnishing products at prices so low, that as many people as possible will be able to afford them.”</p>
                     <p>That means we need to create products that have a beautiful design, good function, are sustainable, of good quality and are available at a low price. We call it “Democratic Design”, because we believe good home furnishing is for everyone.</p>
                     <p>With great products that appeal to many people comes large production volumes, which means we get better deals and can offer our products at low prices. What’s more, when packing and shipping our products in space-efficient flat-packs, storage and transportation costs are reduced, and we can lower our prices even more.</p>
-                    <img src="about-us-assets/about-us-pic1.jpg" alt="about-us-pic1" width="440px" height="330px">
-                    <img src="about-us-assets/about-us-pic2.jpg" alt="about-us-pic2" width="440px" height="330px">
+                    <img src="about-us-assets/about-us-pic1.jpg" alt="about-us-pic1" width="300px" height="230px">
+                    <img src="about-us-assets/about-us-pic2.jpg" alt="about-us-pic2" width="300px" height="230px">
                 </section>
         
                 <section id = "article3">

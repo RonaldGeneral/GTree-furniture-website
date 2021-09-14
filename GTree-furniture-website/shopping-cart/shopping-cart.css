@@ -85,7 +85,6 @@ table#product tr td h2#quantity{
     margin-left: 20px;
 }
 
-
 table#product tr h2.unitPrice::before, table#product tr h2.totalItemPrice::before{
     content: "RM ";
 }
