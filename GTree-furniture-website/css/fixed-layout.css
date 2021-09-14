@@ -8,7 +8,7 @@ body{
     padding: 20px;
 }
 
-/*header*/
+/*header and nav bar layout*/
 div.upper-part{
     display: flex;
     flex-flow: row wrap;
@@ -18,6 +18,9 @@ div.upper-part{
     padding-bottom: 20px; 
 }
 
+/*company logo, search bar, three icons*/
+
+/*company logo*/
 section.logo{
     flex: 1 1 0;
 }
@@ -26,9 +29,51 @@ section.logo img, section.logo a{
     cursor: pointer;
 }
 
+.logo > a > img{
+    border-radius: 10px;
+}
+
+/*search bar*/
 form.searchbar{
     flex: 1 1 60%;
     display: flex;
+}
+
+form.searchbar input{
+    flex: 1 1 80%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    margin-left: 10px;
+    
+
+    border-radius: 20px 0px 0px 20px;
+    background: #f1f1f1;
+}
+  
+form.searchbar button {
+    flex: 1 1 20%;
+    
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    margin-right: 10px;
+    
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.searchbar button:hover {
+    background: #0b7dda;
+}
+  
+
+/*three icons*/
+section.three-icons img{
+    width: 50px;
 }
 
 section.three-icons{
@@ -42,12 +87,48 @@ section.three-icons img, section.three-icons a{
     cursor: pointer;
 }
 
+/*arrangement of the header in different size of window*/
+@media screen and (max-width: 1200px) {
+    
+section.logo{
+    order: 1;
+    margin-right: 50%;
+}
+
+form.searchbar{
+    order: 3;
+}
+
+section.three-icons{
+    order: 2;
+    justify-content: flex-end;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+    section.logo{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 644px) {
+    section.logo{
+        margin-right: 0px;
+    }
+    section.three-icons{
+        justify-content:center;
+    }
+}
+
+
+
+/*company name*/
 header{
     width: 100%;
     min-height: 300px;
     position: relative;
 }
-
 
 #namebar{
     position: relative;
@@ -101,6 +182,7 @@ header{
     animation-iteration-count: infinite;
 }
 
+/*animation for the company name*/
 @keyframes first {
     0%{color: transparent; text-shadow: -200px -50px 5px rgba(7, 112, 42, 0.3);}
     20%{color: transparent;text-shadow: 0px 0px 0px transparent;}
@@ -155,93 +237,13 @@ header{
         
     }
 }
-/*1056*//*1100*/
-@media screen and (max-width: 1200px) {
-    
-section.logo{
-    order: 1;
-    margin-right: 50%;/*100px*/
-}
-
-form.searchbar{
-    order: 3;
-}
-
-section.three-icons{
-    order: 2;
-    justify-content: flex-end;
-}
-
-}
-
-@media screen and (max-width: 900px) {
-    section.logo{
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 644px) {
-    section.logo{
-        margin-right: 0px;
-    }
-    section.three-icons{
-        
-        justify-content:center;
-    }
-    
-}
-
-
-.logo > a > img{
-    border-radius: 10px;
-}
-
-form.searchbar input[type=text] {
-    flex: 1 1 80%;
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    margin-left: 10px;
-    
-
-    border-radius: 20px 0px 0px 20px;
-    background: #f1f1f1;
-}
-  
-form.searchbar button {
-    flex: 1 1 20%;
-    
-    padding: 10px;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: 10px;
-    
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-}
-
-form.example button:hover {
-    background: #0b7dda;
-}
-  
-form.searchbar::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
- section.three-icons img{
-    width: 50px;
-}
 
 
 /*navigation list*/
 span.nav{
     z-index: 100;
 }
+
 nav{
     width: 100%;
     position: sticky;
@@ -250,6 +252,7 @@ nav{
     z-index: inherit;
 }
 
+/*menu items*/
 ul.menu{
     list-style-type:none;
     display: flex;
@@ -260,7 +263,7 @@ ul.menu{
 }
 
 .menu > li{
-    background-color: #0050BC;/*#0b7dda*/
+    background-color: #0050BC;
     min-height: 50px;
     min-width: 150px;
     cursor: pointer;
@@ -273,7 +276,7 @@ ul.menu{
 }
 
 .menu > li:hover, .menu > li:active, .menu > li > a:hover, .menu > li > a:active{
-    background-color: #4B86FC;/*rgb(14, 94, 168);*/
+    background-color: #4B86FC;
 }
 
 
@@ -286,6 +289,7 @@ ul.menu{
     
 }
 
+/*submenu items*/
 .submenu-1 a {
     color: black;
     text-decoration: none;
@@ -297,8 +301,6 @@ ul.menu{
     padding: 15px;
     cursor: pointer;
 }
-
-
 
 .submenu-1:nth-child(1){
     grid-area: 1;
@@ -340,7 +342,7 @@ ul.menu{
     position: absolute;
     top: 50px;
     
-    background-color: #0050BC;/*#0b7dda*/
+    background-color: #0050BC;
     grid-template-areas: "1 3 5"
                         "2 4 6";    
 }
@@ -349,16 +351,16 @@ ul.menu{
 .menu li .submenu-1 > li:nth-child(1),
 .menu li .submenu-1 > li:nth-child(3), 
 .menu li .submenu-1 > li:nth-child(5){
-    background-color: #C2A875;/*#B4C7E7;*/
+    background-color: #C2A875;
 }
 
 .menu li .submenu-1 > li:nth-child(2), 
 .menu li .submenu-1 > li:nth-child(4), 
 .menu li .submenu-1 > li:nth-child(6){
-    background-color: #FFEECA;/*#A2ACBD;*/
+    background-color: #FFEECA;
 }
 
-
+/*arrangement of layout of nav bar in different size of window*/
 @media screen and (max-width: 644px) {
     nav{
         display: unset;
@@ -400,13 +402,13 @@ ul.menu{
     .menu li .submenu-1 > li:nth-child(1),
     .menu li .submenu-1 > li:nth-child(3), 
     .menu li .submenu-1 > li:nth-child(5){
-        background-color: #B4C7E7;
+        background-color: #C2A875;
     }
 
     .menu li .submenu-1 > li:nth-child(2), 
     .menu li .submenu-1 > li:nth-child(4), 
     .menu li .submenu-1 > li:nth-child(6){
-        background-color: #A2ACBD;
+        background-color: #FFEECA;
     }
     .menu li:hover .submenu-1{
         grid-template-areas: "1" "2" "3" "4" "5" "6";
