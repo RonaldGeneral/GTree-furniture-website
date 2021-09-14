@@ -140,7 +140,7 @@
             h2, h3{
                 font-size: 20px;
             }
-
+            /*summary table layout*/
             table, th, td {
                 border: 1px solid black;
                 border-collapse: collapse;
@@ -156,7 +156,8 @@
                 word-wrap:break-word;
                 word-break: break-all;
             }
-
+            
+            /*personal details layout*/
             ul.personal-details>li:nth-of-type(1){
                 list-style-image: url(checkout-assets/people.png);
             }
@@ -169,8 +170,7 @@
             ul.personal-details>li:nth-of-type(4){
                 list-style-image: url(checkout-assets/send-email.png);
             }
-
-            /*personal details layout*/
+            
             .personal-details label{
                 width: 200px;
                 float: left;
@@ -218,6 +218,8 @@
             
         <h1 style="text-align: center;font-weight: bold;">Check Out</h1>
         <h2>Delivery Details</h2>
+
+        <!--personal-details-->
         <form class="personal-details">
             <div class="info">
             <label for="name"><img src="checkout-assets/people.png"> Recipient Name: </label>
@@ -237,6 +239,7 @@
             </div>
         </form>
         
+        <!--summary order table-->
         <h3 style="text-decoration-line: underline;">Summary of Order</h3>
         <table id="summary-table">
             <tr>
@@ -333,6 +336,8 @@
         </table>
         
         <p>*All products are delivered in standard delivery</p>
+        
+        <!--payment method-->
         <h3 style="text-decoration: underline;">Payment Method</h3>
         <div id="payment-method">
             <button class="choice" onclick="select(0)"><img style="width: 70px; height: auto;" src="checkout-assets/touch-n-go.png"><p>Touch 'n Go eWallet</p></button>
