@@ -1,12 +1,9 @@
-
-
+/*fieldset style*/
 legend{
   text-align: center;
   font-weight: bold;
   font-size: 60px;
 }
-
-
 
 fieldset.all {
   border-radius: 50px;
@@ -17,6 +14,30 @@ fieldset.all {
   border: 5px solid black;
 }
 
+.lowerSide{
+  text-align: center;
+  margin: 5%;
+}
+
+table{
+  margin-left: 10%;
+}
+
+#linkTo{
+  color: blue;
+}
+
+.grid-item3{
+  grid-column: 1 / 3;
+  margin: 0% 10%;
+}
+
+div.grid-item2 > label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*container style*/
 .grid-container{
   display: grid;
   grid-gap: 10%;
@@ -34,6 +55,7 @@ fieldset.all {
   padding: 10px;
 }
 
+/*input style*/
 #fname{
   float: left;
   width: 175px;
@@ -60,7 +82,7 @@ fieldset.all {
   float: right;
 }
 
-.ksCantik{
+.genderCol{
   float: left;
   border: 1px solid black;
   border-radius: 10px;
@@ -72,42 +94,14 @@ fieldset.all {
   height: 30px;
 }
 
-div.grid-item2 > label, div > form{
-  font-size: 18px;
-  font-weight: bold;
-}
-
 #Password, #comPassword, textarea{
   margin-bottom: 10px;
   width: 300px;
 }
 
-table{
-  margin-left: 10%;
-}
-
-.last{
-  text-align: center;
-  margin: 5%;
-}
-
-a{
-  color: blue;
-  margin: 10px;
-}
-
-#Sub{
-  width: 150px;
-}
-
 textarea{
   width: 400px;
   height: 100px;
-}
-
-.grid-item3{
-  grid-column: 1 / 3;
-  margin: 0% 10%;
 }
 
 .grid-item3 > label{
@@ -118,6 +112,25 @@ textarea{
   font-weight: bold;
 }
 
+input.inContent, select, textarea{
+  padding: 8px 10px;
+  margin: 8px 0;
+  border: 1px double #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input:hover, .genderCol:hover, textarea:hover{
+  border: 1px solid black;
+}
+
+input:focus, .genderCol:focus, textarea:focus{
+  background-color: rgba(152, 217, 219, 0.973);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/*button style*/
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -133,24 +146,10 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
-}
-input, select, textarea{
-  padding: 8px 10px;
-  margin: 8px 0;
-  border: 1px double #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-input:hover, .gende:hover, textarea:hover{
-  border: 1px solid black;
-}
-input:focus, select:focus, textarea:focus{
-  background-color: rgba(152, 217, 219, 0.973);
-  border: 1px solid black;
-  border-radius: 5px;
+  background-color: #18631c;
 }
 
+/*check validation*/
 input#fname:focus:valid,
 input#sname:focus:valid,
 input#email:focus:valid,

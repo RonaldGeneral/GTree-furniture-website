@@ -1,14 +1,5 @@
-function myFunction() {
-    var checkBox = document.getElementById("myCheck");
-    var text = document.getElementById("text");
-    if (checkBox.checked == true){
-      text.style.display = "block";
-    } else {
-       text.style.display = "none";
-    }
-}
-
-function myfun(){
+//Inspect confirmed Password
+function myFunction(){
   var a = document.getElementById("password").value;
   var b = document.getElementById("passwordss").value;
 
