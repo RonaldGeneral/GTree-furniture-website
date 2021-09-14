@@ -132,7 +132,7 @@
     <!--A fieldset include a register form-->
     <fieldset class="all">
         <legend>Create a new account</legend>
-        <form>
+        <form onsubmit="return myfun()" action="/homepage/homepage.html" >
             <!--Create a container to differentiation the area-->
             <div class="grid-container">
                 <!--Use a class name to differentiation the area-->
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <!--Submit button-->
-            <p class="btnSubmit"><input class="inContent" type="submit" value="Sign Up" onclick="return myFunction()"></p>
+            <p class="btnSubmit"><input class="inContent" type="submit" value="Sign Up" ></p>
         </form>
         <!--link to another webpage-->
         <div class="lowerSide">
