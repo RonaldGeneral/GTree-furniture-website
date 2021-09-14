@@ -22,11 +22,13 @@ function myFunction(){
   }
 
   if(a != b){
+    setTimeout(function(){ location.href = "../Register/register.html"; }, 0.000001);
     alert("Your Password is not same");
     return false;
   }
 
   else{
+    setTimeout(function(){ location.href = "../Login/login.html"; }, 0.000001);
     alert("Register Successfully");
     return true;
   }
