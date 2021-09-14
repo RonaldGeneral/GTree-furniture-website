@@ -123,9 +123,8 @@
     function link(number){
         window.location.assign(hyperlink[number]);
     }
-    
 </script>
-        <!--invoice css-->
+
         <style>
             html{
                 font: size 0.5em;
@@ -149,7 +148,7 @@
                 font-weight: bold;
                 font-size: 20px;
             }
-            
+            /*summary order table layout*/
             table, th, td {
                 border: 1px solid black;
                 border-collapse: collapse;
@@ -186,6 +185,7 @@
                 margin-right: auto;
             }
 
+            /*feedback & back to home button*/
             #selection{
                 display: flex;
                 justify-content: end;
@@ -207,6 +207,8 @@
             .choice:active, .choice:hover{
                 background-color: rgb(91, 151, 255);
             }
+
+            /*cancel the some layout in printing*/
             @media print{
                 header, footer, nav, #greeting, #print-advice, #selection{
                     display: none;
@@ -226,6 +228,7 @@
         <h2 style="text-align: center; font-size: 30px;">GTree Furniture</h2>
         <h2>Delivery Details</h2>
         
+        <!--personal details-->
         <ul class="personal-details">
             <li id="name">Name: </li>
             <li id="address">Address: </li>
@@ -233,6 +236,7 @@
             <li id="email">Email: </li>
         </ul>
         
+        <!--summary order table-->
         <h2 style="text-align: center;">Summary of Order</h2>
         <table>
             <tr>
@@ -293,9 +297,10 @@
         <p id="print-advice">*Right-click and select print option to print the invoice</p>
 
         <br/>
+
+        <!--feedback & back to home button-->
         <div id="selection">
             <button class="choice" type="button" onclick="goToPage('/customerfeedback/customerfeedback.html')">Feedback</button>
-            <!--<button class="choice" type="button" onclick="save()">Download to Computer</button>-->
             <button class="choice" type="button" onclick="goToPage('/homepage/homepage.html')">Back to Home</button>
         </div>
         <script>
