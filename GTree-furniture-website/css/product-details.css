@@ -71,6 +71,7 @@ td[colspan="100"]{
 span.add button {
     background-color: rgba(122, 127, 196, 0.616);
     font-weight: bold;
+    cursor: pointer;
 }
 
 input#quan {
