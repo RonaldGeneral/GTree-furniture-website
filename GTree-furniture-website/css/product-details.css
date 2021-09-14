@@ -75,7 +75,7 @@ span.add button {
 }
 
 input#quan {
-    width: 40px;
+    min-width: 40px;
     background-color: rgba(215, 215, 236, 0.795);
     text-align: center;
 }
