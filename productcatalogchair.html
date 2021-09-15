@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/common-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout-assets/logo.png" rel="shortcut icon">
+        <title>GTree Company</title>
+<style type="text/css">
+          
+        img{
+            opacity:1;
+            border-radius: 10px;
+            float:left;
+            width: 50%;
+            height:auto;
+        }
+    
+        table{
+            width:100%;
+            border-collapse:separate;
+            border:1px  dotted black;
+            padding:8px;
+            border-radius: 5px;
+            background-color: rgb(205, 207, 207);
+            border-spacing: 10px;
+        }
+        tr,th,td{
+            border:1px solid black;
+            border-radius: 10px;
+            font-size:20px;
+            width: auto;
+            background-color: white;
+        }
+        tbody tr :nth-of-type(1):hover{
+            border-color: blue;
+        }
+        tbody tr :nth-of-type(2):hover{
+            border-color:chartreuse;
+        }
+        a{
+            text-decoration: none;
+            background-color: transparent;
+            color: black;
+        }
+        a:hover{
+            color: rgb(222,128,60);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        table thead th{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        table tbody th{
+            font-variant: small-caps;
+            text-align: end;
+        }
+        table tfoot{
+            font-variant: small-caps;
+            text-align: center;
+        } 
+        tfoot tr{
+            font-weight: bold;
+            height: 40px;
+        }
+        img#haha{
+            width:100%;
+        }
+        colgroup col{
+            width:500px ;
+        }
+
+        tfoot tr td:nth-of-type(2) a, td:nth-of-type(4) a{
+                font-size: 40px;
+                font-weight: bolder;
+                position: relative;
+                top: -50%;
+        }
+        
+            </style>
+    </head>
+    <body>
+        <!--header part-->
+        <header>
+            <!--company logo-->
+            <div class="upper-part">
+            <section class="logo">
+                <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons-->
+            <section class="three-icons">
+            <a href="/track-order/track-order.html"><img src="/css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="/shopping-cart/shopping-cart.html"><img src="/css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="/Login/login.html"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+            </div>
+            <script>
+                /*check if the user is login*/
+                if (typeof(Storage) !== "undefined") {
+                    var storage = localStorage.getItem("isLogin")
+                    if (storage == "true")
+                    {
+                        document.getElementById("login").href = "/Personal-particulars/personal-particulars.html";
+                    }
+                    else
+                    {
+                        
+                    }
+                }   
+            </script>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
+        </header>
+            <!--navigation bar-->
+            <span class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li onclick="link(0)"><a id="home" href="#">Home</a></li>
+                        <li onclick="link(1)">
+                            <a id="furniture-category" href="#">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li onmousedown="link(5)">
+                                    <a id="table" href="#">Tables</a></li>
+    
+                                <li onmousedown="link(6)">
+                                    <a id="chair" href="#">Chairs</a></li>
+    
+                                <li onmousedown="link(7)">
+                                    <a id="bedroom" href="#">Bedroom</a></li>
+    
+                                <li onmousedown="link(8)">
+                                    <a id="lighting" href="#">Lighting</a></li>
+    
+                                <li onmousedown="link(9)">
+                                    <a id="decorations" href="#">Decorations</a></li>
+                                
+                                <li onmousedown="link(10)">
+                                    <a id="shelves" href="#">Shelves</a></li>
+                            </ul>
+                        </li>
+                        <li onclick="link(2)"><a id="promotion" href="#">Promotion</a></li>
+                        <li onclick="link(3)"><a id="faq" href="#">FAQ</a></li>
+                        <li onclick="link(4)"><a id="about-us" href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </span>
+<script>
+    //defining the 11 hyperlinks into an array
+    var hyperlink = [
+    /*home*/ "/homepage/homepage.html",
+    /*furnitureCategory*/ "/productcatalog/mainproductcatalog/maincatalog.html",
+    /*promotion*/ "/Promotion/promotion.html",
+    /*faq*/ "/frequently-asked-questions/frequently-asked-questions.html",
+    /*aboutUs*/ "/about-us/about-us.html",
+    /*table*/ "/productcatalog/table/productcatalogtable.html",
+    /*chair*/ "/productcatalog/chair/productcatalogchair.html",
+    /*bedroom*/ "/productcatalog/bedroom/bed/bed.html",
+    /*lighting*/ "/productcatalog/lightning/productcataloglightning.html",
+    /*decorations*/ "/productcatalog/decoration/productcatalogdecoration.html",
+    /*shelves*/ "/productcatalog/shelves/productcatalogshelves.html"
+        ];
+    
+    //defining the id name into an array
+    var tag = [
+        "home",
+        "furniture-category",
+        "promotion",
+        "faq",
+        "about-us",
+        "table",
+        "chair",
+        "bedroom",
+        "lighting",
+        "decorations",
+        "shelves"
+    ]
+    for (var i = 0; i < 11; i++)
+        document.getElementById(tag[i]).href = hyperlink[i];
+
+    function link(number){
+        window.location.assign(hyperlink[number]);
+    }
+    
+</script>
+
+        <!--Content part-->
+<article>    
+    <table>
+        <colgroup><col span="25"><col span="25">
+        </colgroup>
+        <thead>
+            <th colspan="50">Welcome to Gtree Furniture</th>
+        </thead>
+        <tbody>
+        <tr>
+            <th colspan="25"><img src="/productcatalog/chair/officechair1.jpg" onmouseover="change(this)" onmouseout="changeout(this)"/><br>JAERVFJARLLET<br>RM1,199<br><a href="detailschair1.html">More Info</th>
+            <th colspan="25"><img src="/productcatalog/chair/officechair2.jpg" onmouseover="change1(this)" onmouseout="changeout1(this)"/><br>HATTEFJAELL<br>RM1,399<br><a href="detailschair2.html">More Info</th>
+        </tr>
+        <tr>
+            <th colspan="25"><img src="/productcatalog/chair/officechair3.jpg" onmouseover="change2(this)" onmouseout="changeout2(this)"/>MULLFJAELLET <br>RM799<br><a href="detailschair3.html">More Info</th>
+            <th colspan="25"><br>LANDSKRONA<br>RM10,395<br><a href="detailssofa1.html">More Info<br></a><img id="haha" src="/productcatalog/chair/sofa1.jpg" onmouseover="change3(this)" onmouseout="changeout3(this)"/></th>
+        </tr>
+        <tr>
+            <th colspan="50">PAGE OF OFFICE CHAIR AND SOFA</th>
+        </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+            <td colspan="10"><a href="/productcatalog/table/productcatalogtable.html">First Page</td>
+            <td colspan="10"><a href="/productcatalog/table/productcatalogtable.html">&#8592;</td>
+            <td colspan="10"><a href="/productcatalog/mainproductcatalog/maincatalog.html">Home</td>
+            <td colspan="10"><a href="/productcatalog/bedroom/bed/bed.html">&#8594;</td>
+            <td colspan="10"><a href="/productcatalog/shelves/productcatalogshelves.html">Last Page</td>
+        </tr>
+        </tfoot>
+    </table>
+</article>
+<!--footer part-->
+<footer>
+    <!--Company logo and name-->
+    <div id="footer-1">
+        <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+        <p style="text-align: center;">GTree Furniture</p>
+    </div>
+
+    <!--Company information-->
+    <div id="footer-2">Contact Us
+        <ul>
+            <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+            <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+            <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+        </ul>
+    </div>
+
+    <!--Social media platform-->
+    <div id="footer-3">Follow Us
+        <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="/css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="/css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="/css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+        </ul>
+    </div>
+
+    <!--Slogan and cooperation partners logo-->
+    <div id="footer-4">Bedder Than The Rest
+        <p>Our Cooperation Partners</p>
+        <ul>
+            <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="/css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+            <li><a href="https://www.gdexpress.com/" target="_blank"><img src="/css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+            <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="/css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+            <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="/css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+            <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="/css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+        </ul>
+    </div>
+    
+</footer>
+<p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+</body>
+</html>
+<script>
+    function change(x){
+        x.src="/productcatalog/chair/officechair1.5.jpg";
+    }
+    function changeout(x){
+        x.src="/productcatalog/chair/officechair1.jpg";
+    }
+    function change1(x){
+        x.src="/productcatalog/chair/officechair2.5.jpg";
+    }
+    function changeout1(x){
+        x.src="/productcatalog/chair/officechair2.jpg";
+    }
+    function change2(x){
+        x.src="/productcatalog/chair/officechair3.5.jpg";
+    }
+    function changeout2(x){
+        x.src="/productcatalog/chair/officechair3.jpg";
+    }
+    function change3(x){
+        x.src="/productcatalog/chair/sofa1b.jpg";
+    }
+    function changeout3(x){
+        x.src="/productcatalog/chair/sofa1.jpg";
+    }
+    
+</script>
