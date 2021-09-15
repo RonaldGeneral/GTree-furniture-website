@@ -146,9 +146,8 @@ fetch("../mock-database/product.json")
                 }
             }        
         }
-        
+        var totalPrice = 0, totalQuantity = 0; //Initialise all the total price and total quantity
         function addTotalItem(){
-            var totalPrice = 0, totalQuantity = 0; //Initialise all the total price and total quantity
             for (var i = 0; i < product.length; i++){
                 //Add the total price and total quantity of each item if it is not deleted
                 if (product[i] != "null"){
@@ -167,6 +166,9 @@ fetch("../mock-database/product.json")
             const selectedProductId = [], selectedProduct = [], selectedQty = [], selectedPrice = [], selectedUnitPrice = [];
             if (product.length == 0){ //Disallow the customer to checkout if the shopping cart is empty
                 alert("Your Shopping Cart is empty!");
+            }
+            else if (totalPrice == 0){ //Disallow the customer to checkout if they buy nothing
+                alert("You did not select any product!");
             }
             else{
                 //Update the selected product and its details to local storage
