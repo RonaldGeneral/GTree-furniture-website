@@ -58,12 +58,12 @@
         /* Modal Content */
         .modal-content {
         background: linear-gradient(#504dee, hsl(229, 84%, 59%));
-        margin: auto;
+        margin: 10% auto auto auto;
         padding: 20px;
         border: 3px solid rgba(142, 142, 143, 0.7);
         border-radius: 20px;
         width: 50%;
-        height: 50%;
+        height: 40%;
         text-align: center;
         }
         /* The Close Button */
@@ -88,6 +88,7 @@
             background-color: #bfd3f5;
             border-radius: 8px;
             height: 40px;
+            margin-top: 10%;
         }
 
         .modal-content button:hover{
@@ -225,16 +226,15 @@
     </div>
     <div>
         <span style="font-variant: small-caps; font-size: 20px;">
-            How sastisfied were your shopping experience
-            today?
+            How sastisfied was your shopping experience today?
         </span><br>
         <br>
         <span id="rate">
-            Bad to Great(1-5)
+            Rating : <span id="rating">3</span>&#9733;
         </span>
         <form>
-            <label for="name"></label>
-            <span style="font-size: 20px;">1</span><input style="width: 200px;" type="range" id="name"><span style="font-size: 20px;">5</span>
+            <label for="rateGrade"></label>
+            <span style="font-size: 20px;">1</span><input style="width: 200px;" type="range" id="rateGrade" step="1" min="1" max="5" onchange="rating()"><span style="font-size: 20px;">5</span>
         </form>
         <br>
         Whats is the main reason for your score.<br>
@@ -243,7 +243,7 @@
             <input type="textbox" id="fname" name="fname" style="width: 450px; background-color: rgba(250, 248, 248, 0.7);">
         </form>
         <br>
-        <button style="font-size: 20px; font-weight: bold; background-color: rgba(106, 175, 214, 0.726);" id="submit">Submit</button>
+        <button style="background-color: rgba(66, 102, 201, 0.801);color: rgb(255, 249, 249);font-weight: bold;cursor: pointer;border-radius: 8px;padding: 10px;height: 50px;box-shadow: 2px 2px 1px rgb(2 11 34 / 80%);" id="submit">Submit</button>
     </div>
     <!-- The Modal -->
     <div id="modal" class="modal">
@@ -282,6 +282,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function rating(){
+    document.getElementById("rating").innerHTML = document.getElementById("rateGrade").value;
+}
+
 </script>
 
 
