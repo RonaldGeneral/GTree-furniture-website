@@ -28,8 +28,18 @@
             .lowerSide{
             text-align: center;
             margin: 5%;
+            }           
+            .lowerSide a{
+            text-decoration: underline;
             }
-
+            .lowerSide a:hover span{
+                color: rgb(190, 191, 255)
+            }
+            .lowerSide span{
+                color: rgba(1, 15, 80, 0.699);
+                font-weight: bold;
+                font-size: 16px;
+            }
             table{
             margin-left: 10%;
             }
@@ -312,7 +322,7 @@
                         <input class="inContent" type="text" id="sname" name="surname" placeholder="Surname" pattern="^[A-Za-z]+$" required style="text-align: center;"><br><br> 
                     </div>       
                     <input class="inContent" type="email" id="email" name="email" placeholder="Email address" required style="text-align: center;"><br><br>
-                    <input class="inContent" type="tel" id="mnum" name="mnum" pattern="^[0]{1}\d[0-9]?[\s-]?\d{3}?[\s ]?\d{4}$|^[0]{1}?[\s-]?\d{3}?[\s ]?\d{4}$" placeholder="Mobile number (01X-XXX XXXX)" required style="text-align: center;"/><br><br>
+                    <input class="inContent" type="tel" id="mnum" name="mnum" pattern="^[0]{1}\d[0-9]?[\s-]?\d{3}?[\s ]?\d{4}$|^[0]{1}?[\s-]?\d{3}?[\s ]?\d{4}$|^[0]{1}\d[0-9]?[\s-]?\d{4}?[\s ]?\d{4}$" placeholder="Mobile number (01X-XXX XXXX)" required style="text-align: center;"/><br><br>
                 </div>
                 <!--Use a class name to differentiation the area-->
                 <div class="grid-item2">
@@ -346,8 +356,8 @@
         </form>
         <!--link to another webpage-->
         <div class="lowerSide">
-            <a id="linkTo" href="../Login/login.html">Already have an account</a><br/><br/>
-            <a id="linkTo" href="../terms-and-conditions/terms-and-conditions.html">Term & Conditions</a>
+            <a id="linkTo" href="../Login/login.html"><span>Already have an account</span></a><br/><br/>
+            <a id="linkTo" href="../terms-and-conditions/terms-and-conditions.html"><span>Term & Conditions</span></a>
         </div>
     </fieldset>
 </article>
