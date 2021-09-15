@@ -213,6 +213,18 @@
                 margin: 0px; 
                 padding:10px; 
             }
+
+            button#place-order {
+                background-color: rgba(66, 102, 201, 0.801);
+                color: rgb(255, 249, 249);
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 8px;
+                padding: 10px;
+                height: 50px;
+                box-shadow: 2px 2px 1px rgba(2, 11, 34, 0.801);
+                margin: 20px;
+            }
         </style>
         <article>
             
@@ -350,7 +362,7 @@
         <script>
             document.getElementById("price-to-pay").innerHTML = "Total: RM" + sum.toFixed(2);
         </script>
-        <button onclick="invoice()">Place Order</button>
+        <button onclick="invoice()" id="place-order">Place Order</button>
         </div>
         
     </article>
