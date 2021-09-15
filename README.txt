@@ -1,29 +1,15 @@
 # GTree-furniture-website
--we tried to make the website as real as possible by adding features and implementing database in our website.
+-we try to make the website AS REAL AS POSSIBLE by adding features and implementing database in our website.
 
 Main page to open: "GTree-furniture-website\homepage\homepage.html"
 
 Recommended browser: Google Chrome
 Recommended Resolution: 1200 px x 800 px
 
-Functionable website features
------------------------------
--Track orders
--Login
--Add to cart in product catalog
--Shopping cart
--Checkout
-
-
-Unavailable features
---------------------
--Personal Particular
--register
-
 
 Opening the website
 -------------------
-The website need to be opened in visual studio code live server.
+**The website need to be opened in visual studio code live server.**
 Make sure visual studio code is installed and the live server extension is installed.
 
 1. Open file manager and find the folder "GTree-furniture-website"
@@ -35,11 +21,31 @@ Make sure visual studio code is installed and the live server extension is insta
 7. The website will be opened in your browser,make sure it is Google Chrome.
 
 
+Functionable website features
+-----------------------------
+-Track orders
+-Login
+-Add to cart in product catalog
+-Shopping cart
+-Checkout
+-Invoice (to generate new order ID)
+-Livechat 
+
+
+Unavailable features
+--------------------
+-Personal Particular
+-register
+-searchbar
+
+
 Available Track Order ID
 ------------------------
 AAA-2345-333X
 BBB-7890-222X
 CCC-1234-111X
+Track order ID which is generated based on order
+
 
 Available user account
 ----------------------
@@ -47,7 +53,7 @@ UserID: John123
 Password: abc123aabb
 
 
-
-
 livechat command
+----------------
 /dark    -   toggle dark mode
+/mute    -   toggle mute and unmute notification sounds
