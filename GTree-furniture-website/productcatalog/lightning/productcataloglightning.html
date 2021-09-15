@@ -71,6 +71,32 @@
         img{
             padding-left: 10px;
         }
+
+        tfoot tr td .pages-text{
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+        
+        a:hover .pages-text{
+            color: rgb(222,128,60);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        tfoot tr td:nth-of-type(2) a .pages-text, td:nth-of-type(4) a .pages-text{
+            font-size: 40px;
+            font-weight: bolder;
+            position: relative;
+            top: -50%;
+        }
+        
+        .pages{
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
             </style>
     </head>
     <body>
@@ -217,11 +243,12 @@
          </tbody>
          <tfoot>
             <tr>
-            <td colspan="10"><a href="/productcatalog/table/productcatalogtable.html">First Page</td>
-            <td colspan="10"><a href="/productcatalog/bedroom/pillowandpillowcase/productcatalogpillowandpillowcase.html">Previous</td>
-            <td colspan="10"><a href="/productcatalog/mainproductcatalog/maincatalog.html">Home</td>
-            <td colspan="10"><a href="/productcatalog/decoration/productcatalogdecoration.html">Next</td>
-            <td colspan="10"><a href="/productcatalog/shelves/productcatalogshelves.html">Last Page</td>
+            <td colspan="10"><a href="/productcatalog/table/productcatalogtable.html"><button class="pages"><span class="pages-text">First Page</span></button></td>
+            <td colspan="10"><a href="/productcatalog/bedroom/pillowandpillowcase/productcatalogpillowandpillowcase.html"><button class="pages"><span class="pages-text">&#8592;</span></button></td>
+            <td colspan="10"><a href="/productcatalog/mainproductcatalog/maincatalog.html"><button class="pages"><span class="pages-text">Home</span></button></td>
+            <td colspan="10"><a href="/productcatalog/decoration/productcatalogdecoration.html"><button class="pages"><span class="pages-text">&#8594;</span></button></td>
+            <td colspan="10"><a href="/productcatalog/shelves/productcatalogshelves.html"><button class="pages"><span class="pages-text">Last Page</span></button></td>
+        </tr>
         </tr>
         </tfoot>
     </table>
