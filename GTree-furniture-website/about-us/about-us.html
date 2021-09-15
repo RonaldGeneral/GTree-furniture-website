@@ -94,6 +94,24 @@
                 float: left;
                 margin-right: 20px;
             }
+
+            /*song part*/
+            #song b{
+                font-size: 30px;
+                position: relative;
+                left: -25px;
+                color: rgb(23, 20, 131);
+                text-shadow: 
+                1px 1px 2px rgb(87, 87, 87),
+                3px 3px 1px rgb(168, 168, 168);
+            }
+
+            audio {
+                box-shadow: 
+                2px 2px 3px black,
+                -1px -1px 3px rgb(148, 144, 137);
+                background-color: #f1f3f4;
+            }
         </style>
         <title>About Us</title>
         
@@ -258,8 +276,8 @@
                     <p>With great products that appeal to many people comes large production volumes, which means we get better deals and can offer our products at low prices. What’s more, when packing and shipping our products in space-efficient flat-packs, storage and transportation costs are reduced, and we can lower our prices even more.</p>
                     <img src="about-us-assets/about-us-pic1.jpg" alt="about-us-pic1" width="300px" height="230px">
                     <img src="about-us-assets/about-us-pic2.jpg" alt="about-us-pic2" width="300px" height="230px">
-                    <div>
-                        <p><b>Furniture Song</b></p>
+                    <div style="clear: both;padding-top: 10px;">
+                        <p id="song"><b>Furniture Song</b></p>
                         <audio controls autoplay muted loop>
                             <source src="about-us-assets/furniture-song.mp3" type="audio/mpeg">
                             Your browser does not support the audio tag.
