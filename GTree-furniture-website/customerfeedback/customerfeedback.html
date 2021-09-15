@@ -63,7 +63,342 @@
         border: 3px solid rgba(142, 142, 143, 0.7);
         border-radius: 20px;
         width: 50%;
-        height: 40%;
+        height: auto;
+        text-align: center;
+        }
+        /* The Close Button */
+        .close {
+        color: red;
+        float: right;
+        font-size: 28px;
+        font-weight: bolder;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .modal-content button{
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 24;
+            background-color: #bfd3f5;
+            border-radius: 8px;
+            height: 40px;
+            margin-top: 50px;
+        }
+
+        .modal-content button:hover{
+            background-color: #8291ad;
+        }
+
+        .modal-content p {
+            font-weight: 600;
+        }
+
+        
+        </style>
+    </head>
+    <body>
+
+        <!--header part-->
+        <header>
+            <!--company logo-->
+            <div class="upper-part">
+            <section class="logo">
+                <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+            </section>
+
+            <!--search bar-->
+            <form class="searchbar">
+                <input type="text" placeholder="Welcome to GTree Furniture! Enter something - Table, Chair, Shelf, ..." name="search">
+                <button type="submit">SEARCH!</button>
+            </form>
+            
+            <!--track order, cart, login icons-->
+            <section class="three-icons">
+            <a href="/track-order/track-order.html"><img src="/css/fixed-layout-assets/track_order.png" alt="track order"></a>
+            <a href="/shopping-cart/shopping-cart.html"><img src="/css/fixed-layout-assets/cart.png" alt="cart"></a>
+            <a id="login" href="/Login/login.html"><img src="/css/fixed-layout-assets/login.png" alt="login"></a>
+            </section>
+            </div>
+            <script>
+                /*check if the user is login*/
+                if (typeof(Storage) !== "undefined") {
+                    var storage = localStorage.getItem("isLogin")
+                    if (storage == "true")
+                    {
+                        document.getElementById("login").href = "/Personal-particulars/personal-particulars.html";
+                    }
+                }   
+            </script>
+            <section id="namebar">
+                <div id="first">Modern</div>
+                <div id="second">Comfortable</div>
+                <div id="third">Reliable</div>
+                <div id="fourth">Because we are</div>
+                
+                <div id="company-name">GTree Furniture</div>
+            </section>
+        </header>
+            <!--navigation bar-->
+            <span class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li onclick="link(0)"><a id="home" href="#">Home</a></li>
+                        <li onclick="link(1)">
+                            <a id="furniture-category" href="#">Furniture Category</a>
+                            <ul class="submenu-1">
+                                <li onmousedown="link(5)">
+                                    <a id="table" href="#">Tables</a></li>
+    
+                                <li onmousedown="link(6)">
+                                    <a id="chair" href="#">Chairs</a></li>
+    
+                                <li onmousedown="link(7)">
+                                    <a id="bedroom" href="#">Bedroom</a></li>
+    
+                                <li onmousedown="link(8)">
+                                    <a id="lighting" href="#">Lighting</a></li>
+    
+                                <li onmousedown="link(9)">
+                                    <a id="decorations" href="#">Decorations</a></li>
+                                
+                                <li onmousedown="link(10)">
+                                    <a id="shelves" href="#">Shelves</a></li>
+                            </ul>
+                        </li>
+                        <li onclick="link(2)"><a id="promotion" href="#">Promotion</a></li>
+                        <li onclick="link(3)"><a id="faq" href="#">FAQ</a></li>
+                        <li onclick="link(4)"><a id="about-us" href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </span>
+<script>
+    //defining the 11 hyperlinks into an array
+    var hyperlink = [
+    /*home*/ "/homepage/homepage.html",
+    /*furnitureCategory*/ "/productcatalog/mainproductcatalog/maincatalog.html",
+    /*promotion*/ "/Promotion/promotion.html",
+    /*faq*/ "/frequently-asked-questions/frequently-asked-questions.html",
+    /*aboutUs*/ "/about-us/about-us.html",
+    /*table*/ "/productcatalog/table/productcatalogtable.html",
+    /*chair*/ "/productcatalog/chair/productcatalogchair.html",
+    /*bedroom*/ "/productcatalog/bedroom/bed/bed.html",
+    /*lighting*/ "/productcatalog/lightning/productcataloglightning.html",
+    /*decorations*/ "/productcatalog/decoration/productcatalogdecoration.html",
+    /*shelves*/ "/productcatalog/shelves/productcatalogshelves.html"
+        ];
+    
+    //defining the id name into an array
+    var tag = [
+        "home",
+        "furniture-category",
+        "promotion",
+        "faq",
+        "about-us",
+        "table",
+        "chair",
+        "bedroom",
+        "lighting",
+        "decorations",
+        "shelves"
+    ]
+    for (var i = 0; i < 11; i++)
+        document.getElementById(tag[i]).href = hyperlink[i];
+
+    function link(number){
+        window.location.assign(hyperlink[number]);
+    }
+    
+</script>
+
+        <!--Content part-->
+<article>    
+    <div style="line-height: 2em;">
+        Thank You For Purchasing From Us.<br>
+        Before You Leaving out the Website<br>
+        We like to hear some comment from 
+        you.<br>
+    </div>
+    <div>
+        <span style="font-variant: small-caps; font-size: 20px;">
+            How sastisfied was your shopping experience today?
+        </span><br>
+        <br>
+        <span id="rate">
+            Rating : <span id="rating">3</span>&#9733;
+        </span>
+        <form>
+            <label for="rateGrade"></label>
+            <span style="font-size: 20px;">1</span><input style="width: 200px;" type="range" id="rateGrade" step="1" min="1" max="5" onchange="rating()"><span style="font-size: 20px;">5</span>
+        </form>
+        <br>
+        Whats is the main reason for your score.<br>
+        <form>
+            <label for="fname"></label><br>
+            <input type="textbox" id="fname" name="fname" style="width: 450px; background-color: rgba(250, 248, 248, 0.7);">
+        </form>
+        <br>
+        <button style="background-color: rgba(66, 102, 201, 0.801);color: rgb(255, 249, 249);font-weight: bold;cursor: pointer;border-radius: 8px;padding: 10px;height: 50px;box-shadow: 2px 2px 1px rgb(2 11 34 / 80%);" id="submit">Submit</button>
+    </div>
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="float: none;font-size: 27px;">Thank you for your feedback.</p><br>
+            <a href="/homepage/homepage.html" ><button>Back to Homepage</button></a>
+        </div>
+  
+    </div>
+</article>
+<script>
+    // Get the modal
+var modal = document.getElementById("modal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("submit");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function rating(){
+    document.getElementById("rating").innerHTML = document.getElementById("rateGrade").value;
+}
+
+</script>
+
+
+        <!--footer part-->
+        <footer>
+            <!--Company logo and name-->
+            <div id="footer-1">
+                <a href="/homepage/homepage.html"><img src="/css/fixed-layout-assets/logo.png" alt="GTree Furniture logo"></a>
+                <p style="text-align: center;">GTree Furniture</p>
+            </div>
+
+            <!--Company information-->
+            <div id="footer-2">Contact Us
+                <ul>
+                    <li>E-mail : <a href="mailto:GTreeFurniture@gmail.com">GTreeFurniture@gmail.com</a></li>
+                    <li>Tel No. : <a href="tel:017-555 8163">017-555 8163</a></li>
+                    <li>Address : 40, Jalan Utama, 12300 Butterworth, Pulau Pinang</li>
+                </ul>
+            </div>
+
+            <!--Social media platform-->
+            <div id="footer-3">Follow Us
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="/css/fixed-layout-assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="/css/fixed-layout-assets/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="/css/fixed-layout-assets/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+
+            <!--Slogan and cooperation partners logo-->
+            <div id="footer-4">Bedder Than The Rest
+                <p>Our Cooperation Partners</p>
+                <ul>
+                    <li><a href="https://www.fedex.com/en-us/home.html" target="_blank"><img src="/css/fixed-layout-assets/fedex.png" alt="FedEx" ></a></li>
+                    <li><a href="https://www.gdexpress.com/" target="_blank"><img src="/css/fixed-layout-assets/gdex.png" alt="GDEx"></a></li>
+                    <li><a href="https://www.publicbankgroup.com/" target="_blank"><img src="/css/fixed-layout-assets/public_bank.png" alt="Public Bank"></a></li>
+                    <li><a href="https://www.hlb.com.my/en/personal-banking/home.html" target="_blank"><img src="/css/fixed-layout-assets/hong_leong_bank.png" alt="Hong Leong Bank"></a></li>
+                    <li><a href="https://www.maxis.com.my/en/home/" target="_blank"><img src="/css/fixed-layout-assets/maxis.png" alt="Maxis"></a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <p style="text-align: center;">&#169; GTree Furniture Company 2021 All rights reserved.</p>
+        
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="furniture, table, chair, bedroom, lighting, decorations, shelf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/common-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout.css" rel="stylesheet">
+        <link href="/css/fixed-layout-assets/logo.png" rel="shortcut icon">
+        <title>GTree Company</title>
+       <style>
+        body{
+            width: 95%;
+            border-color: cornsilk;
+            background-image:url("photo1.png");
+            background-repeat:repeat;
+            background-attachment: fixed;
+            line-height: 2em;
+        }
+        article div{
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        article div p{
+            float:right;
+        }
+
+        article {
+            padding: 30px; 
+            font-size: 20px;
+        }
+
+        #rate {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* The Modal (background) */
+        .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1000000; 
+        padding-top: 100px; 
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); 
+        }
+
+        /* Modal Content */
+        .modal-content {
+        background: linear-gradient(#504dee, hsl(229, 84%, 59%));
+        margin: 10% auto auto auto;
+        padding: 20px;
+        border: 3px solid rgba(142, 142, 143, 0.7);
+        border-radius: 20px;
+        width: 50%;
+        height: auto;
         text-align: center;
         }
         /* The Close Button */
