@@ -239,7 +239,6 @@
                     font-size: 25px;
                     flex: 5 5 85%;
                     padding: 5px;
-                    resize: none;
                 }
                 
                 form button{
@@ -259,6 +258,18 @@
                 .receptionist.dark {background-color: #918C8F; color: white;}
                 #chatbar.dark {background-color: #918C8F; color: white;}
 
+                /*video*/
+                #chat-content{
+                    position: relative;
+                }
+
+                #video{
+                    max-width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0px;
+                    visibility: hidden;
+                }
             </style>
             <article>
                 <p id="general-sentence">Anything to ask? We are here to help you&#128522;&#128522;</p>
@@ -266,10 +277,10 @@
                 <!--chatbar-->
                 <div class="title">
                     <div id="profile-picture">
-                        <img src="livechat-assets/profile-pic.jpg" alt="profile picture" width="80px" height="80px" style="border-radius: 200px;">
+                        <img id="profile-pic" src="livechat-assets/profile-pic.jpg" alt="profile picture" width="80px" height="80px" style="border-radius: 200px;">
                         <div id="active-sign"></div>
                     </div>
-                    <span>Steffi</span>
+                    <span id="profile-name">Steffi</span>
                     <span style="font-size: 22px; color: rgb(49, 162, 76); font-weight: bold;">Active</span>
                     <img id="audio-icon" src="livechat-assets/mute.png" width="50px" height="auto">
                 </div>
@@ -277,7 +288,37 @@
                 <div id="current-time"></div>
 
                 <!--chat content part-->
-                <div id="chat-content">                   
+                <div id="chat-content">
+                    <video id="video" controls preload="auto" onclick="stop()">
+                        <source src="livechat-assets/video.mp4" type="video/mp4">
+                    </video>           
+                    
+                    <script>
+                        /*display or hide a video*/
+                        var video = document.getElementById("video");
+                        var move = document.getElementById("chat-content");
+                        var videoStatus = false;
+                        function stopVideo(){
+                            if (videoStatus == false){
+                                document.getElementById("profile-pic").src = "livechat-assets/profile-pic.png";
+                                document.getElementById("profile-name").innerHTML = "Rick Astley";
+                                video.play();
+                                video.currentTime = 0;
+                                if (video.muted == true)
+                                    video.muted = false;
+                                video.style.visibility = "visible";
+                                move.scrollBy(0, -1000000);
+                            }
+                            else{
+                                document.getElementById("profile-pic").src = "livechat-assets/profile-pic.jpg";
+                                document.getElementById("profile-name").innerHTML = "Steffi";
+                                video.pause(); 
+                                video.style.visibility = "hidden";
+                                move.scrollBy(0, 1000000);
+                            }
+                            videoStatus = !(videoStatus);
+                        }
+                    </script>
                 <div class="receptionist" title="Steffi">Hi, nice to meet you. I'm Steffi</div>
                 <div class="receptionist" title="Steffi">What could I help you with?</div>
                 </div>
@@ -353,6 +394,11 @@
                             }
                             if(chatbar.value == "/mute"){
                                 mute();
+                                chatbar.value = "";
+                                return 0;
+                            }
+                            if(chatbar.value == "/joke"){
+                                stopVideo();
                                 chatbar.value = "";
                                 return 0;
                             }
