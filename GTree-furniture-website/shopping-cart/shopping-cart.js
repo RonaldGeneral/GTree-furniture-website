@@ -146,8 +146,9 @@ fetch("../mock-database/product.json")
                 }
             }        
         }
-        var totalPrice = 0, totalQuantity = 0; //Initialise all the total price and total quantity
+        
         function addTotalItem(){
+            var totalPrice = 0, totalQuantity = 0; //Initialise all the total price and total quantity
             for (var i = 0; i < product.length; i++){
                 //Add the total price and total quantity of each item if it is not deleted
                 if (product[i] != "null"){
