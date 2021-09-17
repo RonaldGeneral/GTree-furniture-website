@@ -82,10 +82,12 @@ fetch("../mock-database/product.json")
             var allTick = true;
             //Select all the items
             for (var i = 0; i < product.length; i++) {
-                if (!document.getElementById("item"+i).checked && product[i] != "null"){
+                if (product[i] != "null"){
+                    if (!document.getElementById("item"+i).checked){
                     allTick = false;
                     document.getElementById("item"+i).checked = true;
                     addItem(i, document.getElementById('quantity'+i).value);
+                    }
                 }
             }
             //if every item is selected, unselect all the items
@@ -203,8 +205,3 @@ fetch("../mock-database/product.json")
             }
         }
     });
-
-
-
-
-
