@@ -167,10 +167,14 @@ fetch("../mock-database/product.json")
         function checkout(){
             //Create arrays to update the selected product and its details to local storage
             const selectedProductId = [], selectedProduct = [], selectedQty = [], selectedPrice = [], selectedUnitPrice = [];
+            var noProduct = true;
+            for (var i = 0; i < product.length; i++)
+                if (item[i] == "selected") //Check if customer buy anything
+                    noProduct = false;
             if (product.length == 0){ //Disallow the customer to checkout if the shopping cart is empty
                 alert("Your Shopping Cart is empty!");
             }
-            else if (totalPrice == 0){ //Disallow the customer to checkout if they buy nothing
+            else if (noProduct == true){ //Disallow the customer to checkout if they buy nothing
                 alert("You did not select any product!");
             }
             else{
