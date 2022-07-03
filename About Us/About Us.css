@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*body style*/
+body{
+    width: 100%;
+}
+
+
+
+/*article style*/
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+article{
+    width: 60%;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 40px 0px 0px 420px ;
+    
+}
+
+/*paragraph style*/
+p{
+    font-size: 20px;
+}
+
+/*aside style*/
+aside{
+    float: left;
+    width: 18%;
+    text-align: center;
+    border-style: solid;
+    margin: 0px 20px 10px 100px;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+}
+
+/*img style*/
+
+/*h3 style*/
